@@ -13,6 +13,15 @@ import {
 
 const router = Router();
 
+// Logging middleware for all admin routes
+router.use((req, res, next) => {
+  console.log(`Admin API: ${req.method} ${req.originalUrl}`);
+  if (req.body && Object.keys(req.body).length > 0) {
+    console.log('Request body:', req.body);
+  }
+  next();
+});
+
 // Configure multer for file uploads
 const storage = multer.diskStorage({
   destination: async (req, file, cb) => {
