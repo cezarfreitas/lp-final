@@ -1843,6 +1843,7 @@ export default function Index() {
                   href="https://instagram.com/ecko"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Seguir ECKO no Instagram"
                   className="bg-gray-800 hover:bg-red-600 p-3 rounded-full transition-colors duration-300"
                 >
                   <svg
@@ -1859,6 +1860,7 @@ export default function Index() {
                   href="https://facebook.com/ecko"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Curtir ECKO no Facebook"
                   className="bg-gray-800 hover:bg-red-600 p-3 rounded-full transition-colors duration-300"
                 >
                   <svg
@@ -1875,6 +1877,7 @@ export default function Index() {
                   href="https://wa.me/5511987654321"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Entrar em contato via WhatsApp"
                   className="bg-gray-800 hover:bg-green-600 p-3 rounded-full transition-colors duration-300"
                 >
                   <svg
@@ -1891,6 +1894,7 @@ export default function Index() {
                   href="https://youtube.com/ecko"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Inscrever-se no canal ECKO no YouTube"
                   className="bg-gray-800 hover:bg-red-600 p-3 rounded-full transition-colors duration-300"
                 >
                   <svg
