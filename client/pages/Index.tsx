@@ -192,7 +192,7 @@ export default function Index() {
                 </svg>
               </div>
               <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase tracking-wide">
-                LANÇAMENTOS EXCLUSIVOS
+                LAN��AMENTOS EXCLUSIVOS
               </h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                 Tenha acesso antecipado às novas coleções e produtos exclusivos
@@ -1301,6 +1301,279 @@ export default function Index() {
             >
               QUERO REVENDER ESTES PRODUTOS
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Showroom Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left Column - Text Content */}
+            <div className="space-y-6">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wider">
+                CONHEÇA NOSSO <span className="text-red-600">SHOWROOM</span>
+              </h2>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Visite nosso showroom e conheça de perto toda a qualidade e diversidade
+                dos produtos ECKO. Um espaço moderno e inspirador onde você pode
+                vivenciar o universo da marca.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                      LOCALIZAÇÃO PRIVILEGIADA
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Rua Augusta, 1000 - Consolação, São Paulo/SP
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                      HORÁRIO DE FUNCIONAMENTO
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Segunda a Sexta: 9h às 18h<br />
+                      Sábado: 9h às 14h
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                      ATENDIMENTO ESPECIALIZADO
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Equipe preparada para orientar sobre produtos e condições de parceria
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                      AGENDAMENTO
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      (11) 3456-7890 | showroom@ecko.com.br
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-6">
+                <button
+                  onClick={() => {
+                    document.getElementById('benefits')?.scrollIntoView({
+                      behavior: 'smooth'
+                    });
+                  }}
+                  className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
+                >
+                  AGENDAR VISITA
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column - Image Slider */}
+            <div className="relative">
+              <div className="overflow-hidden rounded-lg shadow-lg">
+                <div id="showroom-slider" className="flex transition-transform duration-500 ease-in-out">
+                  {/* Slide 1 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                      alt="Showroom ECKO - Fachada"
+                      className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                    <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
+                      <h3 className="font-display font-bold text-sm uppercase">Fachada do Showroom</h3>
+                      <p className="text-xs opacity-90">Design moderno no coração de São Paulo</p>
+                    </div>
+                  </div>
+
+                  {/* Slide 2 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                      alt="Showroom ECKO - Interior"
+                      className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                    <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
+                      <h3 className="font-display font-bold text-sm uppercase">Espaço Interno</h3>
+                      <p className="text-xs opacity-90">Ambiente amplo e organizado para melhor experiência</p>
+                    </div>
+                  </div>
+
+                  {/* Slide 3 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                      alt="Showroom ECKO - Produtos"
+                      className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                    <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
+                      <h3 className="font-display font-bold text-sm uppercase">Exposição de Produtos</h3>
+                      <p className="text-xs opacity-90">Toda coleção disponível para análise</p>
+                    </div>
+                  </div>
+
+                  {/* Slide 4 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                      alt="Showroom ECKO - Atendimento"
+                      className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                    <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
+                      <h3 className="font-display font-bold text-sm uppercase">Área de Atendimento</h3>
+                      <p className="text-xs opacity-90">Consultoria especializada para parceiros</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Slider Navigation */}
+              <div className="flex justify-center items-center mt-6 space-x-4">
+                <button
+                  id="showroom-prev"
+                  className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
+                  onClick={() => {
+                    const slider = document.getElementById('showroom-slider');
+                    const currentTransform = slider?.style.transform || 'translateX(0%)';
+                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
+                    const newValue = currentValue >= 0 ? -300 : currentValue + 100;
+                    if (slider) slider.style.transform = `translateX(${newValue}%)`;
+
+                    // Update dots
+                    const dots = document.querySelectorAll('.showroom-dot');
+                    dots.forEach(dot => dot.classList.remove('bg-red-600'));
+                    dots.forEach(dot => dot.classList.add('bg-gray-300'));
+                    const activeIndex = Math.abs(newValue / 100);
+                    if (dots[activeIndex]) {
+                      dots[activeIndex].classList.remove('bg-gray-300');
+                      dots[activeIndex].classList.add('bg-red-600');
+                    }
+                  }}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                {/* Dots Indicator */}
+                <div className="flex space-x-2">
+                  <button
+                    className="w-3 h-3 rounded-full bg-red-600 showroom-dot"
+                    onClick={() => {
+                      const slider = document.getElementById('showroom-slider');
+                      if (slider) slider.style.transform = 'translateX(0%)';
+
+                      const dots = document.querySelectorAll('.showroom-dot');
+                      dots.forEach(dot => dot.classList.remove('bg-red-600'));
+                      dots.forEach(dot => dot.classList.add('bg-gray-300'));
+                      dots[0].classList.remove('bg-gray-300');
+                      dots[0].classList.add('bg-red-600');
+                    }}
+                  ></button>
+                  <button
+                    className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
+                    onClick={() => {
+                      const slider = document.getElementById('showroom-slider');
+                      if (slider) slider.style.transform = 'translateX(-100%)';
+
+                      const dots = document.querySelectorAll('.showroom-dot');
+                      dots.forEach(dot => dot.classList.remove('bg-red-600'));
+                      dots.forEach(dot => dot.classList.add('bg-gray-300'));
+                      dots[1].classList.remove('bg-gray-300');
+                      dots[1].classList.add('bg-red-600');
+                    }}
+                  ></button>
+                  <button
+                    className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
+                    onClick={() => {
+                      const slider = document.getElementById('showroom-slider');
+                      if (slider) slider.style.transform = 'translateX(-200%)';
+
+                      const dots = document.querySelectorAll('.showroom-dot');
+                      dots.forEach(dot => dot.classList.remove('bg-red-600'));
+                      dots.forEach(dot => dot.classList.add('bg-gray-300'));
+                      dots[2].classList.remove('bg-gray-300');
+                      dots[2].classList.add('bg-red-600');
+                    }}
+                  ></button>
+                  <button
+                    className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
+                    onClick={() => {
+                      const slider = document.getElementById('showroom-slider');
+                      if (slider) slider.style.transform = 'translateX(-300%)';
+
+                      const dots = document.querySelectorAll('.showroom-dot');
+                      dots.forEach(dot => dot.classList.remove('bg-red-600'));
+                      dots.forEach(dot => dot.classList.add('bg-gray-300'));
+                      dots[3].classList.remove('bg-gray-300');
+                      dots[3].classList.add('bg-red-600');
+                    }}
+                  ></button>
+                </div>
+
+                <button
+                  id="showroom-next"
+                  className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
+                  onClick={() => {
+                    const slider = document.getElementById('showroom-slider');
+                    const currentTransform = slider?.style.transform || 'translateX(0%)';
+                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
+                    const newValue = currentValue <= -300 ? 0 : currentValue - 100;
+                    if (slider) slider.style.transform = `translateX(${newValue}%)`;
+
+                    // Update dots
+                    const dots = document.querySelectorAll('.showroom-dot');
+                    dots.forEach(dot => dot.classList.remove('bg-red-600'));
+                    dots.forEach(dot => dot.classList.add('bg-gray-300'));
+                    const activeIndex = Math.abs(newValue / 100);
+                    if (dots[activeIndex]) {
+                      dots[activeIndex].classList.remove('bg-gray-300');
+                      dots[activeIndex].classList.add('bg-red-600');
+                    }
+                  }}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
