@@ -13,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- Preload critical fonts -->
+    <!-- Optimized fonts - only load necessary weights -->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@300;400;500&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
@@ -24,19 +24,17 @@
     <!-- Fallback for browsers that don't support preload -->
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet"
       />
     </noscript>
 
-    <!-- Inline script for async font loading -->
+    <!-- Async font loading script -->
     <script>
       (function () {
-        // Load fonts asynchronously
         var link = document.createElement("link");
         link.rel = "stylesheet";
-        link.href =
-          "https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap";
+        link.href = "https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Inter:wght@300;400;500&display=swap";
         link.media = "print";
         link.onload = function () {
           this.media = "all";
