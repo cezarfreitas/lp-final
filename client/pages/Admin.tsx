@@ -96,6 +96,8 @@ export default function Admin() {
   const handleSave = async (endpoint: string, data: any, method: 'PUT' | 'POST' = 'PUT') => {
     try {
       setSaveStatus('saving');
+      console.log(`Saving to endpoint: /api/admin/${endpoint}`, { method, data });
+
       const response = await fetch(`/api/admin/${endpoint}`, {
         method,
         headers: {
@@ -104,17 +106,33 @@ export default function Admin() {
         body: JSON.stringify(data),
       });
 
-      if (!response.ok) throw new Error('Failed to save data');
-      
+      if (!response.ok) {
+        let errorData;
+        try {
+          errorData = await response.json();
+        } catch {
+          errorData = { error: await response.text() };
+        }
+
+        console.error('Save API Error:', response.status, response.statusText, errorData);
+        throw new Error(`Failed to save data: ${response.status} ${response.statusText} - ${errorData.error || 'Unknown error'}`);
+      }
+
+      const result = await response.json();
+      console.log('Save successful:', result);
+
       setSaveStatus('success');
       setTimeout(() => setSaveStatus('idle'), 2000);
-      
+
       // Refresh data
       await fetchData();
     } catch (error) {
       console.error('Error saving data:', error);
       setSaveStatus('error');
       setTimeout(() => setSaveStatus('idle'), 2000);
+
+      // Show error message to user
+      alert(`Erro ao salvar: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
     }
   };
 
