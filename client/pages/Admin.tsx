@@ -335,10 +335,10 @@ export default function Admin() {
                         <span className="font-medium truncate">{tab.label}</span>
 
                         {/* Badge/Number */}
-                        <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+                        <span className={`text-xs px-2 py-1 rounded-full font-medium section-badge ${
                           activeTab === tab.id
-                            ? 'bg-red-500/20 text-red-300'
-                            : 'bg-slate-700/50 text-slate-400'
+                            ? 'bg-red-500/20 text-red-300 border-red-500/20'
+                            : 'text-slate-400'
                         }`}>
                           {index + 1}
                         </span>
