@@ -867,7 +867,8 @@ export default function Index() {
                 {/* Dots Indicator */}
                 <div className="flex space-x-2">
                   <button
-                    className="w-3 h-3 rounded-full bg-red-600"
+                    aria-label="Ir para primeiro depoimento"
+                    className="w-6 h-6 rounded-full bg-red-600 flex items-center justify-center"
                     onClick={() => {
                       const carousel = document.getElementById(
                         "testimonials-carousel",
@@ -876,7 +877,8 @@ export default function Index() {
                     }}
                   ></button>
                   <button
-                    className="w-3 h-3 rounded-full bg-gray-300"
+                    aria-label="Ir para segundo depoimento"
+                    className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center"
                     onClick={() => {
                       const carousel = document.getElementById(
                         "testimonials-carousel",
@@ -886,7 +888,8 @@ export default function Index() {
                     }}
                   ></button>
                   <button
-                    className="w-3 h-3 rounded-full bg-gray-300"
+                    aria-label="Ir para terceiro depoimento"
+                    className="w-6 h-6 rounded-full bg-gray-300 flex items-center justify-center"
                     onClick={() => {
                       const carousel = document.getElementById(
                         "testimonials-carousel",
