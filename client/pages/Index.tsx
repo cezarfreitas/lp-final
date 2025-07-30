@@ -261,19 +261,7 @@ export default function Index() {
             </div>
           </div>
 
-          {/* CTA Section */}
-          <div className="text-center mt-16">
-            <h3 className="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-6 uppercase tracking-wider">
-              PRONTO PARA <span className="text-red-600">COMEÇAR</span>?
-            </h3>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Junte-se aos mais de 5.000 parceiros que já faturam com a marca
-              mais desejada do streetwear
-            </p>
-            <button className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide">
-              QUERO SER PARCEIRO AGORA
-            </button>
-          </div>
+
         </div>
       </section>
 
