@@ -12,8 +12,10 @@ export default function Index() {
           }}
         />
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40" />
+        {/* Overlay - Multiple layers for better text readability */}
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
 
         {/* Hero Content */}
         <div className="relative z-10 flex h-full items-center justify-center">
