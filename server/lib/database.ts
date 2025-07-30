@@ -27,12 +27,27 @@ export async function executeQuery<T = any>(
   params?: any[]
 ): Promise<T> {
   const connection = getDbPool();
-  
+
   try {
     const [rows] = await connection.execute(query, params);
     return rows as T;
   } catch (error) {
     console.error('Database query error:', error);
+    throw error;
+  }
+}
+
+// For DDL statements (CREATE, DROP, ALTER, etc.) that don't support prepared statements
+export async function executeDDL<T = any>(
+  query: string
+): Promise<T> {
+  const connection = getDbPool();
+
+  try {
+    const [rows] = await connection.query(query);
+    return rows as T;
+  } catch (error) {
+    console.error('Database DDL error:', error);
     throw error;
   }
 }
