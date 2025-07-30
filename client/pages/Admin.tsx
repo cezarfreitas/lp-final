@@ -41,6 +41,14 @@ export default function Admin() {
       if (!response.ok) {
         const errorText = await response.text();
         console.error('API Error:', response.status, response.statusText, errorText);
+
+        // Check if this is a database initialization issue
+        if (response.status === 500 && errorText.includes('ER_NO_SUCH_TABLE')) {
+          // Database tables don't exist, redirect to setup
+          window.location.href = '/setup';
+          return;
+        }
+
         throw new Error(`Failed to fetch data: ${response.status} ${response.statusText} - ${errorText}`);
       }
 
@@ -48,9 +56,29 @@ export default function Admin() {
       setData(result);
     } catch (error) {
       console.error('Error fetching data:', error);
-      setSaveStatus('error');
+
+      // Check if it's a network error that might indicate database issues
+      if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
+        // Might be a CORS or server issue, check if setup is needed
+        checkIfSetupNeeded();
+      } else {
+        setSaveStatus('error');
+      }
     } finally {
       setLoading(false);
+    }
+  };
+
+  const checkIfSetupNeeded = async () => {
+    try {
+      const response = await fetch('/api/setup/status');
+      if (!response.ok) {
+        // If setup status also fails, likely need to run setup
+        window.location.href = '/setup';
+      }
+    } catch {
+      // If setup endpoint also fails, redirect to setup
+      window.location.href = '/setup';
     }
   };
 
