@@ -19,7 +19,7 @@ export default function Index() {
 
         {/* Hero Content */}
         <div className="relative z-10 flex h-full items-center justify-center">
-          <div className="text-center text-white px-4 max-w-4xl font-body">
+          <div className="text-center text-white px-4 max-w-4xl font-body" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
             {/* Logo */}
             <div className="mb-8 flex justify-center">
               <div className="bg-red-600 p-4 rounded-lg">
