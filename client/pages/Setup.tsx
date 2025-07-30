@@ -18,7 +18,13 @@ export default function Setup() {
       });
 
       if (!response.ok) {
-        const errorText = await response.text();
+        let errorText: string;
+        try {
+          const errorData = await response.json();
+          errorText = errorData.error || errorData.details || 'Unknown error';
+        } catch {
+          errorText = await response.text();
+        }
         console.error('Setup API Error:', response.status, response.statusText, errorText);
         throw new Error(`Erro HTTP ${response.status}: ${errorText || response.statusText}`);
       }
