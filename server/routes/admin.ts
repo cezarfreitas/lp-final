@@ -91,11 +91,17 @@ router.put('/hero/:id', async (req: Request, res: Response) => {
   try {
     const id = parseInt(req.params.id);
     const data = req.body;
-    
+
+    console.log(`Updating hero section ${id}:`, data);
     await updateRecord('hero_section', data, { id });
+    console.log(`Hero section ${id} updated successfully`);
     res.json({ message: 'Hero section updated successfully' });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to update hero section' });
+    console.error(`Failed to update hero section ${req.params.id}:`, error);
+    res.status(500).json({
+      error: 'Failed to update hero section',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 });
 
