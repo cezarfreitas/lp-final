@@ -39,17 +39,28 @@ export default function Admin() {
       const response = await fetch('/api/admin/all-data');
 
       if (!response.ok) {
-        const errorText = await response.text();
-        console.error('API Error:', response.status, response.statusText, errorText);
+        let errorData;
+        try {
+          errorData = await response.json();
+        } catch {
+          errorData = { error: await response.text() };
+        }
+
+        console.error('API Error:', response.status, response.statusText, errorData);
 
         // Check if this is a database initialization issue
-        if (response.status === 500 && errorText.includes('ER_NO_SUCH_TABLE')) {
+        if (response.status === 500 && (
+          errorData.code === 'DB_NOT_INITIALIZED' ||
+          errorData.error?.includes('ER_NO_SUCH_TABLE') ||
+          errorData.error?.includes('Database tables not found')
+        )) {
           // Database tables don't exist, redirect to setup
+          console.log('Database not initialized, redirecting to setup...');
           window.location.href = '/setup';
           return;
         }
 
-        throw new Error(`Failed to fetch data: ${response.status} ${response.statusText} - ${errorText}`);
+        throw new Error(`Failed to fetch data: ${response.status} ${response.statusText} - ${errorData.error || 'Unknown error'}`);
       }
 
       const result = await response.json();
