@@ -53,8 +53,8 @@ export default function Index() {
             {/* CTA Button */}
             <button
               onClick={() => {
-                document.getElementById('benefits')?.scrollIntoView({
-                  behavior: 'smooth'
+                document.getElementById("benefits")?.scrollIntoView({
+                  behavior: "smooth",
                 });
               }}
               className="font-display border-2 border-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold hover:bg-red-600 active:bg-red-700 transition-colors duration-300 flex items-center justify-center gap-2 mx-auto tracking-wide uppercase w-full max-w-xs sm:w-auto"
@@ -81,8 +81,8 @@ export default function Index() {
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
             <button
               onClick={() => {
-                document.getElementById('benefits')?.scrollIntoView({
-                  behavior: 'smooth'
+                document.getElementById("benefits")?.scrollIntoView({
+                  behavior: "smooth",
                 });
               }}
               className="animate-bounce text-white hover:text-red-400 transition-colors duration-300"
