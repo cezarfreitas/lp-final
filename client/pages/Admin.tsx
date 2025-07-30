@@ -292,7 +292,7 @@ export default function Admin() {
 
               {/* Progress Bar */}
               <div className="bg-slate-700/50 rounded-full p-1">
-                <div className="bg-gradient-to-r from-red-500 to-red-600 h-2 rounded-full w-3/4"></div>
+                <div className="progress-bar-animated h-2 rounded-full w-3/4"></div>
               </div>
               <p className="text-slate-400 text-xs mt-2">Configuração: 75% completa</p>
             </div>
