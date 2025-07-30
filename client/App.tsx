@@ -10,6 +10,7 @@ import { lazy, Suspense } from "react";
 
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
+const Admin = lazy(() => import("./pages/Admin"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading component
