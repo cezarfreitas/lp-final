@@ -100,7 +100,7 @@ export default function Index() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 bg-white">
+      <section id="benefits" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
