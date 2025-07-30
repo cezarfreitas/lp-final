@@ -332,7 +332,7 @@ export default function Admin() {
                     {/* Content */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between">
-                        <span className="font-medium truncate">{tab.label}</span>
+                        <span className="font-medium truncate sidebar-label">{tab.label}</span>
 
                         {/* Badge/Number */}
                         <span className={`text-xs px-2 py-1 rounded-full font-medium section-badge ${
