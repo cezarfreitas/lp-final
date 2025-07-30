@@ -539,7 +539,20 @@ router.get('/all-data', async (req: Request, res: Response) => {
     });
   } catch (error) {
     console.error('Error fetching all data:', error);
-    res.status(500).json({ error: 'Failed to fetch page data' });
+
+    // Check if it's a table doesn't exist error
+    if (error instanceof Error && error.message.includes('ER_NO_SUCH_TABLE')) {
+      res.status(500).json({
+        error: 'Database tables not found. Please run setup first.',
+        code: 'DB_NOT_INITIALIZED',
+        setupUrl: '/setup'
+      });
+    } else {
+      res.status(500).json({
+        error: 'Failed to fetch page data',
+        details: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
   }
 });
 
