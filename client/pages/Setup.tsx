@@ -9,13 +9,22 @@ export default function Setup() {
     try {
       setStatus('loading');
       setMessage('Inicializando banco de dados...');
-      
+
       const response = await fetch('/api/setup/init-database', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
-      
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Setup API Error:', response.status, response.statusText, errorText);
+        throw new Error(`Erro HTTP ${response.status}: ${errorText || response.statusText}`);
+      }
+
       const result = await response.json();
-      
+
       if (result.success) {
         setStatus('success');
         setMessage(`Banco inicializado com sucesso! ${result.tablesCreated} tabelas criadas, ${result.recordsInserted} registros inseridos.`);
@@ -25,7 +34,13 @@ export default function Setup() {
       }
     } catch (error) {
       setStatus('error');
-      setMessage(`Erro: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
+      console.error('Database initialization error:', error);
+
+      if (error instanceof TypeError && error.message.includes('Failed to fetch')) {
+        setMessage('Erro de conexão: Não foi possível conectar ao servidor. Verifique se o servidor está rodando.');
+      } else {
+        setMessage(`Erro: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
+      }
     }
   };
 
