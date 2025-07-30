@@ -23,13 +23,11 @@ export default function Index() {
           >
             {/* Logo */}
             <div className="mb-6 sm:mb-8 flex justify-center">
-              <div className="bg-white p-3 sm:p-4 rounded-lg shadow-lg">
-                <img
-                  src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
-                  alt="Logo ECKO Oficial"
-                  className="h-12 sm:h-16 w-auto"
-                />
-              </div>
+              <img
+                src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
+                alt="Logo ECKO Oficial"
+                className="h-12 sm:h-16 w-auto"
+              />
             </div>
 
             {/* Subtitle */}
@@ -1728,13 +1726,11 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Logo and About */}
             <div className="space-y-4">
-              <div className="bg-white p-3 rounded-lg inline-block">
-                <img
-                  src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
-                  alt="Logo ECKO Oficial"
-                  className="h-10 w-auto"
-                />
-              </div>
+              <img
+                src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
+                alt="Logo ECKO Oficial"
+                className="h-10 w-auto"
+              />
               <p className="text-gray-300 text-sm leading-relaxed">
                 20 anos de tradição no streetwear brasileiro. A marca que
                 transforma paixão em negócio lucrativo.
