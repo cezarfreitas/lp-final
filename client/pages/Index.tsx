@@ -23,10 +23,12 @@ export default function Index() {
           >
             {/* Logo */}
             <div className="mb-6 sm:mb-8 flex justify-center">
-              <div className="bg-red-600 p-3 sm:p-4 rounded-lg">
-                <div className="text-white font-display font-bold text-xl sm:text-2xl tracking-wider">
-                  ECKO
-                </div>
+              <div className="bg-white p-3 sm:p-4 rounded-lg shadow-lg">
+                <img
+                  src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
+                  alt="Logo ECKO Oficial"
+                  className="h-12 sm:h-16 w-auto"
+                />
               </div>
             </div>
 
@@ -494,7 +496,7 @@ export default function Index() {
                       <option value="fisica">Física</option>
                       <option value="online-fisica">Online + Física</option>
                       <option value="midias-sociais">
-                        Vendo nas mídias sociais
+                        Vendo nas m��dias sociais
                       </option>
                     </select>
                   </div>
