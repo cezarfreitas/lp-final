@@ -419,9 +419,11 @@ export default function Index() {
                         onChange={(e) => {
                           const extraFields = document.getElementById('extra-fields');
                           const consumerMessage = document.getElementById('consumer-message');
+                          const submitButton = document.getElementById('submit-button');
                           if (e.target.checked) {
                             if (extraFields) extraFields.style.display = 'block';
                             if (consumerMessage) consumerMessage.style.display = 'none';
+                            if (submitButton) submitButton.style.display = 'block';
                           }
                         }}
                       />
