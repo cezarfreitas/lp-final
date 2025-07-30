@@ -64,6 +64,22 @@ export default function Setup() {
     }
   };
 
+  const testConnection = async () => {
+    try {
+      setMessage('Testando conexão com servidor...');
+      const response = await fetch('/api/setup/test');
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      setMessage(`✅ Conexão OK: ${result.message}`);
+    } catch (error) {
+      setMessage(`❌ Erro de conexão: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
+    }
+  };
+
   useState(() => {
     checkDatabaseStatus();
   });
