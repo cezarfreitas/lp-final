@@ -10,39 +10,51 @@ import setupRoutes from "./routes/setup.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+// Export function to create Express app for Vite dev server
+export function createServer() {
+  const app = express();
 
-// Initialize database
-initializeDatabase().catch(console.error);
+  // Initialize database
+  initializeDatabase().catch(console.error);
 
-// Middleware
-app.use(compression());
-app.use(cors());
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+  // Middleware
+  app.use(compression());
+  app.use(cors());
+  app.use(express.json({ limit: '10mb' }));
+  app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Serve static files
-app.use(express.static(path.join(__dirname, '../dist/client')));
-app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
+  // Create uploads directory if it doesn't exist
+  app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 
-// Admin API routes
-app.use('/api/admin', adminRoutes);
+  // Admin API routes
+  app.use('/api/admin', adminRoutes);
 
-// Setup routes
-app.use('/api/setup', setupRoutes);
+  // Setup routes
+  app.use('/api/setup', setupRoutes);
 
-// Serve React app for all other routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../dist/client/index.html'));
-});
+  // Error handling middleware
+  app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+    console.error('Server error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  });
 
-// Error handling middleware
-app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
-  console.error('Server error:', err);
-  res.status(500).json({ error: 'Internal server error' });
-});
+  return app;
+}
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+// Start standalone server when run directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const app = createServer();
+  const PORT = process.env.PORT || 3000;
+
+  // Serve static files for production
+  app.use(express.static(path.join(__dirname, '../dist/client')));
+
+  // Serve React app for all other routes in production
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../dist/client/index.html'));
+  });
+
+  app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+  });
+}
