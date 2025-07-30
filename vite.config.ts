@@ -19,10 +19,10 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: {
           // Split vendor chunks for better caching
-          react: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['@radix-ui/react-slot', '@radix-ui/react-toast'],
-          query: ['@tanstack/react-query'],
+          react: ["react", "react-dom"],
+          router: ["react-router-dom"],
+          ui: ["@radix-ui/react-slot", "@radix-ui/react-toast"],
+          query: ["@tanstack/react-query"],
         },
       },
     },
@@ -33,7 +33,7 @@ export default defineConfig(({ mode }) => ({
     // Enable source maps for debugging but smaller
     sourcemap: false,
     // Minimize bundle size
-    minify: 'terser',
+    minify: "terser",
     terserOptions: {
       compress: {
         drop_console: true,
