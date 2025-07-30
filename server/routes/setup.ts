@@ -9,6 +9,15 @@ const __dirname = path.dirname(__filename);
 
 const router = Router();
 
+// Test route
+router.get('/test', (req: Request, res: Response) => {
+  res.json({
+    success: true,
+    message: 'Setup routes are working!',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Initialize database with schema and initial data
 router.post('/init-database', async (req: Request, res: Response) => {
   try {
