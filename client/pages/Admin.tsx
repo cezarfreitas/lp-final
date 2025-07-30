@@ -137,13 +137,48 @@ export default function Admin() {
   };
 
   const tabs = [
-    { id: 'hero', label: 'Hero Section', icon: '🏠' },
-    { id: 'benefits', label: 'Benefícios', icon: '⭐' },
-    { id: 'testimonials', label: 'Depoimentos', icon: '💬' },
-    { id: 'faq', label: 'FAQ', icon: '❓' },
-    { id: 'gallery', label: 'Galeria', icon: '🖼️' },
-    { id: 'showroom', label: 'Showroom', icon: '🏢' },
-    { id: 'footer', label: 'Footer', icon: '📄' },
+    {
+      id: 'hero',
+      label: 'Hero Section',
+      icon: 'M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z',
+      description: 'Seção principal da página'
+    },
+    {
+      id: 'benefits',
+      label: 'Benefícios',
+      icon: 'M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z',
+      description: 'Vantagens e diferenciais'
+    },
+    {
+      id: 'testimonials',
+      label: 'Depoimentos',
+      icon: 'M8 12a4 4 0 100-8 4 4 0 000 8zm0 2a6 6 0 100-12 6 6 0 000 12zM8 9a1 1 0 011-1h.01a1 1 0 110 2H9a1 1 0 01-1-1zm0 4a1 1 0 011-1h.01a1 1 0 110 2H9a1 1 0 01-1-1z',
+      description: 'Avaliações dos clientes'
+    },
+    {
+      id: 'faq',
+      label: 'FAQ',
+      icon: 'M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.458V6.5m0 7v4.042M2.458 12H6.5m7 0h4.042',
+      description: 'Perguntas frequentes'
+    },
+    {
+      id: 'gallery',
+      label: 'Galeria',
+      icon: 'M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z',
+      description: 'Imagens dos produtos'
+    },
+    {
+      id: 'showroom',
+      label: 'Showroom',
+      icon: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+      description: 'Espaço físico da loja'
+    },
+    {
+      id: 'footer',
+      label: 'Footer',
+      icon: 'M4 6h16M4 12h16M4 18h16',
+      description: 'Rodapé e links'
+    },
   ];
 
   if (loading) {
