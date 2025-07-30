@@ -7,7 +7,8 @@ export default function Index() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: 'url(https://estyle.vteximg.com.br/arquivos/ecko_mosaic5.png?v=638421392678800000)'
+            backgroundImage:
+              "url(https://estyle.vteximg.com.br/arquivos/ecko_mosaic5.png?v=638421392678800000)",
           }}
         />
 
