@@ -41,7 +41,7 @@ export default function Index() {
               <br />
               OFICIAL <span className="text-red-600">ECKO</span> E TENHA
               <br />
-              SUCESSO NO STREETWEAR
+              os melhores produtos
             </h1>
 
             {/* Description */}
