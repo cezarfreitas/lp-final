@@ -832,6 +832,7 @@ export default function Index() {
               <div className="flex justify-center items-center mt-6 space-x-4">
                 <button
                   id="prev-btn"
+                  aria-label="Depoimento anterior"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
                     const carousel = document.getElementById(
@@ -898,6 +899,7 @@ export default function Index() {
 
                 <button
                   id="next-btn"
+                  aria-label="Próximo depoimento"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
                     const carousel = document.getElementById(
