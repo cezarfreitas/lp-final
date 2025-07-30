@@ -7,6 +7,17 @@ import compression from "compression";
 const app = createServer();
 const port = process.env.PORT || 3000;
 
+// Add compression middleware for better performance
+app.use(compression({
+  level: 6, // Good balance between compression ratio and CPU usage
+  threshold: 1024, // Only compress responses larger than 1KB
+  filter: (req, res) => {
+    // Don't compress images or already compressed files
+    if (req.headers['x-no-compression']) return false;
+    return compression.filter(req, res);
+  }
+}));
+
 // In production, serve the built SPA files
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
