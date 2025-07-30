@@ -111,10 +111,16 @@ router.get('/benefits', async (req: Request, res: Response) => {
 
 router.post('/benefits', async (req: Request, res: Response) => {
   try {
+    console.log('Creating benefit:', req.body);
     const result = await insertRecord('benefits', req.body);
+    console.log('Benefit created with ID:', result.insertId);
     res.json({ id: result.insertId, message: 'Benefit created successfully' });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to create benefit' });
+    console.error('Failed to create benefit:', error);
+    res.status(500).json({
+      error: 'Failed to create benefit',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 });
 
