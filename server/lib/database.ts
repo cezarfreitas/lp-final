@@ -105,16 +105,19 @@ export async function findMany<T>(
 }
 
 export async function insertRecord<T>(
-  table: string, 
+  table: string,
   data: Record<string, any>
 ): Promise<{ insertId: number; affectedRows: number }> {
   const columns = Object.keys(data).join(', ');
   const placeholders = Object.keys(data).map(() => '?').join(', ');
   const values = Object.values(data);
-  
+
   const query = `INSERT INTO ${table} (${columns}) VALUES (${placeholders})`;
+  console.log('INSERT query:', query);
+  console.log('INSERT values:', values);
+
   const result = await executeQuery<mysql.ResultSetHeader>(query, values);
-  
+
   return {
     insertId: result.insertId,
     affectedRows: result.affectedRows
