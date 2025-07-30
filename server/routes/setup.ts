@@ -82,9 +82,15 @@ router.post('/init-database', async (req: Request, res: Response) => {
       if (statement.trim()) {
         try {
           console.log(`  Executing init statement ${i + 1}...`);
-          await executeQuery(statement);
+          // Use DDL for USE database, and regular executeQuery for INSERT statements
+          if (statement.toUpperCase().startsWith('USE ')) {
+            await executeDDL(statement);
+          } else {
+            await executeQuery(statement);
+          }
         } catch (error) {
           console.error(`  ❌ Failed to execute init statement ${i + 1}:`, error);
+          console.error(`  Statement was: ${statement.substring(0, 100)}...`);
           throw error;
         }
       }
