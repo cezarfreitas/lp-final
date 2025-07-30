@@ -122,11 +122,9 @@ export default function Index() {
 
           {/* Benefits Layout - Mobile: 2 cols, Desktop: 4 cards + image */}
           <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
-
             {/* Left Column - 4 Benefits Cards (Desktop) */}
             <div className="lg:order-1 order-2 col-span-2 lg:col-span-1">
               <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-8">
-
                 {/* Benefit 1 */}
                 <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
                   <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
@@ -149,7 +147,8 @@ export default function Index() {
                       MARGEM ALTA
                     </h3>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                      Lucre até 60% em cada produto vendido com preços exclusivos para parceiros oficiais
+                      Lucre até 60% em cada produto vendido com preços
+                      exclusivos para parceiros oficiais
                     </p>
                   </div>
                 </div>
@@ -176,7 +175,8 @@ export default function Index() {
                       ENVIO NACIONAL
                     </h3>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                      Entregamos em todo Brasil com frete otimizado e prazos reduzidos para seus clientes
+                      Entregamos em todo Brasil com frete otimizado e prazos
+                      reduzidos para seus clientes
                     </p>
                   </div>
                 </div>
@@ -203,7 +203,8 @@ export default function Index() {
                       LANÇAMENTOS EXCLUSIVOS
                     </h3>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                      Tenha acesso antecipado às novas coleções e produtos exclusivos antes de todos
+                      Tenha acesso antecipado às novas coleções e produtos
+                      exclusivos antes de todos
                     </p>
                   </div>
                 </div>
@@ -230,11 +231,11 @@ export default function Index() {
                       SUPORTE COMPLETO
                     </h3>
                     <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                      Equipe dedicada para ajudar com vendas, marketing e crescimento do seu negócio
+                      Equipe dedicada para ajudar com vendas, marketing e
+                      crescimento do seu negócio
                     </p>
                   </div>
                 </div>
-
               </div>
             </div>
 
@@ -242,22 +243,22 @@ export default function Index() {
             <div className="lg:order-2 order-1 col-span-2 lg:col-span-1">
               <div className="relative group">
                 <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
-                alt="Lojista ECKO oficial bem-sucedido vendendo streetwear brasileiro com margem alta e suporte completo"
-                className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-              />
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                  alt="Lojista ECKO oficial bem-sucedido vendendo streetwear brasileiro com margem alta e suporte completo"
+                  className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-lg" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <h3 className="font-display font-bold text-lg uppercase tracking-wider mb-2">
                     SUCESSO GARANTIDO
                   </h3>
                   <p className="text-sm opacity-90">
-                    Junte-se aos milhares de parceiros que já transformaram suas vidas com a ECKO
+                    Junte-se aos milhares de parceiros que já transformaram suas
+                    vidas com a ECKO
                   </p>
                 </div>
               </div>
             </div>
-
           </div>
 
           {/* CTA Section */}
@@ -283,8 +284,9 @@ export default function Index() {
             {/* Left Column - Text Content */}
             <div className="space-y-6">
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wider">
-              COMO SE TORNAR UM <span className="text-red-600">LOJISTA OFICIAL</span> ECKO
-            </h2>
+                COMO SE TORNAR UM{" "}
+                <span className="text-red-600">LOJISTA OFICIAL</span> ECKO
+              </h2>
 
               <p className="text-lg text-gray-600 leading-relaxed">
                 Transforme sua paixão pelo streetwear em uma fonte de renda
