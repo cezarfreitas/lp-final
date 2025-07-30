@@ -634,20 +634,27 @@ export default function Index() {
                     <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       MARCOS SILVA
                     </h4>
-                    <p className="text-sm text-gray-600">São Paulo/SP - Lojista há 2 anos</p>
+                    <p className="text-sm text-gray-600">
+                      São Paulo/SP - Lojista há 2 anos
+                    </p>
                   </div>
                 </div>
                 <div className="mb-4">
                   <div className="flex text-yellow-400 mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      <svg
+                        key={i}
+                        className="w-4 h-4 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Comecei vendendo para amigos e hoje tenho uma loja online que fatura R$ 15mil por mês. A ECKO mudou minha vida!"
+                  "Comecei vendendo para amigos e hoje tenho uma loja online que
+                  fatura R$ 15mil por mês. A ECKO mudou minha vida!"
                 </p>
               </div>
 
@@ -661,20 +668,27 @@ export default function Index() {
                     <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       ANA COSTA
                     </h4>
-                    <p className="text-sm text-gray-600">Rio de Janeiro/RJ - Lojista há 3 anos</p>
+                    <p className="text-sm text-gray-600">
+                      Rio de Janeiro/RJ - Lojista há 3 anos
+                    </p>
                   </div>
                 </div>
                 <div className="mb-4">
                   <div className="flex text-yellow-400 mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      <svg
+                        key={i}
+                        className="w-4 h-4 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Tenho loja física e online. A qualidade dos produtos e o suporte da equipe são excepcionais. Recomendo!"
+                  "Tenho loja física e online. A qualidade dos produtos e o
+                  suporte da equipe são excepcionais. Recomendo!"
                 </p>
               </div>
 
@@ -688,20 +702,27 @@ export default function Index() {
                     <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       RAFAEL MENDES
                     </h4>
-                    <p className="text-sm text-gray-600">Belo Horizonte/MG - Lojista há 1 ano</p>
+                    <p className="text-sm text-gray-600">
+                      Belo Horizonte/MG - Lojista há 1 ano
+                    </p>
                   </div>
                 </div>
                 <div className="mb-4">
                   <div className="flex text-yellow-400 mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      <svg
+                        key={i}
+                        className="w-4 h-4 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Sempre quis empreender e com a ECKO consegui realizar esse sonho. Processo simples e lucrativo!"
+                  "Sempre quis empreender e com a ECKO consegui realizar esse
+                  sonho. Processo simples e lucrativo!"
                 </p>
               </div>
             </div>
@@ -709,7 +730,10 @@ export default function Index() {
             {/* Mobile Carousel */}
             <div className="lg:hidden">
               <div className="overflow-hidden">
-                <div id="testimonials-carousel" className="flex transition-transform duration-300 ease-in-out">
+                <div
+                  id="testimonials-carousel"
+                  className="flex transition-transform duration-300 ease-in-out"
+                >
                   {/* Testimonial 1 - Mobile */}
                   <div className="w-full flex-shrink-0 px-4">
                     <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
@@ -721,20 +745,28 @@ export default function Index() {
                           <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             MARCOS SILVA
                           </h4>
-                          <p className="text-xs text-gray-600">São Paulo/SP - Lojista há 2 anos</p>
+                          <p className="text-xs text-gray-600">
+                            São Paulo/SP - Lojista há 2 anos
+                          </p>
                         </div>
                       </div>
                       <div className="mb-4">
                         <div className="flex text-yellow-400 mb-2">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            <svg
+                              key={i}
+                              className="w-4 h-4 fill-current"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}
                         </div>
                       </div>
                       <p className="text-gray-700 italic text-sm">
-                        "Comecei vendendo para amigos e hoje tenho uma loja online que fatura R$ 15mil por mês. A ECKO mudou minha vida!"
+                        "Comecei vendendo para amigos e hoje tenho uma loja
+                        online que fatura R$ 15mil por mês. A ECKO mudou minha
+                        vida!"
                       </p>
                     </div>
                   </div>
@@ -750,20 +782,27 @@ export default function Index() {
                           <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             ANA COSTA
                           </h4>
-                          <p className="text-xs text-gray-600">Rio de Janeiro/RJ - Lojista há 3 anos</p>
+                          <p className="text-xs text-gray-600">
+                            Rio de Janeiro/RJ - Lojista há 3 anos
+                          </p>
                         </div>
                       </div>
                       <div className="mb-4">
                         <div className="flex text-yellow-400 mb-2">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            <svg
+                              key={i}
+                              className="w-4 h-4 fill-current"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}
                         </div>
                       </div>
                       <p className="text-gray-700 italic text-sm">
-                        "Tenho loja física e online. A qualidade dos produtos e o suporte da equipe são excepcionais. Recomendo!"
+                        "Tenho loja física e online. A qualidade dos produtos e
+                        o suporte da equipe são excepcionais. Recomendo!"
                       </p>
                     </div>
                   </div>
@@ -779,20 +818,27 @@ export default function Index() {
                           <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             RAFAEL MENDES
                           </h4>
-                          <p className="text-xs text-gray-600">Belo Horizonte/MG - Lojista há 1 ano</p>
+                          <p className="text-xs text-gray-600">
+                            Belo Horizonte/MG - Lojista há 1 ano
+                          </p>
                         </div>
                       </div>
                       <div className="mb-4">
                         <div className="flex text-yellow-400 mb-2">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            <svg
+                              key={i}
+                              className="w-4 h-4 fill-current"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}
                         </div>
                       </div>
                       <p className="text-gray-700 italic text-sm">
-                        "Sempre quis empreender e com a ECKO consegui realizar esse sonho. Processo simples e lucrativo!"
+                        "Sempre quis empreender e com a ECKO consegui realizar
+                        esse sonho. Processo simples e lucrativo!"
                       </p>
                     </div>
                   </div>
@@ -805,15 +851,32 @@ export default function Index() {
                   id="prev-btn"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
-                    const carousel = document.getElementById('testimonials-carousel');
-                    const currentTransform = carousel?.style.transform || 'translateX(0%)';
-                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
-                    const newValue = currentValue >= 0 ? -200 : currentValue + 100;
-                    if (carousel) carousel.style.transform = `translateX(${newValue}%)`;
+                    const carousel = document.getElementById(
+                      "testimonials-carousel",
+                    );
+                    const currentTransform =
+                      carousel?.style.transform || "translateX(0%)";
+                    const currentValue = parseInt(
+                      currentTransform.match(/-?\d+/) || ["0"],
+                    );
+                    const newValue =
+                      currentValue >= 0 ? -200 : currentValue + 100;
+                    if (carousel)
+                      carousel.style.transform = `translateX(${newValue}%)`;
                   }}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
                   </svg>
                 </button>
 
@@ -822,22 +885,30 @@ export default function Index() {
                   <button
                     className="w-3 h-3 rounded-full bg-red-600"
                     onClick={() => {
-                      const carousel = document.getElementById('testimonials-carousel');
-                      if (carousel) carousel.style.transform = 'translateX(0%)';
+                      const carousel = document.getElementById(
+                        "testimonials-carousel",
+                      );
+                      if (carousel) carousel.style.transform = "translateX(0%)";
                     }}
                   ></button>
                   <button
                     className="w-3 h-3 rounded-full bg-gray-300"
                     onClick={() => {
-                      const carousel = document.getElementById('testimonials-carousel');
-                      if (carousel) carousel.style.transform = 'translateX(-100%)';
+                      const carousel = document.getElementById(
+                        "testimonials-carousel",
+                      );
+                      if (carousel)
+                        carousel.style.transform = "translateX(-100%)";
                     }}
                   ></button>
                   <button
                     className="w-3 h-3 rounded-full bg-gray-300"
                     onClick={() => {
-                      const carousel = document.getElementById('testimonials-carousel');
-                      if (carousel) carousel.style.transform = 'translateX(-200%)';
+                      const carousel = document.getElementById(
+                        "testimonials-carousel",
+                      );
+                      if (carousel)
+                        carousel.style.transform = "translateX(-200%)";
                     }}
                   ></button>
                 </div>
@@ -846,15 +917,32 @@ export default function Index() {
                   id="next-btn"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
-                    const carousel = document.getElementById('testimonials-carousel');
-                    const currentTransform = carousel?.style.transform || 'translateX(0%)';
-                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
-                    const newValue = currentValue <= -200 ? 0 : currentValue - 100;
-                    if (carousel) carousel.style.transform = `translateX(${newValue}%)`;
+                    const carousel = document.getElementById(
+                      "testimonials-carousel",
+                    );
+                    const currentTransform =
+                      carousel?.style.transform || "translateX(0%)";
+                    const currentValue = parseInt(
+                      currentTransform.match(/-?\d+/) || ["0"],
+                    );
+                    const newValue =
+                      currentValue <= -200 ? 0 : currentValue - 100;
+                    if (carousel)
+                      carousel.style.transform = `translateX(${newValue}%)`;
                   }}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </button>
               </div>
@@ -883,12 +971,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -901,12 +994,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Sim, para ser um parceiro oficial ECKO você precisa ter CNPJ ativo. Isso garante que você possa revender nossos produtos com todas as vantagens e suporte necessários para o crescimento do seu negócio.
+                  Sim, para ser um parceiro oficial ECKO você precisa ter CNPJ
+                  ativo. Isso garante que você possa revender nossos produtos
+                  com todas as vantagens e suporte necessários para o
+                  crescimento do seu negócio.
                 </p>
               </div>
             </div>
@@ -916,12 +1020,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -934,12 +1043,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Não há valor mínimo obrigatório para se tornar parceiro. Você pode começar com o pedido que se adequar ao seu orçamento. Oferecemos condições especiais de pagamento e prazos flexíveis para facilitar o início da sua operação.
+                  Não há valor mínimo obrigatório para se tornar parceiro. Você
+                  pode começar com o pedido que se adequar ao seu orçamento.
+                  Oferecemos condições especiais de pagamento e prazos flexíveis
+                  para facilitar o início da sua operação.
                 </p>
               </div>
             </div>
@@ -949,12 +1069,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -967,12 +1092,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Após o preenchimento do formulário, nossa equipe comercial entrará em contato em até 24 horas. Fazemos uma análise rápida dos seus dados e, sendo aprovado, você já pode fazer seu primeiro pedido e começar a vender.
+                  Após o preenchimento do formulário, nossa equipe comercial
+                  entrará em contato em até 24 horas. Fazemos uma análise rápida
+                  dos seus dados e, sendo aprovado, você já pode fazer seu
+                  primeiro pedido e começar a vender.
                 </p>
               </div>
             </div>
@@ -982,12 +1118,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -1000,12 +1141,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Aceitamos diversas formas de pagamento: cartão de crédito (até 6x), PIX com desconto, boleto bancário e transferência. Para parceiros antigos, oferecemos também condições especiais de prazo para pagamento.
+                  Aceitamos diversas formas de pagamento: cartão de crédito (até
+                  6x), PIX com desconto, boleto bancário e transferência. Para
+                  parceiros antigos, oferecemos também condições especiais de
+                  prazo para pagamento.
                 </p>
               </div>
             </div>
@@ -1015,12 +1167,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -1033,12 +1190,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Sim! Atendemos todo o território nacional. Temos parcerias com as principais transportadoras para garantir entregas rápidas e seguras. Os prazos variam de acordo com a região, mas sempre buscamos a melhor opção custo-benefício.
+                  Sim! Atendemos todo o território nacional. Temos parcerias com
+                  as principais transportadoras para garantir entregas rápidas e
+                  seguras. Os prazos variam de acordo com a região, mas sempre
+                  buscamos a melhor opção custo-benefício.
                 </p>
               </div>
             </div>
@@ -1048,12 +1216,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -1066,12 +1239,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Oferecemos suporte completo: equipe comercial dedicada, materiais de divulgação, fotos profissionais dos produtos, orientações de vendas e marketing digital. Nosso objetivo é o seu sucesso como parceiro ECKO.
+                  Oferecemos suporte completo: equipe comercial dedicada,
+                  materiais de divulgação, fotos profissionais dos produtos,
+                  orientações de vendas e marketing digital. Nosso objetivo é o
+                  seu sucesso como parceiro ECKO.
                 </p>
               </div>
             </div>
@@ -1087,8 +1271,8 @@ export default function Index() {
             </p>
             <button
               onClick={() => {
-                document.getElementById('benefits')?.scrollIntoView({
-                  behavior: 'smooth'
+                document.getElementById("benefits")?.scrollIntoView({
+                  behavior: "smooth",
                 });
               }}
               className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
@@ -1108,7 +1292,8 @@ export default function Index() {
               NOSSA <span className="text-red-600">COLEÇÃO</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Conheça alguns dos produtos que você poderá revender com a marca mais desejada do streetwear
+              Conheça alguns dos produtos que você poderá revender com a marca
+              mais desejada do streetwear
             </p>
           </div>
 
@@ -1123,7 +1308,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Camiseta ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Camiseta ECKO
+                </h3>
                 <p className="text-xs">Streetwear Autêntico</p>
               </div>
             </div>
@@ -1137,7 +1324,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Moletom ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Moletom ECKO
+                </h3>
                 <p className="text-xs">Conforto e Estilo</p>
               </div>
             </div>
@@ -1151,7 +1340,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Boné ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Boné ECKO
+                </h3>
                 <p className="text-xs">Acessório Essencial</p>
               </div>
             </div>
@@ -1165,7 +1356,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Calça ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Calça ECKO
+                </h3>
                 <p className="text-xs">Estilo Urbano</p>
               </div>
             </div>
@@ -1179,7 +1372,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Jaqueta ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Jaqueta ECKO
+                </h3>
                 <p className="text-xs">Proteção com Estilo</p>
               </div>
             </div>
@@ -1193,7 +1388,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Tênis ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Tênis ECKO
+                </h3>
                 <p className="text-xs">Performance Urbana</p>
               </div>
             </div>
@@ -1207,7 +1404,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Mochila ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Mochila ECKO
+                </h3>
                 <p className="text-xs">Funcionalidade</p>
               </div>
             </div>
@@ -1221,7 +1420,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Short ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Short ECKO
+                </h3>
                 <p className="text-xs">Verão Urbano</p>
               </div>
             </div>
@@ -1235,7 +1436,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Regata ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Regata ECKO
+                </h3>
                 <p className="text-xs">Leveza e Estilo</p>
               </div>
             </div>
@@ -1249,7 +1452,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Casaco ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Casaco ECKO
+                </h3>
                 <p className="text-xs">Inverno Estiloso</p>
               </div>
             </div>
@@ -1263,7 +1468,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Bermuda ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Bermuda ECKO
+                </h3>
                 <p className="text-xs">Casual Premium</p>
               </div>
             </div>
@@ -1277,7 +1484,9 @@ export default function Index() {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <h3 className="font-display font-bold text-sm uppercase">Chinelo ECKO</h3>
+                <h3 className="font-display font-bold text-sm uppercase">
+                  Chinelo ECKO
+                </h3>
                 <p className="text-xs">Conforto Total</p>
               </div>
             </div>
@@ -1293,8 +1502,8 @@ export default function Index() {
             </p>
             <button
               onClick={() => {
-                document.getElementById('benefits')?.scrollIntoView({
-                  behavior: 'smooth'
+                document.getElementById("benefits")?.scrollIntoView({
+                  behavior: "smooth",
                 });
               }}
               className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
@@ -1309,7 +1518,6 @@ export default function Index() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
             {/* Left Column - Text Content */}
             <div className="space-y-6">
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wider">
@@ -1317,17 +1525,32 @@ export default function Index() {
               </h2>
 
               <p className="text-lg text-gray-600 leading-relaxed">
-                Visite nosso showroom e conheça de perto toda a qualidade e diversidade
-                dos produtos ECKO. Um espaço moderno e inspirador onde você pode
-                vivenciar o universo da marca.
+                Visite nosso showroom e conheça de perto toda a qualidade e
+                diversidade dos produtos ECKO. Um espaço moderno e inspirador
+                onde você pode vivenciar o universo da marca.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -1342,8 +1565,18 @@ export default function Index() {
 
                 <div className="flex items-start gap-4">
                   <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -1351,7 +1584,8 @@ export default function Index() {
                       HORÁRIO DE FUNCIONAMENTO
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Segunda a Sexta: 9h às 18h<br />
+                      Segunda a Sexta: 9h às 18h
+                      <br />
                       Sábado: 9h às 14h
                     </p>
                   </div>
@@ -1359,8 +1593,18 @@ export default function Index() {
 
                 <div className="flex items-start gap-4">
                   <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -1368,15 +1612,26 @@ export default function Index() {
                       ATENDIMENTO ESPECIALIZADO
                     </h4>
                     <p className="text-gray-600 text-sm">
-                      Equipe preparada para orientar sobre produtos e condições de parceria
+                      Equipe preparada para orientar sobre produtos e condições
+                      de parceria
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
                   <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <svg
+                      className="w-4 h-4 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -1393,8 +1648,8 @@ export default function Index() {
               <div className="pt-6">
                 <button
                   onClick={() => {
-                    document.getElementById('benefits')?.scrollIntoView({
-                      behavior: 'smooth'
+                    document.getElementById("benefits")?.scrollIntoView({
+                      behavior: "smooth",
                     });
                   }}
                   className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
@@ -1407,7 +1662,10 @@ export default function Index() {
             {/* Right Column - Image Slider */}
             <div className="relative">
               <div className="overflow-hidden rounded-lg shadow-lg">
-                <div id="showroom-slider" className="flex transition-transform duration-500 ease-in-out">
+                <div
+                  id="showroom-slider"
+                  className="flex transition-transform duration-500 ease-in-out"
+                >
                   {/* Slide 1 */}
                   <div className="w-full flex-shrink-0">
                     <img
@@ -1416,8 +1674,12 @@ export default function Index() {
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
-                      <h3 className="font-display font-bold text-sm uppercase">Fachada do Showroom</h3>
-                      <p className="text-xs opacity-90">Design moderno no coração de São Paulo</p>
+                      <h3 className="font-display font-bold text-sm uppercase">
+                        Fachada do Showroom
+                      </h3>
+                      <p className="text-xs opacity-90">
+                        Design moderno no coração de São Paulo
+                      </p>
                     </div>
                   </div>
 
@@ -1429,8 +1691,12 @@ export default function Index() {
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
-                      <h3 className="font-display font-bold text-sm uppercase">Espaço Interno</h3>
-                      <p className="text-xs opacity-90">Ambiente amplo e organizado para melhor experiência</p>
+                      <h3 className="font-display font-bold text-sm uppercase">
+                        Espaço Interno
+                      </h3>
+                      <p className="text-xs opacity-90">
+                        Ambiente amplo e organizado para melhor experiência
+                      </p>
                     </div>
                   </div>
 
@@ -1442,8 +1708,12 @@ export default function Index() {
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
-                      <h3 className="font-display font-bold text-sm uppercase">Exposição de Produtos</h3>
-                      <p className="text-xs opacity-90">Toda coleção disponível para análise</p>
+                      <h3 className="font-display font-bold text-sm uppercase">
+                        Exposição de Produtos
+                      </h3>
+                      <p className="text-xs opacity-90">
+                        Toda coleção disponível para análise
+                      </p>
                     </div>
                   </div>
 
@@ -1455,8 +1725,12 @@ export default function Index() {
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
-                      <h3 className="font-display font-bold text-sm uppercase">Área de Atendimento</h3>
-                      <p className="text-xs opacity-90">Consultoria especializada para parceiros</p>
+                      <h3 className="font-display font-bold text-sm uppercase">
+                        Área de Atendimento
+                      </h3>
+                      <p className="text-xs opacity-90">
+                        Consultoria especializada para parceiros
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1468,25 +1742,40 @@ export default function Index() {
                   id="showroom-prev"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
-                    const slider = document.getElementById('showroom-slider');
-                    const currentTransform = slider?.style.transform || 'translateX(0%)';
-                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
-                    const newValue = currentValue >= 0 ? -300 : currentValue + 100;
-                    if (slider) slider.style.transform = `translateX(${newValue}%)`;
+                    const slider = document.getElementById("showroom-slider");
+                    const currentTransform =
+                      slider?.style.transform || "translateX(0%)";
+                    const currentValue = parseInt(
+                      currentTransform.match(/-?\d+/) || ["0"],
+                    );
+                    const newValue =
+                      currentValue >= 0 ? -300 : currentValue + 100;
+                    if (slider)
+                      slider.style.transform = `translateX(${newValue}%)`;
 
                     // Update dots
-                    const dots = document.querySelectorAll('.showroom-dot');
-                    dots.forEach(dot => dot.classList.remove('bg-red-600'));
-                    dots.forEach(dot => dot.classList.add('bg-gray-300'));
+                    const dots = document.querySelectorAll(".showroom-dot");
+                    dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                    dots.forEach((dot) => dot.classList.add("bg-gray-300"));
                     const activeIndex = Math.abs(newValue / 100);
                     if (dots[activeIndex]) {
-                      dots[activeIndex].classList.remove('bg-gray-300');
-                      dots[activeIndex].classList.add('bg-red-600');
+                      dots[activeIndex].classList.remove("bg-gray-300");
+                      dots[activeIndex].classList.add("bg-red-600");
                     }
                   }}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
                   </svg>
                 </button>
 
@@ -1495,53 +1784,53 @@ export default function Index() {
                   <button
                     className="w-3 h-3 rounded-full bg-red-600 showroom-dot"
                     onClick={() => {
-                      const slider = document.getElementById('showroom-slider');
-                      if (slider) slider.style.transform = 'translateX(0%)';
+                      const slider = document.getElementById("showroom-slider");
+                      if (slider) slider.style.transform = "translateX(0%)";
 
-                      const dots = document.querySelectorAll('.showroom-dot');
-                      dots.forEach(dot => dot.classList.remove('bg-red-600'));
-                      dots.forEach(dot => dot.classList.add('bg-gray-300'));
-                      dots[0].classList.remove('bg-gray-300');
-                      dots[0].classList.add('bg-red-600');
+                      const dots = document.querySelectorAll(".showroom-dot");
+                      dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                      dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                      dots[0].classList.remove("bg-gray-300");
+                      dots[0].classList.add("bg-red-600");
                     }}
                   ></button>
                   <button
                     className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
                     onClick={() => {
-                      const slider = document.getElementById('showroom-slider');
-                      if (slider) slider.style.transform = 'translateX(-100%)';
+                      const slider = document.getElementById("showroom-slider");
+                      if (slider) slider.style.transform = "translateX(-100%)";
 
-                      const dots = document.querySelectorAll('.showroom-dot');
-                      dots.forEach(dot => dot.classList.remove('bg-red-600'));
-                      dots.forEach(dot => dot.classList.add('bg-gray-300'));
-                      dots[1].classList.remove('bg-gray-300');
-                      dots[1].classList.add('bg-red-600');
+                      const dots = document.querySelectorAll(".showroom-dot");
+                      dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                      dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                      dots[1].classList.remove("bg-gray-300");
+                      dots[1].classList.add("bg-red-600");
                     }}
                   ></button>
                   <button
                     className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
                     onClick={() => {
-                      const slider = document.getElementById('showroom-slider');
-                      if (slider) slider.style.transform = 'translateX(-200%)';
+                      const slider = document.getElementById("showroom-slider");
+                      if (slider) slider.style.transform = "translateX(-200%)";
 
-                      const dots = document.querySelectorAll('.showroom-dot');
-                      dots.forEach(dot => dot.classList.remove('bg-red-600'));
-                      dots.forEach(dot => dot.classList.add('bg-gray-300'));
-                      dots[2].classList.remove('bg-gray-300');
-                      dots[2].classList.add('bg-red-600');
+                      const dots = document.querySelectorAll(".showroom-dot");
+                      dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                      dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                      dots[2].classList.remove("bg-gray-300");
+                      dots[2].classList.add("bg-red-600");
                     }}
                   ></button>
                   <button
                     className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
                     onClick={() => {
-                      const slider = document.getElementById('showroom-slider');
-                      if (slider) slider.style.transform = 'translateX(-300%)';
+                      const slider = document.getElementById("showroom-slider");
+                      if (slider) slider.style.transform = "translateX(-300%)";
 
-                      const dots = document.querySelectorAll('.showroom-dot');
-                      dots.forEach(dot => dot.classList.remove('bg-red-600'));
-                      dots.forEach(dot => dot.classList.add('bg-gray-300'));
-                      dots[3].classList.remove('bg-gray-300');
-                      dots[3].classList.add('bg-red-600');
+                      const dots = document.querySelectorAll(".showroom-dot");
+                      dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                      dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                      dots[3].classList.remove("bg-gray-300");
+                      dots[3].classList.add("bg-red-600");
                     }}
                   ></button>
                 </div>
@@ -1550,30 +1839,44 @@ export default function Index() {
                   id="showroom-next"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
-                    const slider = document.getElementById('showroom-slider');
-                    const currentTransform = slider?.style.transform || 'translateX(0%)';
-                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
-                    const newValue = currentValue <= -300 ? 0 : currentValue - 100;
-                    if (slider) slider.style.transform = `translateX(${newValue}%)`;
+                    const slider = document.getElementById("showroom-slider");
+                    const currentTransform =
+                      slider?.style.transform || "translateX(0%)";
+                    const currentValue = parseInt(
+                      currentTransform.match(/-?\d+/) || ["0"],
+                    );
+                    const newValue =
+                      currentValue <= -300 ? 0 : currentValue - 100;
+                    if (slider)
+                      slider.style.transform = `translateX(${newValue}%)`;
 
                     // Update dots
-                    const dots = document.querySelectorAll('.showroom-dot');
-                    dots.forEach(dot => dot.classList.remove('bg-red-600'));
-                    dots.forEach(dot => dot.classList.add('bg-gray-300'));
+                    const dots = document.querySelectorAll(".showroom-dot");
+                    dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                    dots.forEach((dot) => dot.classList.add("bg-gray-300"));
                     const activeIndex = Math.abs(newValue / 100);
                     if (dots[activeIndex]) {
-                      dots[activeIndex].classList.remove('bg-gray-300');
-                      dots[activeIndex].classList.add('bg-red-600');
+                      dots[activeIndex].classList.remove("bg-gray-300");
+                      dots[activeIndex].classList.add("bg-red-600");
                     }
                   }}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </button>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -1582,19 +1885,24 @@ export default function Index() {
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-
             {/* Logo and About */}
             <div className="space-y-4">
               <div className="bg-red-600 p-3 rounded-lg inline-block">
-                <div className="font-display font-bold text-xl tracking-wider">ECKO</div>
+                <div className="font-display font-bold text-xl tracking-wider">
+                  ECKO
+                </div>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                20 anos de tradição no streetwear brasileiro.
-                A marca que transforma paixão em negócio lucrativo.
+                20 anos de tradição no streetwear brasileiro. A marca que
+                transforma paixão em negócio lucrativo.
               </p>
               <div className="space-y-2">
-                <p className="text-xs text-gray-400">CNPJ: 12.345.678/0001-99</p>
-                <p className="text-xs text-gray-400">Registro ECKO Brasil © 2024</p>
+                <p className="text-xs text-gray-400">
+                  CNPJ: 12.345.678/0001-99
+                </p>
+                <p className="text-xs text-gray-400">
+                  Registro ECKO Brasil © 2024
+                </p>
               </div>
             </div>
 
@@ -1610,7 +1918,9 @@ export default function Index() {
                     className="text-gray-300 text-sm hover:text-red-400 transition-colors duration-200"
                     onClick={(e) => {
                       e.preventDefault();
-                      document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
+                      document
+                        .getElementById("benefits")
+                        ?.scrollIntoView({ behavior: "smooth" });
                     }}
                   >
                     Benefícios
@@ -1650,26 +1960,63 @@ export default function Index() {
               </h4>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <svg className="w-4 h-4 text-red-400 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <svg
+                    className="w-4 h-4 text-red-400 mt-1 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
                   </svg>
                   <div>
                     <p className="text-gray-300 text-sm">Rua Augusta, 1000</p>
-                    <p className="text-gray-300 text-sm">Consolação - São Paulo/SP</p>
+                    <p className="text-gray-300 text-sm">
+                      Consolação - São Paulo/SP
+                    </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  <svg
+                    className="w-4 h-4 text-red-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
                   </svg>
                   <p className="text-gray-300 text-sm">(11) 3456-7890</p>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <svg className="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-4 h-4 text-red-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                   <p className="text-gray-300 text-sm">contato@ecko.com.br</p>
                 </div>
@@ -1689,8 +2036,12 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-red-600 p-3 rounded-full transition-colors duration-300"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.624 5.367 11.99 11.988 11.99s11.988-5.366 11.988-11.99C24.005 5.367 18.641.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.33-1.297A4.821 4.821 0 013.822 12.4c0-1.297.49-2.448 1.297-3.33A4.821 4.821 0 018.45 7.773c1.297 0 2.448.49 3.33 1.297A4.821 4.821 0 0113.077 12.4c0 1.297-.49 2.448-1.297 3.33-.882.808-2.033 1.258-3.33 1.258zm7.598 0c-1.297 0-2.448-.49-3.33-1.297A4.821 4.821 0 0111.42 12.4c0-1.297.49-2.448 1.297-3.33A4.821 4.821 0 0116.047 7.773c1.297 0 2.448.49 3.33 1.297A4.821 4.821 0 0120.674 12.4c0 1.297-.49 2.448-1.297 3.33-.882.808-2.033 1.258-3.33 1.258z"/>
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.624 5.367 11.99 11.988 11.99s11.988-5.366 11.988-11.99C24.005 5.367 18.641.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.33-1.297A4.821 4.821 0 013.822 12.4c0-1.297.49-2.448 1.297-3.33A4.821 4.821 0 018.45 7.773c1.297 0 2.448.49 3.33 1.297A4.821 4.821 0 0113.077 12.4c0 1.297-.49 2.448-1.297 3.33-.882.808-2.033 1.258-3.33 1.258zm7.598 0c-1.297 0-2.448-.49-3.33-1.297A4.821 4.821 0 0111.42 12.4c0-1.297.49-2.448 1.297-3.33A4.821 4.821 0 0116.047 7.773c1.297 0 2.448.49 3.33 1.297A4.821 4.821 0 0120.674 12.4c0 1.297-.49 2.448-1.297 3.33-.882.808-2.033 1.258-3.33 1.258z" />
                   </svg>
                 </a>
 
@@ -1701,8 +2052,12 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-red-600 p-3 rounded-full transition-colors duration-300"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                   </svg>
                 </a>
 
@@ -1713,8 +2068,12 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-green-600 p-3 rounded-full transition-colors duration-300"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
                   </svg>
                 </a>
 
@@ -1725,17 +2084,22 @@ export default function Index() {
                   rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-red-600 p-3 rounded-full transition-colors duration-300"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                   </svg>
                 </a>
               </div>
 
               <div className="pt-2">
-                <p className="text-xs text-gray-400">Nos siga para novidades e lançamentos</p>
+                <p className="text-xs text-gray-400">
+                  Nos siga para novidades e lançamentos
+                </p>
               </div>
             </div>
-
           </div>
 
           {/* Bottom Bar */}
@@ -1746,13 +2110,22 @@ export default function Index() {
               </div>
 
               <div className="flex space-x-6">
-                <a href="#" className="text-xs text-gray-400 hover:text-white transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-xs text-gray-400 hover:text-white transition-colors duration-200"
+                >
                   Política de Privacidade
                 </a>
-                <a href="#" className="text-xs text-gray-400 hover:text-white transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-xs text-gray-400 hover:text-white transition-colors duration-200"
+                >
                   Termos de Uso
                 </a>
-                <a href="#" className="text-xs text-gray-400 hover:text-white transition-colors duration-200">
+                <a
+                  href="#"
+                  className="text-xs text-gray-400 hover:text-white transition-colors duration-200"
+                >
                   Contrato de Parceria
                 </a>
               </div>
