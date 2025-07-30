@@ -60,9 +60,11 @@ router.post('/init-database', async (req: Request, res: Response) => {
       if (statement.trim()) {
         try {
           console.log(`  Executing schema statement ${i + 1}...`);
-          await executeQuery(statement);
+          // Use DDL function for CREATE TABLE and other schema commands
+          await executeDDL(statement);
         } catch (error) {
           console.error(`  ❌ Failed to execute schema statement ${i + 1}:`, error);
+          console.error(`  Statement was: ${statement.substring(0, 100)}...`);
           throw error;
         }
       }
