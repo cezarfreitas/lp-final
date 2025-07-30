@@ -53,8 +53,8 @@ export default function Index() {
             {/* CTA Button */}
             <button
               onClick={() => {
-                document.getElementById("benefits")?.scrollIntoView({
-                  behavior: "smooth",
+                document.getElementById('benefits')?.scrollIntoView({
+                  behavior: 'smooth'
                 });
               }}
               className="font-display border-2 border-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold hover:bg-red-600 active:bg-red-700 transition-colors duration-300 flex items-center justify-center gap-2 mx-auto tracking-wide uppercase w-full max-w-xs sm:w-auto"
@@ -81,8 +81,8 @@ export default function Index() {
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
             <button
               onClick={() => {
-                document.getElementById("benefits")?.scrollIntoView({
-                  behavior: "smooth",
+                document.getElementById('benefits')?.scrollIntoView({
+                  behavior: 'smooth'
                 });
               }}
               className="animate-bounce text-white hover:text-red-400 transition-colors duration-300"
@@ -291,6 +291,189 @@ export default function Index() {
             <button className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide">
               QUERO SER PARCEIRO AGORA
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            {/* Left Column - Text Content */}
+            <div className="space-y-6">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wider">
+                COMECE SUA <span className="text-red-600">JORNADA</span> HOJE
+              </h2>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Transforme sua paixão pelo streetwear em uma fonte de renda consistente.
+                Nossa equipe está pronta para te ajudar a dar os primeiros passos no mundo
+                da revenda autorizada ECKO.
+              </p>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                      PROCESSO SIMPLES
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Cadastro rápido e aprovação em até 24 horas
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                      SEM TAXAS INICIAIS
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Comece sem investimento inicial ou taxas de adesão
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                      SUPORTE DEDICADO
+                    </h4>
+                    <p className="text-gray-600 text-sm">
+                      Equipe especializada para te acompanhar em cada etapa
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Contact Form */}
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="mb-6">
+                <h3 className="font-display text-2xl font-bold text-gray-900 uppercase tracking-wider mb-2">
+                  SOLICITE SEU ACESSO
+                </h3>
+                <p className="text-gray-600">
+                  Preencha o formulário e nossa equipe entrará em contato
+                </p>
+              </div>
+
+              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Nome Completo *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
+                    placeholder="Seu nome completo"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    E-mail *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
+                    placeholder="seu@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    WhatsApp *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
+                    placeholder="(11) 99999-9999"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="city" className="block text-sm font-medium text-gray-700 mb-2">
+                    Cidade/Estado *
+                  </label>
+                  <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
+                    placeholder="São Paulo/SP"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="experience" className="block text-sm font-medium text-gray-700 mb-2">
+                    Experiência com Vendas
+                  </label>
+                  <select
+                    id="experience"
+                    name="experience"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
+                  >
+                    <option value="">Selecione uma opção</option>
+                    <option value="iniciante">Iniciante - Primeira vez vendendo</option>
+                    <option value="intermediario">Intermediário - 1 a 3 anos</option>
+                    <option value="avancado">Avançado - Mais de 3 anos</option>
+                    <option value="profissional">Profissional - Tenho loja física</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Como conheceu a ECKO?
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={3}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors resize-none"
+                    placeholder="Conte-nos como chegou até aqui..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full font-display bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
+                >
+                  QUERO SER PARCEIRO AGORA
+                </button>
+
+                <p className="text-xs text-gray-500 text-center">
+                  Ao enviar, você concorda em receber contato da nossa equipe
+                </p>
+              </form>
+            </div>
+
           </div>
         </div>
       </section>
