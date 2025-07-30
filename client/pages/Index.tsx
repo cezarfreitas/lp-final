@@ -490,6 +490,28 @@ export default function Index() {
                   </div>
                 </div>
 
+                {/* Mensagem para consumidores */}
+                <div id="consumer-message" style={{ display: 'none' }} className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                  <div className="text-center space-y-4">
+                    <h4 className="font-display text-lg font-bold text-gray-900 uppercase tracking-wide">
+                      ⚠️ CANAL EXCLUSIVO B2B
+                    </h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      Infelizmente este canal é só por <strong>atacado</strong>, mas caso queira receber um <strong className="text-red-600">cupom de 10% de desconto</strong> no site oficial da ECKO, clique em enviar que te mando agora!
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        // Aqui você pode adicionar a lógica para enviar o cupom
+                        alert('Cupom enviado! Verifique seu WhatsApp em alguns minutos.');
+                      }}
+                      className="font-display bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 text-sm font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
+                    >
+                      QUERO O CUPOM DE 10%
+                    </button>
+                  </div>
+                </div>
+
                 <button
                   type="submit"
                   className="w-full font-display bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
