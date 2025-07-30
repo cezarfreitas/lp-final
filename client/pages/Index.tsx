@@ -87,7 +87,7 @@ export default function Index() {
           </div>
 
           {/* Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {/* Benefit 1 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
               <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-red-700 transition-colors">
