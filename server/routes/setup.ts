@@ -127,7 +127,7 @@ router.post('/init-database', async (req: Request, res: Response) => {
 router.get('/status', async (req: Request, res: Response) => {
   try {
     // Check if tables exist
-    const tables = await executeQuery("SHOW TABLES");
+    const tables = await executeDDL("SHOW TABLES");
     
     // Count records in main tables
     const counts = {};
