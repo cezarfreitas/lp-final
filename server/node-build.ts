@@ -11,8 +11,25 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const distPath = path.join(__dirname, "../spa");
 
-// Serve static files
-app.use(express.static(distPath));
+// Serve static files with optimized caching
+app.use(express.static(distPath, {
+  maxAge: '1y', // Cache static assets for 1 year
+  etag: true,
+  lastModified: true,
+  setHeaders: (res, path) => {
+    // Different cache strategies for different file types
+    if (path.endsWith('.html')) {
+      // HTML files should be revalidated frequently
+      res.setHeader('Cache-Control', 'public, max-age=0, s-maxage=86400, must-revalidate');
+    } else if (path.match(/\.(js|css)$/)) {
+      // JS/CSS files with hash in filename can be cached longer
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    } else if (path.match(/\.(jpg|jpeg|png|gif|ico|svg|webp)$/)) {
+      // Images can be cached for a long time
+      res.setHeader('Cache-Control', 'public, max-age=31536000');
+    }
+  }
+}));
 
 // Handle React Router - serve index.html for all non-API routes
 app.get("*", (req, res) => {
