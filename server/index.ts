@@ -1,23 +1,44 @@
-import "dotenv/config";
+import path from "path";
 import express from "express";
 import cors from "cors";
-import { handleDemo } from "./routes/demo";
+import { fileURLToPath } from "url";
+import compression from "compression";
+import { initializeDatabase } from "./lib/database.js";
+import adminRoutes from "./routes/admin.js";
 
-export function createServer() {
-  const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-  // Middleware
-  app.use(cors());
-  app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-  // Example API routes
-  app.get("/api/ping", (_req, res) => {
-    const ping = process.env.PING_MESSAGE ?? "ping";
-    res.json({ message: ping });
-  });
+// Initialize database
+initializeDatabase().catch(console.error);
 
-  app.get("/api/demo", handleDemo);
+// Middleware
+app.use(compression());
+app.use(cors());
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-  return app;
-}
+// Serve static files
+app.use(express.static(path.join(__dirname, '../dist/client')));
+app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
+
+// Admin API routes
+app.use('/api/admin', adminRoutes);
+
+// Serve React app for all other routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/client/index.html'));
+});
+
+// Error handling middleware
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  console.error('Server error:', err);
+  res.status(500).json({ error: 'Internal server error' });
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
