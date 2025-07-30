@@ -29,6 +29,9 @@ app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 // Admin API routes
 app.use('/api/admin', adminRoutes);
 
+// Setup routes
+app.use('/api/setup', setupRoutes);
+
 // Serve React app for all other routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../dist/client/index.html'));
