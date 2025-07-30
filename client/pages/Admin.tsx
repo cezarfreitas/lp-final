@@ -361,7 +361,7 @@ export default function Admin() {
             </div>
 
             {/* Bottom Actions */}
-            <div className="mt-8 pt-6 border-t border-slate-700">
+            <div className="mt-8 pt-6 sidebar-bottom">
               <div className="space-y-3">
                 <a
                   href="/"
