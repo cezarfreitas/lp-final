@@ -307,9 +307,9 @@ export default function Admin() {
                 <div key={tab.id} className="relative group">
                   <button
                     onClick={() => setActiveTab(tab.id)}
-                    className={`w-full text-left px-4 py-3 rounded-xl flex items-center space-x-3 transition-all duration-200 relative overflow-hidden ${
+                    className={`w-full text-left px-4 py-3 rounded-xl flex items-center space-x-3 transition-all duration-200 relative overflow-hidden sidebar-button-hover ${
                       activeTab === tab.id
-                        ? 'bg-gradient-to-r from-red-500/20 to-red-600/20 text-white border border-red-500/30 shadow-lg shadow-red-500/10'
+                        ? 'bg-gradient-to-r from-red-500/20 to-red-600/20 text-white border border-red-500/30 sidebar-active-glow'
                         : 'text-slate-300 hover:bg-slate-700/50 hover:text-white'
                     }`}
                   >
