@@ -256,36 +256,16 @@ export default function Admin() {
               </h1>
             </div>
             
-            {/* Save Status */}
             <div className="flex items-center space-x-4">
-              {saveStatus === 'saving' && (
-                <div className="flex items-center text-blue-600">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2"></div>
-                  Salvando...
-                </div>
-              )}
-              {saveStatus === 'success' && (
-                <div className="flex items-center text-green-600">
-                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Salvo com sucesso!
-                </div>
-              )}
-              {saveStatus === 'error' && (
-                <div className="flex items-center text-red-600">
-                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                  </svg>
-                  Erro ao salvar
-                </div>
-              )}
-              <a 
-                href="/" 
-                target="_blank" 
-                className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
+              <a
+                href="/"
+                target="_blank"
+                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors flex items-center space-x-2"
               >
-                Ver Site 🔗
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span>Ver Site</span>
               </a>
             </div>
           </div>
@@ -409,8 +389,50 @@ export default function Admin() {
         </nav>
 
         {/* Main Content */}
-        <main className="flex-1 p-8">
-          <div className="max-w-4xl mx-auto">
+        <main className="flex-1 bg-gray-50 min-h-screen">
+          <div className="p-8">
+            {/* Page Header */}
+            <div className="mb-8">
+              <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                      {tabs.find(tab => tab.id === activeTab)?.label}
+                    </h2>
+                    <p className="text-gray-600">
+                      {tabs.find(tab => tab.id === activeTab)?.description}
+                    </p>
+                  </div>
+
+                  <div className="flex items-center space-x-3">
+                    {saveStatus === 'saving' && (
+                      <div className="flex items-center text-blue-600 bg-blue-50 px-3 py-2 rounded-lg">
+                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2"></div>
+                        <span className="text-sm font-medium">Salvando...</span>
+                      </div>
+                    )}
+                    {saveStatus === 'success' && (
+                      <div className="flex items-center text-green-600 bg-green-50 px-3 py-2 rounded-lg">
+                        <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-sm font-medium">Salvo com sucesso!</span>
+                      </div>
+                    )}
+                    {saveStatus === 'error' && (
+                      <div className="flex items-center text-red-600 bg-red-50 px-3 py-2 rounded-lg">
+                        <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-sm font-medium">Erro ao salvar</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
             {activeTab === 'hero' && (
               <AdminHero 
                 data={data.hero} 
@@ -465,6 +487,7 @@ export default function Admin() {
                 onSave={handleSave}
               />
             )}
+            </div>
           </div>
         </main>
       </div>
