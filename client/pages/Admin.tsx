@@ -344,7 +344,7 @@ export default function Admin() {
                         </span>
                       </div>
 
-                      <p className={`text-xs mt-1 truncate ${
+                      <p className={`text-xs mt-1 truncate sidebar-description ${
                         activeTab === tab.id ? 'text-slate-300' : 'text-slate-500'
                       }`}>
                         {tab.description}
