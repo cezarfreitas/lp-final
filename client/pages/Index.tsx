@@ -512,12 +512,14 @@ export default function Index() {
                   </div>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full font-display bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
-                >
-                  QUERO SER PARCEIRO AGORA
-                </button>
+                <div id="submit-button" style={{ display: 'none' }}>
+                  <button
+                    type="submit"
+                    className="w-full font-display bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
+                  >
+                    QUERO SER PARCEIRO AGORA
+                  </button>
+                </div>
 
                 <p className="text-xs text-gray-500 text-center">
                   Ao enviar, você concorda em receber contato da nossa equipe
