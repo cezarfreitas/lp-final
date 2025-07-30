@@ -434,8 +434,10 @@ export default function Index() {
                         className="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-600"
                         onChange={(e) => {
                           const extraFields = document.getElementById('extra-fields');
-                          if (extraFields && e.target.checked) {
-                            extraFields.style.display = 'none';
+                          const consumerMessage = document.getElementById('consumer-message');
+                          if (e.target.checked) {
+                            if (extraFields) extraFields.style.display = 'none';
+                            if (consumerMessage) consumerMessage.style.display = 'block';
                           }
                         }}
                       />
