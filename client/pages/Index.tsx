@@ -37,11 +37,11 @@ export default function Index() {
 
             {/* Main Title */}
             <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight tracking-wider uppercase">
-              SEJA PARCEIRO
+              SEJA UM LOJISTA
               <br />
               OFICIAL <span className="text-red-600">ECKO</span> E TENHA
               <br />
-              SUCESSO
+              SUCESSO NO STREETWEAR
             </h1>
 
             {/* Description */}
@@ -242,10 +242,10 @@ export default function Index() {
             <div className="lg:order-2 order-1 col-span-2 lg:col-span-1">
               <div className="relative group">
                 <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
-                  alt="Parceiro ECKO Bem-sucedido"
-                  className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
-                />
+                src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                alt="Lojista ECKO oficial bem-sucedido vendendo streetwear brasileiro com margem alta e suporte completo"
+                className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+              />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-lg" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <h3 className="font-display font-bold text-lg uppercase tracking-wider mb-2">
@@ -283,8 +283,8 @@ export default function Index() {
             {/* Left Column - Text Content */}
             <div className="space-y-6">
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wider">
-                COMECE SUA <span className="text-red-600">JORNADA</span> HOJE
-              </h2>
+              COMO SE TORNAR UM <span className="text-red-600">LOJISTA OFICIAL</span> ECKO
+            </h2>
 
               <p className="text-lg text-gray-600 leading-relaxed">
                 Transforme sua paixão pelo streetwear em uma fonte de renda
@@ -377,7 +377,7 @@ export default function Index() {
             <div className="bg-white rounded-lg shadow-lg p-8">
               <div className="mb-6">
                 <h3 className="font-display text-2xl font-bold text-gray-900 uppercase tracking-wider mb-2">
-                  SOLICITE SEU ACESSO
+                  CADASTRO LOJISTA OFICIAL ECKO
                 </h3>
                 <p className="text-gray-600">
                   Preencha o formulário e nossa equipe entrará em contato
@@ -1285,7 +1285,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Camiseta ECKO Streetwear"
+                alt="Camiseta ECKO streetwear para revenda oficial - lojista autorizado"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1301,7 +1301,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Moletom ECKO Premium"
+                alt="Moletom ECKO premium para lojistas oficiais - atacado streetwear"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1317,7 +1317,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Boné ECKO Original"
+                alt="Boné ECKO original para revenda autorizada - acessório streetwear"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1333,7 +1333,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Calça ECKO Style"
+                alt="Calça ECKO style para lojistas oficiais - atacado moda urbana"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1349,7 +1349,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Jaqueta ECKO Premium"
+                alt="Jaqueta ECKO premium para revendedores autorizados - streetwear brasileiro"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1365,7 +1365,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Tênis ECKO Collection"
+                alt="Tênis ECKO collection para lojistas oficiais - calçado streetwear"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1381,7 +1381,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Mochila ECKO Urban"
+                alt="Mochila ECKO urban para revenda autorizada - acessório urbano"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1397,7 +1397,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Short ECKO Summer"
+                alt="Short ECKO summer para lojistas oficiais - moda praia streetwear"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1413,7 +1413,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Regata ECKO Sport"
+                alt="Regata ECKO sport para revendedores autorizados - roupa esportiva"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1429,7 +1429,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Casaco ECKO Winter"
+                alt="Casaco ECKO winter para lojistas oficiais - roupa inverno streetwear"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1445,7 +1445,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Bermuda ECKO Casual"
+                alt="Bermuda ECKO casual para revenda autorizada - moda masculina streetwear"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1461,7 +1461,7 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=400"
-                alt="Chinelo ECKO Comfort"
+                alt="Chinelo ECKO comfort para lojistas oficiais - calçado conforto"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -1536,7 +1536,7 @@ export default function Index() {
                   <div className="w-full flex-shrink-0">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
-                      alt="Showroom ECKO - Fachada"
+                      alt="Showroom ECKO fachada em São Paulo para lojistas oficiais visitarem"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
@@ -1553,7 +1553,7 @@ export default function Index() {
                   <div className="w-full flex-shrink-0">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
-                      alt="Showroom ECKO - Interior"
+                      alt="Interior do showroom ECKO com produtos para lojistas conhecerem"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
@@ -1570,7 +1570,7 @@ export default function Index() {
                   <div className="w-full flex-shrink-0">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
-                      alt="Showroom ECKO - Produtos"
+                      alt="Exposição de produtos ECKO no showroom para futuros lojistas oficiais"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
@@ -1587,7 +1587,7 @@ export default function Index() {
                   <div className="w-full flex-shrink-0">
                     <img
                       src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
-                      alt="Showroom ECKO - Atendimento"
+                      alt="Área de atendimento especializado para lojistas ECKO no showroom"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
                     <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
