@@ -116,9 +116,9 @@ export default function Index() {
 
             {/* Benefit 2 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-red-700 transition-colors">
+              <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-red-700 transition-colors">
                 <svg
-                  className="w-8 h-8 text-white"
+                  className="w-6 h-6 sm:w-8 sm:h-8 text-white"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -131,10 +131,10 @@ export default function Index() {
                   />
                 </svg>
               </div>
-              <h3 className="font-display text-xl font-bold text-gray-900 mb-3 uppercase tracking-wide">
+              <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase tracking-wide">
                 ENVIO NACIONAL
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                 Entregamos em todo Brasil com frete otimizado e prazos reduzidos
                 para seus clientes
               </p>
