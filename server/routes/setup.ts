@@ -45,23 +45,37 @@ router.post('/init-database', async (req: Request, res: Response) => {
       .map(stmt => stmt.trim())
       .filter(stmt => stmt.length > 0);
     
-    console.log('🔄 Creating database tables...');
-    for (const statement of schemaStatements) {
+    console.log(`🔄 Creating database tables... (${schemaStatements.length} statements)`);
+    for (let i = 0; i < schemaStatements.length; i++) {
+      const statement = schemaStatements[i];
       if (statement.trim()) {
-        await executeQuery(statement);
+        try {
+          console.log(`  Executing schema statement ${i + 1}...`);
+          await executeQuery(statement);
+        } catch (error) {
+          console.error(`  ❌ Failed to execute schema statement ${i + 1}:`, error);
+          throw error;
+        }
       }
     }
-    
+
     // Split and execute init statements
     const initStatements = initSQL
       .split(';')
       .map(stmt => stmt.trim())
       .filter(stmt => stmt.length > 0);
-    
-    console.log('🔄 Inserting initial data...');
-    for (const statement of initStatements) {
+
+    console.log(`🔄 Inserting initial data... (${initStatements.length} statements)`);
+    for (let i = 0; i < initStatements.length; i++) {
+      const statement = initStatements[i];
       if (statement.trim()) {
-        await executeQuery(statement);
+        try {
+          console.log(`  Executing init statement ${i + 1}...`);
+          await executeQuery(statement);
+        } catch (error) {
+          console.error(`  ❌ Failed to execute init statement ${i + 1}:`, error);
+          throw error;
+        }
       }
     }
     
