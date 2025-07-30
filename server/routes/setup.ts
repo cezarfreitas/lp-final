@@ -15,9 +15,29 @@ router.post('/init-database', async (req: Request, res: Response) => {
     // Read schema file
     const schemaPath = path.join(__dirname, '../../database/schema.sql');
     const initPath = path.join(__dirname, '../../database/init.sql');
-    
-    const schemaSQL = await fs.readFile(schemaPath, 'utf8');
-    const initSQL = await fs.readFile(initPath, 'utf8');
+
+    console.log('📂 Looking for SQL files at:');
+    console.log('  Schema:', schemaPath);
+    console.log('  Init:', initPath);
+
+    let schemaSQL: string;
+    let initSQL: string;
+
+    try {
+      schemaSQL = await fs.readFile(schemaPath, 'utf8');
+      console.log('✅ Schema file loaded successfully');
+    } catch (error) {
+      console.error('❌ Failed to read schema file:', error);
+      throw new Error(`Failed to read schema file: ${schemaPath}`);
+    }
+
+    try {
+      initSQL = await fs.readFile(initPath, 'utf8');
+      console.log('✅ Init file loaded successfully');
+    } catch (error) {
+      console.error('❌ Failed to read init file:', error);
+      throw new Error(`Failed to read init file: ${initPath}`);
+    }
     
     // Split and execute schema statements
     const schemaStatements = schemaSQL
