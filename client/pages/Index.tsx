@@ -634,20 +634,27 @@ export default function Index() {
                     <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       MARCOS SILVA
                     </h4>
-                    <p className="text-sm text-gray-600">São Paulo/SP - Lojista há 2 anos</p>
+                    <p className="text-sm text-gray-600">
+                      São Paulo/SP - Lojista há 2 anos
+                    </p>
                   </div>
                 </div>
                 <div className="mb-4">
                   <div className="flex text-yellow-400 mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      <svg
+                        key={i}
+                        className="w-4 h-4 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Comecei vendendo para amigos e hoje tenho uma loja online que fatura R$ 15mil por mês. A ECKO mudou minha vida!"
+                  "Comecei vendendo para amigos e hoje tenho uma loja online que
+                  fatura R$ 15mil por mês. A ECKO mudou minha vida!"
                 </p>
               </div>
 
@@ -661,20 +668,27 @@ export default function Index() {
                     <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       ANA COSTA
                     </h4>
-                    <p className="text-sm text-gray-600">Rio de Janeiro/RJ - Lojista há 3 anos</p>
+                    <p className="text-sm text-gray-600">
+                      Rio de Janeiro/RJ - Lojista há 3 anos
+                    </p>
                   </div>
                 </div>
                 <div className="mb-4">
                   <div className="flex text-yellow-400 mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      <svg
+                        key={i}
+                        className="w-4 h-4 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Tenho loja física e online. A qualidade dos produtos e o suporte da equipe são excepcionais. Recomendo!"
+                  "Tenho loja física e online. A qualidade dos produtos e o
+                  suporte da equipe são excepcionais. Recomendo!"
                 </p>
               </div>
 
@@ -688,20 +702,27 @@ export default function Index() {
                     <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       RAFAEL MENDES
                     </h4>
-                    <p className="text-sm text-gray-600">Belo Horizonte/MG - Lojista há 1 ano</p>
+                    <p className="text-sm text-gray-600">
+                      Belo Horizonte/MG - Lojista há 1 ano
+                    </p>
                   </div>
                 </div>
                 <div className="mb-4">
                   <div className="flex text-yellow-400 mb-2">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      <svg
+                        key={i}
+                        className="w-4 h-4 fill-current"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-700 italic">
-                  "Sempre quis empreender e com a ECKO consegui realizar esse sonho. Processo simples e lucrativo!"
+                  "Sempre quis empreender e com a ECKO consegui realizar esse
+                  sonho. Processo simples e lucrativo!"
                 </p>
               </div>
             </div>
@@ -709,7 +730,10 @@ export default function Index() {
             {/* Mobile Carousel */}
             <div className="lg:hidden">
               <div className="overflow-hidden">
-                <div id="testimonials-carousel" className="flex transition-transform duration-300 ease-in-out">
+                <div
+                  id="testimonials-carousel"
+                  className="flex transition-transform duration-300 ease-in-out"
+                >
                   {/* Testimonial 1 - Mobile */}
                   <div className="w-full flex-shrink-0 px-4">
                     <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
@@ -721,20 +745,28 @@ export default function Index() {
                           <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             MARCOS SILVA
                           </h4>
-                          <p className="text-xs text-gray-600">São Paulo/SP - Lojista há 2 anos</p>
+                          <p className="text-xs text-gray-600">
+                            São Paulo/SP - Lojista há 2 anos
+                          </p>
                         </div>
                       </div>
                       <div className="mb-4">
                         <div className="flex text-yellow-400 mb-2">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            <svg
+                              key={i}
+                              className="w-4 h-4 fill-current"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}
                         </div>
                       </div>
                       <p className="text-gray-700 italic text-sm">
-                        "Comecei vendendo para amigos e hoje tenho uma loja online que fatura R$ 15mil por mês. A ECKO mudou minha vida!"
+                        "Comecei vendendo para amigos e hoje tenho uma loja
+                        online que fatura R$ 15mil por mês. A ECKO mudou minha
+                        vida!"
                       </p>
                     </div>
                   </div>
@@ -750,20 +782,27 @@ export default function Index() {
                           <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             ANA COSTA
                           </h4>
-                          <p className="text-xs text-gray-600">Rio de Janeiro/RJ - Lojista há 3 anos</p>
+                          <p className="text-xs text-gray-600">
+                            Rio de Janeiro/RJ - Lojista há 3 anos
+                          </p>
                         </div>
                       </div>
                       <div className="mb-4">
                         <div className="flex text-yellow-400 mb-2">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            <svg
+                              key={i}
+                              className="w-4 h-4 fill-current"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}
                         </div>
                       </div>
                       <p className="text-gray-700 italic text-sm">
-                        "Tenho loja física e online. A qualidade dos produtos e o suporte da equipe são excepcionais. Recomendo!"
+                        "Tenho loja física e online. A qualidade dos produtos e
+                        o suporte da equipe são excepcionais. Recomendo!"
                       </p>
                     </div>
                   </div>
@@ -779,20 +818,27 @@ export default function Index() {
                           <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             RAFAEL MENDES
                           </h4>
-                          <p className="text-xs text-gray-600">Belo Horizonte/MG - Lojista há 1 ano</p>
+                          <p className="text-xs text-gray-600">
+                            Belo Horizonte/MG - Lojista há 1 ano
+                          </p>
                         </div>
                       </div>
                       <div className="mb-4">
                         <div className="flex text-yellow-400 mb-2">
                           {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            <svg
+                              key={i}
+                              className="w-4 h-4 fill-current"
+                              viewBox="0 0 20 20"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                           ))}
                         </div>
                       </div>
                       <p className="text-gray-700 italic text-sm">
-                        "Sempre quis empreender e com a ECKO consegui realizar esse sonho. Processo simples e lucrativo!"
+                        "Sempre quis empreender e com a ECKO consegui realizar
+                        esse sonho. Processo simples e lucrativo!"
                       </p>
                     </div>
                   </div>
@@ -805,15 +851,32 @@ export default function Index() {
                   id="prev-btn"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
-                    const carousel = document.getElementById('testimonials-carousel');
-                    const currentTransform = carousel?.style.transform || 'translateX(0%)';
-                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
-                    const newValue = currentValue >= 0 ? -200 : currentValue + 100;
-                    if (carousel) carousel.style.transform = `translateX(${newValue}%)`;
+                    const carousel = document.getElementById(
+                      "testimonials-carousel",
+                    );
+                    const currentTransform =
+                      carousel?.style.transform || "translateX(0%)";
+                    const currentValue = parseInt(
+                      currentTransform.match(/-?\d+/) || ["0"],
+                    );
+                    const newValue =
+                      currentValue >= 0 ? -200 : currentValue + 100;
+                    if (carousel)
+                      carousel.style.transform = `translateX(${newValue}%)`;
                   }}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
                   </svg>
                 </button>
 
@@ -822,22 +885,30 @@ export default function Index() {
                   <button
                     className="w-3 h-3 rounded-full bg-red-600"
                     onClick={() => {
-                      const carousel = document.getElementById('testimonials-carousel');
-                      if (carousel) carousel.style.transform = 'translateX(0%)';
+                      const carousel = document.getElementById(
+                        "testimonials-carousel",
+                      );
+                      if (carousel) carousel.style.transform = "translateX(0%)";
                     }}
                   ></button>
                   <button
                     className="w-3 h-3 rounded-full bg-gray-300"
                     onClick={() => {
-                      const carousel = document.getElementById('testimonials-carousel');
-                      if (carousel) carousel.style.transform = 'translateX(-100%)';
+                      const carousel = document.getElementById(
+                        "testimonials-carousel",
+                      );
+                      if (carousel)
+                        carousel.style.transform = "translateX(-100%)";
                     }}
                   ></button>
                   <button
                     className="w-3 h-3 rounded-full bg-gray-300"
                     onClick={() => {
-                      const carousel = document.getElementById('testimonials-carousel');
-                      if (carousel) carousel.style.transform = 'translateX(-200%)';
+                      const carousel = document.getElementById(
+                        "testimonials-carousel",
+                      );
+                      if (carousel)
+                        carousel.style.transform = "translateX(-200%)";
                     }}
                   ></button>
                 </div>
@@ -846,15 +917,32 @@ export default function Index() {
                   id="next-btn"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
-                    const carousel = document.getElementById('testimonials-carousel');
-                    const currentTransform = carousel?.style.transform || 'translateX(0%)';
-                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
-                    const newValue = currentValue <= -200 ? 0 : currentValue - 100;
-                    if (carousel) carousel.style.transform = `translateX(${newValue}%)`;
+                    const carousel = document.getElementById(
+                      "testimonials-carousel",
+                    );
+                    const currentTransform =
+                      carousel?.style.transform || "translateX(0%)";
+                    const currentValue = parseInt(
+                      currentTransform.match(/-?\d+/) || ["0"],
+                    );
+                    const newValue =
+                      currentValue <= -200 ? 0 : currentValue - 100;
+                    if (carousel)
+                      carousel.style.transform = `translateX(${newValue}%)`;
                   }}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </button>
               </div>
@@ -883,12 +971,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -901,12 +994,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Sim, para ser um parceiro oficial ECKO você precisa ter CNPJ ativo. Isso garante que você possa revender nossos produtos com todas as vantagens e suporte necessários para o crescimento do seu negócio.
+                  Sim, para ser um parceiro oficial ECKO você precisa ter CNPJ
+                  ativo. Isso garante que você possa revender nossos produtos
+                  com todas as vantagens e suporte necessários para o
+                  crescimento do seu negócio.
                 </p>
               </div>
             </div>
@@ -916,12 +1020,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -934,12 +1043,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Não há valor mínimo obrigatório para se tornar parceiro. Você pode começar com o pedido que se adequar ao seu orçamento. Oferecemos condições especiais de pagamento e prazos flexíveis para facilitar o início da sua operação.
+                  Não há valor mínimo obrigatório para se tornar parceiro. Você
+                  pode começar com o pedido que se adequar ao seu orçamento.
+                  Oferecemos condições especiais de pagamento e prazos flexíveis
+                  para facilitar o início da sua operação.
                 </p>
               </div>
             </div>
@@ -949,12 +1069,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -967,12 +1092,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Após o preenchimento do formulário, nossa equipe comercial entrará em contato em até 24 horas. Fazemos uma análise rápida dos seus dados e, sendo aprovado, você já pode fazer seu primeiro pedido e começar a vender.
+                  Após o preenchimento do formulário, nossa equipe comercial
+                  entrará em contato em até 24 horas. Fazemos uma análise rápida
+                  dos seus dados e, sendo aprovado, você já pode fazer seu
+                  primeiro pedido e começar a vender.
                 </p>
               </div>
             </div>
@@ -982,12 +1118,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -1000,12 +1141,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Aceitamos diversas formas de pagamento: cartão de crédito (até 6x), PIX com desconto, boleto bancário e transferência. Para parceiros antigos, oferecemos também condições especiais de prazo para pagamento.
+                  Aceitamos diversas formas de pagamento: cartão de crédito (até
+                  6x), PIX com desconto, boleto bancário e transferência. Para
+                  parceiros antigos, oferecemos também condições especiais de
+                  prazo para pagamento.
                 </p>
               </div>
             </div>
@@ -1015,12 +1167,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -1033,12 +1190,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Sim! Atendemos todo o território nacional. Temos parcerias com as principais transportadoras para garantir entregas rápidas e seguras. Os prazos variam de acordo com a região, mas sempre buscamos a melhor opção custo-benefício.
+                  Sim! Atendemos todo o território nacional. Temos parcerias com
+                  as principais transportadoras para garantir entregas rápidas e
+                  seguras. Os prazos variam de acordo com a região, mas sempre
+                  buscamos a melhor opção custo-benefício.
                 </p>
               </div>
             </div>
@@ -1048,12 +1216,17 @@ export default function Index() {
               <button
                 className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
                 onClick={(e) => {
-                  const content = e.currentTarget.nextElementSibling as HTMLElement;
-                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  const content = e.currentTarget
+                    .nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector(
+                    ".faq-icon",
+                  ) as HTMLElement;
                   if (content && icon) {
-                    const isOpen = content.style.display !== 'none';
-                    content.style.display = isOpen ? 'none' : 'block';
-                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                    const isOpen = content.style.display !== "none";
+                    content.style.display = isOpen ? "none" : "block";
+                    icon.style.transform = isOpen
+                      ? "rotate(0deg)"
+                      : "rotate(180deg)";
                   }
                 }}
               >
@@ -1066,12 +1239,23 @@ export default function Index() {
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
-              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+              <div
+                className="px-6 pb-4 text-gray-700"
+                style={{ display: "none" }}
+              >
                 <p className="text-sm sm:text-base leading-relaxed">
-                  Oferecemos suporte completo: equipe comercial dedicada, materiais de divulgação, fotos profissionais dos produtos, orientações de vendas e marketing digital. Nosso objetivo é o seu sucesso como parceiro ECKO.
+                  Oferecemos suporte completo: equipe comercial dedicada,
+                  materiais de divulgação, fotos profissionais dos produtos,
+                  orientações de vendas e marketing digital. Nosso objetivo é o
+                  seu sucesso como parceiro ECKO.
                 </p>
               </div>
             </div>
@@ -1087,8 +1271,8 @@ export default function Index() {
             </p>
             <button
               onClick={() => {
-                document.getElementById('benefits')?.scrollIntoView({
-                  behavior: 'smooth'
+                document.getElementById("benefits")?.scrollIntoView({
+                  behavior: "smooth",
                 });
               }}
               className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
