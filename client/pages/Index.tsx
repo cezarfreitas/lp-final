@@ -606,6 +606,262 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-wider">
+              O QUE DIZEM NOSSOS <span className="text-red-600">PARCEIROS</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Histórias reais de quem transformou paixão em lucro com a ECKO
+            </p>
+          </div>
+
+          {/* Desktop: 3 columns, Mobile: Carousel */}
+          <div className="relative">
+            {/* Desktop Grid */}
+            <div className="hidden lg:grid lg:grid-cols-3 lg:gap-8">
+              {/* Testimonial 1 */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    M
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
+                      MARCOS SILVA
+                    </h4>
+                    <p className="text-sm text-gray-600">São Paulo/SP - Lojista há 2 anos</p>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <div className="flex text-yellow-400 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 italic">
+                  "Comecei vendendo para amigos e hoje tenho uma loja online que fatura R$ 15mil por mês. A ECKO mudou minha vida!"
+                </p>
+              </div>
+
+              {/* Testimonial 2 */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    A
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
+                      ANA COSTA
+                    </h4>
+                    <p className="text-sm text-gray-600">Rio de Janeiro/RJ - Lojista há 3 anos</p>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <div className="flex text-yellow-400 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 italic">
+                  "Tenho loja física e online. A qualidade dos produtos e o suporte da equipe são excepcionais. Recomendo!"
+                </p>
+              </div>
+
+              {/* Testimonial 3 */}
+              <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                    R
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
+                      RAFAEL MENDES
+                    </h4>
+                    <p className="text-sm text-gray-600">Belo Horizonte/MG - Lojista há 1 ano</p>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <div className="flex text-yellow-400 mb-2">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+                <p className="text-gray-700 italic">
+                  "Sempre quis empreender e com a ECKO consegui realizar esse sonho. Processo simples e lucrativo!"
+                </p>
+              </div>
+            </div>
+
+            {/* Mobile Carousel */}
+            <div className="lg:hidden">
+              <div className="overflow-hidden">
+                <div id="testimonials-carousel" className="flex transition-transform duration-300 ease-in-out">
+                  {/* Testimonial 1 - Mobile */}
+                  <div className="w-full flex-shrink-0 px-4">
+                    <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                          M
+                        </div>
+                        <div className="ml-4">
+                          <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                            MARCOS SILVA
+                          </h4>
+                          <p className="text-xs text-gray-600">São Paulo/SP - Lojista há 2 anos</p>
+                        </div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="flex text-yellow-400 mb-2">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-700 italic text-sm">
+                        "Comecei vendendo para amigos e hoje tenho uma loja online que fatura R$ 15mil por mês. A ECKO mudou minha vida!"
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Testimonial 2 - Mobile */}
+                  <div className="w-full flex-shrink-0 px-4">
+                    <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                          A
+                        </div>
+                        <div className="ml-4">
+                          <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                            ANA COSTA
+                          </h4>
+                          <p className="text-xs text-gray-600">Rio de Janeiro/RJ - Lojista há 3 anos</p>
+                        </div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="flex text-yellow-400 mb-2">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-700 italic text-sm">
+                        "Tenho loja física e online. A qualidade dos produtos e o suporte da equipe são excepcionais. Recomendo!"
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Testimonial 3 - Mobile */}
+                  <div className="w-full flex-shrink-0 px-4">
+                    <div className="bg-gray-50 rounded-lg p-6 shadow-lg">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                          R
+                        </div>
+                        <div className="ml-4">
+                          <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                            RAFAEL MENDES
+                          </h4>
+                          <p className="text-xs text-gray-600">Belo Horizonte/MG - Lojista há 1 ano</p>
+                        </div>
+                      </div>
+                      <div className="mb-4">
+                        <div className="flex text-yellow-400 mb-2">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-700 italic text-sm">
+                        "Sempre quis empreender e com a ECKO consegui realizar esse sonho. Processo simples e lucrativo!"
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Carousel Navigation */}
+              <div className="flex justify-center items-center mt-6 space-x-4">
+                <button
+                  id="prev-btn"
+                  className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
+                  onClick={() => {
+                    const carousel = document.getElementById('testimonials-carousel');
+                    const currentTransform = carousel?.style.transform || 'translateX(0%)';
+                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
+                    const newValue = currentValue >= 0 ? -200 : currentValue + 100;
+                    if (carousel) carousel.style.transform = `translateX(${newValue}%)`;
+                  }}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                {/* Dots Indicator */}
+                <div className="flex space-x-2">
+                  <button
+                    className="w-3 h-3 rounded-full bg-red-600"
+                    onClick={() => {
+                      const carousel = document.getElementById('testimonials-carousel');
+                      if (carousel) carousel.style.transform = 'translateX(0%)';
+                    }}
+                  ></button>
+                  <button
+                    className="w-3 h-3 rounded-full bg-gray-300"
+                    onClick={() => {
+                      const carousel = document.getElementById('testimonials-carousel');
+                      if (carousel) carousel.style.transform = 'translateX(-100%)';
+                    }}
+                  ></button>
+                  <button
+                    className="w-3 h-3 rounded-full bg-gray-300"
+                    onClick={() => {
+                      const carousel = document.getElementById('testimonials-carousel');
+                      if (carousel) carousel.style.transform = 'translateX(-200%)';
+                    }}
+                  ></button>
+                </div>
+
+                <button
+                  id="next-btn"
+                  className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
+                  onClick={() => {
+                    const carousel = document.getElementById('testimonials-carousel');
+                    const currentTransform = carousel?.style.transform || 'translateX(0%)';
+                    const currentValue = parseInt(currentTransform.match(/-?\d+/) || ['0']);
+                    const newValue = currentValue <= -200 ? 0 : currentValue - 100;
+                    if (carousel) carousel.style.transform = `translateX(${newValue}%)`;
+                  }}
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
