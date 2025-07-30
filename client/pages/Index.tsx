@@ -1613,6 +1613,7 @@ export default function Index() {
               <div className="flex justify-center items-center mt-6 space-x-4">
                 <button
                   id="showroom-prev"
+                  aria-label="Foto anterior do showroom"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
                     const slider = document.getElementById("showroom-slider");
@@ -1710,6 +1711,7 @@ export default function Index() {
 
                 <button
                   id="showroom-next"
+                  aria-label="Próxima foto do showroom"
                   className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
                   onClick={() => {
                     const slider = document.getElementById("showroom-slider");
