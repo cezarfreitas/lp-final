@@ -543,7 +543,7 @@ export default function Index() {
                       placeholder="00000-000"
                       maxLength={9}
                       onChange={(e) => {
-                        // Formatação automática do CEP
+                        // Formata��ão automática do CEP
                         let value = e.target.value.replace(/\D/g, "");
                         if (value.length > 5) {
                           value =
@@ -859,6 +859,242 @@ export default function Index() {
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-wider">
+              PERGUNTAS <span className="text-red-600">FREQUENTES</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Tire suas dúvidas sobre como se tornar um parceiro oficial ECKO
+            </p>
+          </div>
+
+          {/* FAQ Items */}
+          <div className="space-y-4">
+            {/* FAQ 1 */}
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                onClick={(e) => {
+                  const content = e.currentTarget.nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  if (content && icon) {
+                    const isOpen = content.style.display !== 'none';
+                    content.style.display = isOpen ? 'none' : 'block';
+                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                  }
+                }}
+              >
+                <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm sm:text-base">
+                  Preciso ter CNPJ para ser parceiro?
+                </h3>
+                <svg
+                  className="w-5 h-5 text-red-600 transition-transform duration-200 faq-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  Sim, para ser um parceiro oficial ECKO você precisa ter CNPJ ativo. Isso garante que você possa revender nossos produtos com todas as vantagens e suporte necessários para o crescimento do seu negócio.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                onClick={(e) => {
+                  const content = e.currentTarget.nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  if (content && icon) {
+                    const isOpen = content.style.display !== 'none';
+                    content.style.display = isOpen ? 'none' : 'block';
+                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                  }
+                }}
+              >
+                <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm sm:text-base">
+                  Qual o valor mínimo para começar?
+                </h3>
+                <svg
+                  className="w-5 h-5 text-red-600 transition-transform duration-200 faq-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  Não há valor mínimo obrigatório para se tornar parceiro. Você pode começar com o pedido que se adequar ao seu orçamento. Oferecemos condições especiais de pagamento e prazos flexíveis para facilitar o início da sua operação.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                onClick={(e) => {
+                  const content = e.currentTarget.nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  if (content && icon) {
+                    const isOpen = content.style.display !== 'none';
+                    content.style.display = isOpen ? 'none' : 'block';
+                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                  }
+                }}
+              >
+                <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm sm:text-base">
+                  Como funciona o processo de aprovação?
+                </h3>
+                <svg
+                  className="w-5 h-5 text-red-600 transition-transform duration-200 faq-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  Após o preenchimento do formulário, nossa equipe comercial entrará em contato em até 24 horas. Fazemos uma análise rápida dos seus dados e, sendo aprovado, você já pode fazer seu primeiro pedido e começar a vender.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                onClick={(e) => {
+                  const content = e.currentTarget.nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  if (content && icon) {
+                    const isOpen = content.style.display !== 'none';
+                    content.style.display = isOpen ? 'none' : 'block';
+                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                  }
+                }}
+              >
+                <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm sm:text-base">
+                  Quais são as formas de pagamento?
+                </h3>
+                <svg
+                  className="w-5 h-5 text-red-600 transition-transform duration-200 faq-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  Aceitamos diversas formas de pagamento: cartão de crédito (até 6x), PIX com desconto, boleto bancário e transferência. Para parceiros antigos, oferecemos também condições especiais de prazo para pagamento.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                onClick={(e) => {
+                  const content = e.currentTarget.nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  if (content && icon) {
+                    const isOpen = content.style.display !== 'none';
+                    content.style.display = isOpen ? 'none' : 'block';
+                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                  }
+                }}
+              >
+                <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm sm:text-base">
+                  Vocês entregam em todo Brasil?
+                </h3>
+                <svg
+                  className="w-5 h-5 text-red-600 transition-transform duration-200 faq-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  Sim! Atendemos todo o território nacional. Temos parcerias com as principais transportadoras para garantir entregas rápidas e seguras. Os prazos variam de acordo com a região, mas sempre buscamos a melhor opção custo-benefício.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors duration-200"
+                onClick={(e) => {
+                  const content = e.currentTarget.nextElementSibling as HTMLElement;
+                  const icon = e.currentTarget.querySelector('.faq-icon') as HTMLElement;
+                  if (content && icon) {
+                    const isOpen = content.style.display !== 'none';
+                    content.style.display = isOpen ? 'none' : 'block';
+                    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                  }
+                }}
+              >
+                <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm sm:text-base">
+                  Que tipo de suporte vocês oferecem?
+                </h3>
+                <svg
+                  className="w-5 h-5 text-red-600 transition-transform duration-200 faq-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div className="px-6 pb-4 text-gray-700" style={{ display: 'none' }}>
+                <p className="text-sm sm:text-base leading-relaxed">
+                  Oferecemos suporte completo: equipe comercial dedicada, materiais de divulgação, fotos profissionais dos produtos, orientações de vendas e marketing digital. Nosso objetivo é o seu sucesso como parceiro ECKO.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center mt-12">
+            <h3 className="font-display text-xl sm:text-2xl font-bold text-gray-900 mb-4 uppercase tracking-wider">
+              AINDA TEM DÚVIDAS?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Nossa equipe está pronta para te ajudar
+            </p>
+            <button
+              onClick={() => {
+                document.getElementById('benefits')?.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }}
+              className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
+            >
+              FALAR COM CONSULTOR
+            </button>
           </div>
         </div>
       </section>
