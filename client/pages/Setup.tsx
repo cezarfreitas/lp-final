@@ -47,13 +47,20 @@ export default function Setup() {
   const checkDatabaseStatus = async () => {
     try {
       const response = await fetch('/api/setup/status');
+
+      if (!response.ok) {
+        console.warn('Setup status endpoint returned:', response.status, response.statusText);
+        return;
+      }
+
       const result = await response.json();
-      
+
       if (result.success) {
         setDbStatus(result);
       }
     } catch (error) {
       console.error('Erro ao verificar status:', error);
+      // Don't show error to user for status check, it's optional
     }
   };
 
