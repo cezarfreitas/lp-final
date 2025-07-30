@@ -141,12 +141,20 @@ export default function Setup() {
             )}
           </button>
 
-          <button
-            onClick={checkDatabaseStatus}
-            className="w-full py-2 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50"
-          >
-            Verificar Status
-          </button>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              onClick={checkDatabaseStatus}
+              className="py-2 px-4 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50"
+            >
+              Verificar Status
+            </button>
+            <button
+              onClick={testConnection}
+              className="py-2 px-4 border border-blue-300 rounded-lg text-blue-700 hover:bg-blue-50"
+            >
+              Testar Conexão
+            </button>
+          </div>
         </div>
 
         {/* Status Message */}
