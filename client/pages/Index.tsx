@@ -53,8 +53,8 @@ export default function Index() {
             {/* CTA Button */}
             <button
               onClick={() => {
-                document.getElementById("benefits")?.scrollIntoView({
-                  behavior: "smooth",
+                document.getElementById('benefits')?.scrollIntoView({
+                  behavior: 'smooth'
                 });
               }}
               className="font-display border-2 border-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold hover:bg-red-600 active:bg-red-700 transition-colors duration-300 flex items-center justify-center gap-2 mx-auto tracking-wide uppercase w-full max-w-xs sm:w-auto"
@@ -81,8 +81,8 @@ export default function Index() {
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
             <button
               onClick={() => {
-                document.getElementById("benefits")?.scrollIntoView({
-                  behavior: "smooth",
+                document.getElementById('benefits')?.scrollIntoView({
+                  behavior: 'smooth'
                 });
               }}
               className="animate-bounce text-white hover:text-red-400 transition-colors duration-300"
@@ -299,6 +299,7 @@ export default function Index() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
             {/* Left Column - Text Content */}
             <div className="space-y-6">
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wider">
@@ -306,26 +307,16 @@ export default function Index() {
               </h2>
 
               <p className="text-lg text-gray-600 leading-relaxed">
-                Transforme sua paixão pelo streetwear em uma fonte de renda
-                consistente. Nossa equipe está pronta para te ajudar a dar os
-                primeiros passos no mundo da revenda autorizada ECKO.
+                Transforme sua paixão pelo streetwear em uma fonte de renda consistente.
+                Nossa equipe está pronta para te ajudar a dar os primeiros passos no mundo
+                da revenda autorizada ECKO.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
@@ -340,18 +331,8 @@ export default function Index() {
 
                 <div className="flex items-start gap-4">
                   <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
@@ -366,18 +347,8 @@ export default function Index() {
 
                 <div className="flex items-start gap-4">
                   <div className="bg-red-600 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
                   <div>
@@ -405,10 +376,7 @@ export default function Index() {
 
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Nome Completo *
                   </label>
                   <input
@@ -422,10 +390,7 @@ export default function Index() {
                 </div>
 
                 <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     WhatsApp *
                   </label>
                   <input
@@ -448,8 +413,15 @@ export default function Index() {
                         type="radio"
                         name="lojista"
                         value="sim"
+                        id="lojista-sim"
                         required
                         className="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-600"
+                        onChange={(e) => {
+                          const extraFields = document.getElementById('extra-fields');
+                          if (extraFields) {
+                            extraFields.style.display = e.target.checked ? 'block' : 'none';
+                          }
+                        }}
                       />
                       <span className="ml-2 text-gray-700">Sim</span>
                     </label>
@@ -460,11 +432,57 @@ export default function Index() {
                         value="nao"
                         required
                         className="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-600"
+                        onChange={(e) => {
+                          const extraFields = document.getElementById('extra-fields');
+                          if (extraFields && e.target.checked) {
+                            extraFields.style.display = 'none';
+                          }
+                        }}
                       />
-                      <span className="ml-2 text-gray-700">
-                        Não, sou consumidor
-                      </span>
+                      <span className="ml-2 text-gray-700">Não, sou consumidor</span>
                     </label>
+                  </div>
+                </div>
+
+                {/* Campos extras para lojistas */}
+                <div id="extra-fields" style={{ display: 'none' }} className="space-y-6">
+                  <div>
+                    <label htmlFor="store-type" className="block text-sm font-medium text-gray-700 mb-2">
+                      Sua loja é? *
+                    </label>
+                    <select
+                      id="store-type"
+                      name="store-type"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
+                    >
+                      <option value="">Selecione uma opção</option>
+                      <option value="online">Online</option>
+                      <option value="fisica">Física</option>
+                      <option value="online-fisica">Online + Física</option>
+                      <option value="midias-sociais">Vendo nas mídias sociais</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="cep" className="block text-sm font-medium text-gray-700 mb-2">
+                      Qual seu CEP? *
+                    </label>
+                    <input
+                      type="text"
+                      id="cep"
+                      name="cep"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
+                      placeholder="00000-000"
+                      maxLength={9}
+                      onChange={(e) => {
+                        // Formatação automática do CEP
+                        let value = e.target.value.replace(/\D/g, '');
+                        if (value.length > 5) {
+                          value = value.substring(0, 5) + '-' + value.substring(5, 8);
+                        }
+                        e.target.value = value;
+                      }}
+                    />
                   </div>
                 </div>
 
@@ -480,6 +498,7 @@ export default function Index() {
                 </p>
               </form>
             </div>
+
           </div>
         </div>
       </section>
