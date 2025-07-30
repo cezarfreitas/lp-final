@@ -18,7 +18,7 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Install all dependencies (including devDependencies) for building
-RUN npm ci
+RUN npm ci --legacy-peer-deps
 
 # Build the application
 RUN npm run build
