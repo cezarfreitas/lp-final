@@ -1735,14 +1735,7 @@ export default function Index() {
                 20 anos de tradição no streetwear brasileiro. A marca que
                 transforma paixão em negócio lucrativo.
               </p>
-              <div className="space-y-2">
-                <p className="text-xs text-gray-400">
-                  CNPJ: 12.345.678/0001-99
-                </p>
-                <p className="text-xs text-gray-400">
-                  Registro ECKO Brasil © 2024
-                </p>
-              </div>
+
             </div>
 
             {/* Quick Links */}
