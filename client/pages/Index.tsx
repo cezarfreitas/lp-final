@@ -1656,7 +1656,8 @@ export default function Index() {
                 {/* Dots Indicator */}
                 <div className="flex space-x-2">
                   <button
-                    className="w-3 h-3 rounded-full bg-red-600 showroom-dot"
+                    aria-label="Ver fachada do showroom"
+                    className="w-6 h-6 rounded-full bg-red-600 showroom-dot flex items-center justify-center"
                     onClick={() => {
                       const slider = document.getElementById("showroom-slider");
                       if (slider) slider.style.transform = "translateX(0%)";
@@ -1669,7 +1670,8 @@ export default function Index() {
                     }}
                   ></button>
                   <button
-                    className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
+                    aria-label="Ver interior do showroom"
+                    className="w-6 h-6 rounded-full bg-gray-300 showroom-dot flex items-center justify-center"
                     onClick={() => {
                       const slider = document.getElementById("showroom-slider");
                       if (slider) slider.style.transform = "translateX(-100%)";
@@ -1682,7 +1684,8 @@ export default function Index() {
                     }}
                   ></button>
                   <button
-                    className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
+                    aria-label="Ver exposição de produtos"
+                    className="w-6 h-6 rounded-full bg-gray-300 showroom-dot flex items-center justify-center"
                     onClick={() => {
                       const slider = document.getElementById("showroom-slider");
                       if (slider) slider.style.transform = "translateX(-200%)";
@@ -1695,7 +1698,8 @@ export default function Index() {
                     }}
                   ></button>
                   <button
-                    className="w-3 h-3 rounded-full bg-gray-300 showroom-dot"
+                    aria-label="Ver área de atendimento"
+                    className="w-6 h-6 rounded-full bg-gray-300 showroom-dot flex items-center justify-center"
                     onClick={() => {
                       const slider = document.getElementById("showroom-slider");
                       if (slider) slider.style.transform = "translateX(-300%)";
