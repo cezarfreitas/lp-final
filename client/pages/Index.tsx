@@ -120,163 +120,144 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Benefits Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-            {/* Benefit 1 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-red-700 transition-colors">
-                <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
-                  />
-                </svg>
+          {/* Benefits Layout - Mobile: 2 cols, Desktop: 4 cards + image */}
+          <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
+
+            {/* Left Column - 4 Benefits Cards (Desktop) */}
+            <div className="lg:order-1 order-2 col-span-2 lg:col-span-1">
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-8">
+
+                {/* Benefit 1 */}
+                <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
+                  <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
+                    <svg
+                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                      />
+                    </svg>
+                  </div>
+                  <div className="lg:flex-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
+                      MARGEM ALTA
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                      Lucre até 60% em cada produto vendido com preços exclusivos para parceiros oficiais
+                    </p>
+                  </div>
+                </div>
+
+                {/* Benefit 2 */}
+                <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
+                  <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
+                    <svg
+                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                      />
+                    </svg>
+                  </div>
+                  <div className="lg:flex-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
+                      ENVIO NACIONAL
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                      Entregamos em todo Brasil com frete otimizado e prazos reduzidos para seus clientes
+                    </p>
+                  </div>
+                </div>
+
+                {/* Benefit 3 */}
+                <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
+                  <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
+                    <svg
+                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <div className="lg:flex-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
+                      LANÇAMENTOS EXCLUSIVOS
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                      Tenha acesso antecipado às novas coleções e produtos exclusivos antes de todos
+                    </p>
+                  </div>
+                </div>
+
+                {/* Benefit 4 */}
+                <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
+                  <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
+                    <svg
+                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2v20M2 12h20"
+                      />
+                    </svg>
+                  </div>
+                  <div className="lg:flex-1">
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
+                      SUPORTE COMPLETO
+                    </h3>
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                      Equipe dedicada para ajudar com vendas, marketing e crescimento do seu negócio
+                    </p>
+                  </div>
+                </div>
+
               </div>
-              <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase tracking-wide">
-                MARGEM ALTA
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Lucre até 60% em cada produto vendido com preços exclusivos para
-                parceiros oficiais
-              </p>
             </div>
 
-            {/* Benefit 2 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-red-700 transition-colors">
-                <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                  />
-                </svg>
+            {/* Right Column - Hero Image (Desktop) */}
+            <div className="lg:order-2 order-1 col-span-2 lg:col-span-1">
+              <div className="relative group">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                  alt="Parceiro ECKO Bem-sucedido"
+                  className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent rounded-lg" />
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <h3 className="font-display font-bold text-lg uppercase tracking-wider mb-2">
+                    SUCESSO GARANTIDO
+                  </h3>
+                  <p className="text-sm opacity-90">
+                    Junte-se aos milhares de parceiros que já transformaram suas vidas com a ECKO
+                  </p>
+                </div>
               </div>
-              <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase tracking-wide">
-                ENVIO NACIONAL
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Entregamos em todo Brasil com frete otimizado e prazos reduzidos
-                para seus clientes
-              </p>
             </div>
 
-            {/* Benefit 3 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-red-700 transition-colors">
-                <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase tracking-wide">
-                LANÇAMENTOS EXCLUSIVOS
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Tenha acesso antecipado às novas coleções e produtos exclusivos
-                antes de todos
-              </p>
-            </div>
-
-            {/* Benefit 4 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-red-700 transition-colors">
-                <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2v20M2 12h20"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase tracking-wide">
-                SUPORTE COMPLETO
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Equipe dedicada para ajudar com vendas, marketing e crescimento
-                do seu negócio
-              </p>
-            </div>
-
-            {/* Benefit 5 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-red-700 transition-colors">
-                <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase tracking-wide">
-                MARCA CONSOLIDADA
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                20 anos de tradição no streetwear com reconhecimento nacional e
-                credibilidade
-              </p>
-            </div>
-
-            {/* Benefit 6 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-red-700 transition-colors">
-                <svg
-                  className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 uppercase tracking-wide">
-                MATERIAL DE APOIO
-              </h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                Catálogos, fotos profissionais e materiais de divulgação para
-                impulsionar suas vendas
-              </p>
-            </div>
           </div>
 
           {/* CTA Section */}
