@@ -127,10 +127,16 @@ router.post('/benefits', async (req: Request, res: Response) => {
 router.put('/benefits/:id', async (req: Request, res: Response) => {
   try {
     const id = parseInt(req.params.id);
+    console.log(`Updating benefit ${id}:`, req.body);
     await updateRecord('benefits', req.body, { id });
+    console.log(`Benefit ${id} updated successfully`);
     res.json({ message: 'Benefit updated successfully' });
   } catch (error) {
-    res.status(500).json({ error: 'Failed to update benefit' });
+    console.error(`Failed to update benefit ${req.params.id}:`, error);
+    res.status(500).json({
+      error: 'Failed to update benefit',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 });
 
