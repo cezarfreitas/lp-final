@@ -614,9 +614,9 @@ export default function Index() {
                     M
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
+                    <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       MARCOS SILVA
-                    </h4>
+                    </h3>
                     <p className="text-sm text-gray-600">
                       São Paulo/SP - Lojista há 2 anos
                     </p>
@@ -648,9 +648,9 @@ export default function Index() {
                     A
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
+                    <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       ANA COSTA
-                    </h4>
+                    </h3>
                     <p className="text-sm text-gray-600">
                       Rio de Janeiro/RJ - Lojista há 3 anos
                     </p>
@@ -682,9 +682,9 @@ export default function Index() {
                     R
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide">
+                    <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide">
                       RAFAEL MENDES
-                    </h4>
+                    </h3>
                     <p className="text-sm text-gray-600">
                       Belo Horizonte/MG - Lojista há 1 ano
                     </p>
@@ -725,9 +725,9 @@ export default function Index() {
                           M
                         </div>
                         <div className="ml-4">
-                          <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                          <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             MARCOS SILVA
-                          </h4>
+                          </h3>
                           <p className="text-xs text-gray-600">
                             São Paulo/SP - Lojista há 2 anos
                           </p>
@@ -762,9 +762,9 @@ export default function Index() {
                           A
                         </div>
                         <div className="ml-4">
-                          <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                          <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             ANA COSTA
-                          </h4>
+                          </h3>
                           <p className="text-xs text-gray-600">
                             Rio de Janeiro/RJ - Lojista há 3 anos
                           </p>
@@ -798,9 +798,9 @@ export default function Index() {
                           R
                         </div>
                         <div className="ml-4">
-                          <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                          <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                             RAFAEL MENDES
-                          </h4>
+                          </h3>
                           <p className="text-xs text-gray-600">
                             Belo Horizonte/MG - Lojista há 1 ano
                           </p>
