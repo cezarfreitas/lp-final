@@ -51,7 +51,7 @@ export default function Index() {
             </p>
 
             {/* CTA Button */}
-            <button className="font-display border-2 border-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold hover:bg-red-600 active:bg-red-700 transition-colors duration-300 flex items-center gap-2 mx-auto tracking-wide uppercase w-full max-w-xs sm:w-auto">
+            <button className="font-display border-2 border-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold hover:bg-red-600 active:bg-red-700 transition-colors duration-300 flex items-center justify-center gap-2 mx-auto tracking-wide uppercase w-full max-w-xs sm:w-auto">
               <span className="hidden sm:inline">CONHECER OS BENEFÍCIOS</span>
               <span className="sm:hidden">VER BENEFÍCIOS</span>
               <svg
