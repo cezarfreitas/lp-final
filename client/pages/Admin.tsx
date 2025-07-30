@@ -37,7 +37,13 @@ export default function Admin() {
     try {
       setLoading(true);
       const response = await fetch('/api/admin/all-data');
-      if (!response.ok) throw new Error('Failed to fetch data');
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('API Error:', response.status, response.statusText, errorText);
+        throw new Error(`Failed to fetch data: ${response.status} ${response.statusText} - ${errorText}`);
+      }
+
       const result = await response.json();
       setData(result);
     } catch (error) {
