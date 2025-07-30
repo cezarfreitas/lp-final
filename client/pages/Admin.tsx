@@ -321,8 +321,8 @@ export default function Admin() {
                     {/* Icon */}
                     <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
                       activeTab === tab.id
-                        ? 'bg-red-500/20 text-red-400'
-                        : 'bg-slate-700/50 text-slate-400 group-hover:bg-slate-600/50 group-hover:text-slate-300'
+                        ? 'icon-container-active text-red-400'
+                        : 'icon-container text-slate-400 group-hover:bg-slate-600/50 group-hover:text-slate-300'
                     }`}>
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d={tab.icon} clipRule="evenodd" />
