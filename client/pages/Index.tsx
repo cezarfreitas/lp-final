@@ -90,7 +90,7 @@ export default function Index() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {/* Benefit 1 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="bg-red-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:bg-red-700 transition-colors">
+              <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:bg-red-700 transition-colors">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
