@@ -75,10 +75,19 @@ router.post('/init-database', async (req: Request, res: Response) => {
     
   } catch (error) {
     console.error('❌ Database initialization failed:', error);
-    res.status(500).json({ 
-      success: false, 
-      error: 'Database initialization failed',
-      details: error instanceof Error ? error.message : 'Unknown error'
+
+    let errorMessage = 'Database initialization failed';
+    let errorDetails = 'Unknown error';
+
+    if (error instanceof Error) {
+      errorMessage = error.message;
+      errorDetails = error.stack || error.message;
+    }
+
+    res.status(500).json({
+      success: false,
+      error: errorMessage,
+      details: errorDetails
     });
   }
 });
