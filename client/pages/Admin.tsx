@@ -85,10 +85,10 @@ export default function Admin() {
 
   if (loading) {
     return (
-      <div className=\"min-h-screen bg-gray-100 flex items-center justify-center\">
-        <div className=\"text-center\">
-          <div className=\"animate-spin rounded-full h-32 w-32 border-b-2 border-red-600 mx-auto mb-4\"></div>
-          <p className=\"text-gray-600\">Carregando dados...</p>
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-red-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Carregando dados...</p>
         </div>
       </div>
     );
@@ -96,12 +96,12 @@ export default function Admin() {
 
   if (!data) {
     return (
-      <div className=\"min-h-screen bg-gray-100 flex items-center justify-center\">
-        <div className=\"text-center\">
-          <p className=\"text-red-600 text-xl mb-4\">Erro ao carregar dados</p>
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-red-600 text-xl mb-4">Erro ao carregar dados</p>
           <button 
             onClick={fetchData}
-            className=\"bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700\"
+            className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700"
           >
             Tentar Novamente
           </button>
@@ -111,50 +111,50 @@ export default function Admin() {
   }
 
   return (
-    <div className=\"min-h-screen bg-gray-100\">
+    <div className="min-h-screen bg-gray-100">
       {/* Header */}
-      <header className=\"bg-white shadow-sm border-b\">
-        <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8\">
-          <div className=\"flex justify-between items-center py-4\">
-            <div className=\"flex items-center space-x-4\">
+      <header className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <div className="flex items-center space-x-4">
               <img 
-                src=\"https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png\"
-                alt=\"ECKO Admin\"
-                className=\"h-8 w-auto\"
+                src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
+                alt="ECKO Admin"
+                className="h-8 w-auto"
               />
-              <h1 className=\"text-2xl font-bold text-gray-900\">
+              <h1 className="text-2xl font-bold text-gray-900">
                 Painel Administrativo
               </h1>
             </div>
             
             {/* Save Status */}
-            <div className=\"flex items-center space-x-4\">
+            <div className="flex items-center space-x-4">
               {saveStatus === 'saving' && (
-                <div className=\"flex items-center text-blue-600\">
-                  <div className=\"animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2\"></div>
+                <div className="flex items-center text-blue-600">
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mr-2"></div>
                   Salvando...
                 </div>
               )}
               {saveStatus === 'success' && (
-                <div className=\"flex items-center text-green-600\">
-                  <svg className=\"w-4 h-4 mr-2\" fill=\"currentColor\" viewBox=\"0 0 20 20\">
-                    <path fillRule=\"evenodd\" d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z\" clipRule=\"evenodd\" />
+                <div className="flex items-center text-green-600">
+                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   Salvo com sucesso!
                 </div>
               )}
               {saveStatus === 'error' && (
-                <div className=\"flex items-center text-red-600\">
-                  <svg className=\"w-4 h-4 mr-2\" fill=\"currentColor\" viewBox=\"0 0 20 20\">
-                    <path fillRule=\"evenodd\" d=\"M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z\" clipRule=\"evenodd\" />
+                <div className="flex items-center text-red-600">
+                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                   </svg>
                   Erro ao salvar
                 </div>
               )}
               <a 
-                href=\"/\" 
-                target=\"_blank\" 
-                className=\"bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700\"
+                href="/" 
+                target="_blank" 
+                className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
               >
                 Ver Site 🔗
               </a>
@@ -163,11 +163,11 @@ export default function Admin() {
         </div>
       </header>
 
-      <div className=\"flex\">
+      <div className="flex">
         {/* Sidebar */}
-        <nav className=\"w-64 bg-white shadow-sm min-h-screen\">
-          <div className=\"p-4\">
-            <ul className=\"space-y-2\">
+        <nav className="w-64 bg-white shadow-sm min-h-screen">
+          <div className="p-4">
+            <ul className="space-y-2">
               {tabs.map((tab) => (
                 <li key={tab.id}>
                   <button
@@ -178,8 +178,8 @@ export default function Admin() {
                         : 'text-gray-600 hover:bg-gray-100'
                     }`}
                   >
-                    <span className=\"text-xl\">{tab.icon}</span>
-                    <span className=\"font-medium\">{tab.label}</span>
+                    <span className="text-xl">{tab.icon}</span>
+                    <span className="font-medium">{tab.label}</span>
                   </button>
                 </li>
               ))}
@@ -188,8 +188,8 @@ export default function Admin() {
         </nav>
 
         {/* Main Content */}
-        <main className=\"flex-1 p-8\">
-          <div className=\"max-w-4xl mx-auto\">
+        <main className="flex-1 p-8">
+          <div className="max-w-4xl mx-auto">
             {activeTab === 'hero' && (
               <AdminHero 
                 data={data.hero} 
