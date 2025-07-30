@@ -1,6 +1,3 @@
--- Usar o banco correto
-USE `lp-ecko-db`;
-
 -- Inserir dados iniciais se não existirem
 
 -- Hero Section
