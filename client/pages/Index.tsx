@@ -19,11 +19,16 @@ export default function Index() {
 
         {/* Hero Content */}
         <div className="relative z-10 flex h-full items-center justify-center">
-          <div className="text-center text-white px-4 max-w-4xl font-body" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
+          <div
+            className="text-center text-white px-4 max-w-4xl font-body"
+            style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
+          >
             {/* Logo */}
             <div className="mb-8 flex justify-center">
               <div className="bg-red-600 p-4 rounded-lg">
-                <div className="text-white font-display font-bold text-2xl tracking-wider">ECKO</div>
+                <div className="text-white font-display font-bold text-2xl tracking-wider">
+                  ECKO
+                </div>
               </div>
             </div>
 
@@ -34,21 +39,34 @@ export default function Index() {
 
             {/* Main Title */}
             <h1 className="font-display text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-wider uppercase">
-              SEJA PARCEIRO<br />
-              OFICIAL <span className="text-red-600">ECKO</span> E TENHA<br />
+              SEJA PARCEIRO
+              <br />
+              OFICIAL <span className="text-red-600">ECKO</span> E TENHA
+              <br />
               SUCESSO
             </h1>
 
             {/* Description */}
             <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed opacity-90 font-medium">
-              Junte-se aos milhares de revendedores que já transformaram seus negócios com a marca mais desejada do streetwear brasileiro
+              Junte-se aos milhares de revendedores que já transformaram seus
+              negócios com a marca mais desejada do streetwear brasileiro
             </p>
 
             {/* CTA Button */}
             <button className="font-display border-2 border-red-600 text-white px-8 py-4 text-lg font-semibold hover:bg-red-600 transition-colors duration-300 flex items-center gap-2 mx-auto tracking-wide uppercase">
               CONHECER OS BENEFÍCIOS
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                />
               </svg>
             </button>
           </div>
