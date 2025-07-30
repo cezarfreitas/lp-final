@@ -312,9 +312,9 @@ export default function Index() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                    <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                       PROCESSO SIMPLES
-                    </h4>
+                    </h3>
                     <p className="text-gray-600 text-sm">
                       Cadastro rápido e aprovação em até 24 horas
                     </p>
@@ -338,9 +338,9 @@ export default function Index() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                    <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                       SEM TAXAS INICIAIS
-                    </h4>
+                    </h3>
                     <p className="text-gray-600 text-sm">
                       Comece sem investimento inicial ou taxas de adesão
                     </p>
@@ -364,9 +364,9 @@ export default function Index() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
+                    <h3 className="font-display font-bold text-gray-900 uppercase tracking-wide text-sm">
                       SUPORTE DEDICADO
-                    </h4>
+                    </h3>
                     <p className="text-gray-600 text-sm">
                       Equipe especializada para te acompanhar em cada etapa
                     </p>
@@ -1908,7 +1908,7 @@ export default function Index() {
               </div>
 
               <div className="pt-2">
-                <p className="text-xs text-gray-400">
+                <p className="text-xs text-gray-300">
                   Nos siga para novidades e lançamentos
                 </p>
               </div>
@@ -1945,7 +1945,7 @@ export default function Index() {
             </div>
 
             <div className="mt-4 text-center">
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-400">
                 Desenvolvido com ❤️ pela equipe ECKO Digital
               </p>
             </div>
