@@ -274,7 +274,7 @@ export default function Admin() {
 
       <div className="flex">
         {/* Sidebar */}
-        <nav className="w-72 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 shadow-xl min-h-screen border-r border-slate-700">
+        <nav className="w-72 sidebar-gradient shadow-xl min-h-screen border-r border-slate-700 relative overflow-hidden">
           <div className="p-6">
             {/* Sidebar Header */}
             <div className="mb-8">
