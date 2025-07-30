@@ -131,12 +131,16 @@ export async function updateRecord(
 ): Promise<{ affectedRows: number }> {
   const setClause = Object.keys(data).map(key => `${key} = ?`).join(', ');
   const whereClause = Object.keys(conditions).map(key => `${key} = ?`).join(' AND ');
-  
+
   const values = [...Object.values(data), ...Object.values(conditions)];
-  
+
   const query = `UPDATE ${table} SET ${setClause} WHERE ${whereClause}`;
+  console.log('UPDATE query:', query);
+  console.log('UPDATE values:', values);
+
   const result = await executeQuery<mysql.ResultSetHeader>(query, values);
-  
+  console.log('UPDATE result:', result);
+
   return { affectedRows: result.affectedRows };
 }
 
