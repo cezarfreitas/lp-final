@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 import compression from "compression";
 import { initializeDatabase } from "./lib/database.js";
 import adminRoutes from "./routes/admin.js";
+import setupRoutes from "./routes/setup.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
