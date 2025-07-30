@@ -1534,14 +1534,7 @@ export default function Index() {
                       alt="Showroom ECKO fachada em São Paulo para lojistas oficiais visitarem"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
-                    <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
-                      <h3 className="font-display font-bold text-sm uppercase">
-                        Fachada do Showroom
-                      </h3>
-                      <p className="text-xs opacity-90">
-                        Design moderno no coração de São Paulo
-                      </p>
-                    </div>
+
                   </div>
 
                   {/* Slide 2 */}
@@ -1551,14 +1544,7 @@ export default function Index() {
                       alt="Interior do showroom ECKO com produtos para lojistas conhecerem"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
-                    <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
-                      <h3 className="font-display font-bold text-sm uppercase">
-                        Espaço Interno
-                      </h3>
-                      <p className="text-xs opacity-90">
-                        Ambiente amplo e organizado para melhor experiência
-                      </p>
-                    </div>
+
                   </div>
 
                   {/* Slide 3 */}
@@ -1568,14 +1554,7 @@ export default function Index() {
                       alt="Exposição de produtos ECKO no showroom para futuros lojistas oficiais"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
-                    <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
-                      <h3 className="font-display font-bold text-sm uppercase">
-                        Exposição de Produtos
-                      </h3>
-                      <p className="text-xs opacity-90">
-                        Toda coleção disponível para análise
-                      </p>
-                    </div>
+
                   </div>
 
                   {/* Slide 4 */}
@@ -1585,14 +1564,7 @@ export default function Index() {
                       alt="Área de atendimento especializado para lojistas ECKO no showroom"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
-                    <div className="absolute bottom-4 left-4 right-4 text-white bg-black/50 p-3 rounded">
-                      <h3 className="font-display font-bold text-sm uppercase">
-                        Área de Atendimento
-                      </h3>
-                      <p className="text-xs opacity-90">
-                        Consultoria especializada para parceiros
-                      </p>
-                    </div>
+
                   </div>
                 </div>
               </div>
