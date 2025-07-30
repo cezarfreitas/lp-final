@@ -19,10 +19,10 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: {
           // Split vendor chunks for better caching
-          react: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          ui: ["@radix-ui/react-slot", "@radix-ui/react-toast"],
-          query: ["@tanstack/react-query"],
+          react: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-slot', '@radix-ui/react-toast'],
+          query: ['@tanstack/react-query'],
         },
       },
     },
@@ -32,14 +32,8 @@ export default defineConfig(({ mode }) => ({
     chunkSizeWarningLimit: 500,
     // Enable source maps for debugging but smaller
     sourcemap: false,
-    // Minimize bundle size
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    // Minimize bundle size with esbuild (faster than terser)
+    minify: 'esbuild',
   },
   plugins: [react(), expressPlugin()],
   resolve: {
