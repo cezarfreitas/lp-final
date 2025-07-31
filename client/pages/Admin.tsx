@@ -6,6 +6,7 @@ import { AdminFAQ } from '../components/admin/AdminFAQ';
 import { AdminGallery } from '../components/admin/AdminGallery';
 import { AdminShowroom } from '../components/admin/AdminShowroom';
 import { AdminFooter } from '../components/admin/AdminFooter';
+import { AdminDesign } from '../components/admin/AdminDesign';
 
 interface AdminData {
   hero: any;
