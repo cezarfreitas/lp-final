@@ -261,10 +261,10 @@ export default function Admin() {
                 <div key={tab.id} className="relative group">
                   <button
                     onClick={() => setActiveTab(tab.id)}
-                    className={`w-full text-left px-3 py-2 rounded-lg flex items-center space-x-2 transition-all duration-200 relative ${
+                    className={`w-full text-left px-3 py-2 rounded-lg flex items-center space-x-2 ripple-effect ${
                       activeTab === tab.id
-                        ? 'bg-red-600 text-white shadow-lg shadow-red-600/25'
-                        : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                        ? 'nav-item-active text-white'
+                        : 'text-gray-300 nav-item-hover'
                     }`}
                   >
                     {/* Compact Icon */}
