@@ -41,12 +41,73 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
     }));
   };
 
-  const uploadImage = async (file: File, field: 'logo_url' | 'background_image_url') => {
-    const formData = new FormData();
-    formData.append('file', file);
+  // Função para comprimir e otimizar imagens
+  const compressImage = (file: File, maxWidth: number, maxHeight: number, quality: number = 0.8): Promise<File> => {
+    return new Promise((resolve) => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
 
+      img.onload = () => {
+        // Calcular dimensões mantendo aspect ratio
+        let { width, height } = img;
+
+        if (width > height) {
+          if (width > maxWidth) {
+            height = (height * maxWidth) / width;
+            width = maxWidth;
+          }
+        } else {
+          if (height > maxHeight) {
+            width = (width * maxHeight) / height;
+            height = maxHeight;
+          }
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+
+        // Desenhar imagem redimensionada
+        ctx?.drawImage(img, 0, 0, width, height);
+
+        // Converter para blob com compressão
+        canvas.toBlob(
+          (blob) => {
+            if (blob) {
+              const compressedFile = new File([blob], file.name, {
+                type: 'image/webp', // WebP para melhor compressão
+                lastModified: Date.now(),
+              });
+              resolve(compressedFile);
+            } else {
+              resolve(file); // Fallback para arquivo original
+            }
+          },
+          'image/webp', // Formato WebP otimizado
+          quality
+        );
+      };
+
+      img.src = URL.createObjectURL(file);
+    });
+  };
+
+  const uploadImage = async (file: File, field: 'logo_url' | 'background_image_url') => {
     try {
-      console.log('Uploading file:', file.name);
+      console.log('Processando imagem:', file.name, 'Tamanho original:', (file.size / 1024 / 1024).toFixed(2) + 'MB');
+
+      // Definir dimensões máximas baseadas no tipo de imagem
+      const maxDimensions = field === 'logo_url'
+        ? { width: 400, height: 200 } // Logo menor
+        : { width: 1920, height: 1080 }; // Background maior
+
+      // Comprimir imagem
+      const compressedFile = await compressImage(file, maxDimensions.width, maxDimensions.height, 0.85);
+
+      console.log('Imagem comprimida:', compressedFile.name, 'Novo tamanho:', (compressedFile.size / 1024 / 1024).toFixed(2) + 'MB');
+
+      const formData = new FormData();
+      formData.append('file', compressedFile);
 
       const response = await fetch('/api/admin/upload', {
         method: 'POST',
@@ -60,7 +121,15 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
           ...prev,
           [field]: result.url
         }));
-        alert('Upload realizado com sucesso!');
+
+        // Mostrar informações de otimização
+        const originalSize = (file.size / 1024).toFixed(0);
+        const compressedSize = (compressedFile.size / 1024).toFixed(0);
+        const reduction = ((1 - compressedFile.size / file.size) * 100).toFixed(0);
+
+        alert(`✅ Upload otimizado com sucesso!
+📈 Redução: ${reduction}% (${originalSize}KB → ${compressedSize}KB)
+🚀 Formato WebP para melhor performance`);
       } else {
         const errorData = await response.text();
         console.error('Upload failed:', response.status, errorData);
