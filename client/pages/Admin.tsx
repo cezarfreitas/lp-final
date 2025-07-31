@@ -216,15 +216,11 @@ export default function Admin() {
       {/* Header */}
       <header className="bg-white border-b border-gray-200 px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center">
-              <span className="text-white font-bold text-sm">E</span>
-            </div>
-            <div>
-              <h1 className="text-lg font-semibold text-gray-900">ECKO Admin</h1>
-              <p className="text-sm text-gray-500">Painel de administração</p>
-            </div>
+          <div className="flex items-center">
+          <div className="text-sm text-gray-600 ml-4">
+            Painel de administração
           </div>
+        </div>
 
           {/* Save Status */}
           <div className="flex items-center space-x-4">
