@@ -230,7 +230,8 @@ export default function Admin() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-2 border-gray-300 border-t-red-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Carregando...</p>
+          <p className="text-gray-600">Carregando dados...</p>
+          <p className="text-gray-400 text-sm mt-2">Conectando ao servidor...</p>
         </div>
       </div>
     );
