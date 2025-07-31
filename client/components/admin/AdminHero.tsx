@@ -97,6 +97,21 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
   };
 
   const uploadImage = async (file: File, field: 'logo_url' | 'background_image_url') => {
+    // Validar se é imagem
+    if (!file.type.startsWith('image/')) {
+      alert('❌ Por favor, selecione apenas arquivos de imagem (JPG, PNG, WebP, etc.)');
+      return;
+    }
+
+    // Validar tamanho máximo (10MB)
+    if (file.size > 10 * 1024 * 1024) {
+      alert('❌ Arquivo muito grande! Máximo permitido: 10MB');
+      return;
+    }
+
+    const uploadField = field === 'logo_url' ? 'logo' : 'background';
+    setUploading(prev => ({ ...prev, [uploadField]: true }));
+
     try {
       console.log('Processando imagem:', file.name, 'Tamanho original:', (file.size / 1024 / 1024).toFixed(2) + 'MB');
 
