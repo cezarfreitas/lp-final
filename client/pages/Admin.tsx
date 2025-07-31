@@ -247,10 +247,10 @@ export default function Admin() {
           <div className="p-4">
             {/* Compact Header */}
             <div className="mb-6 text-center">
-              <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold text-xl">E</span>
+              <div className="w-12 h-12 ecko-logo-container ecko-logo-pulse rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-white font-bold text-xl text-shadow-md">E</span>
               </div>
-              <h2 className="text-white font-bold text-lg">ECKO</h2>
+              <h2 className="text-white font-bold text-lg text-shadow-sm">ECKO</h2>
               <p className="text-gray-400 text-xs">Admin Panel</p>
             </div>
 
