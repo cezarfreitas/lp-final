@@ -9,8 +9,8 @@ const dbConfig = {
   charset: 'utf8mb4',
   timezone: '+00:00',
   connectionLimit: 10,
-  acquireTimeout: 60000,
-  timeout: 60000,
+  // Remove invalid options that cause warnings
+  // acquireTimeout and timeout are not valid for mysql2
 };
 
 let pool: mysql.Pool;
