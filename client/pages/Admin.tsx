@@ -164,13 +164,28 @@ export default function Admin() {
         data,
       });
 
-      const response = await fetch(`/api/admin/${endpoint}`, {
-        method,
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      let response;
+      let retries = 2;
+
+      while (retries > 0) {
+        try {
+          response = await fetch(`/api/admin/${endpoint}`, {
+            method,
+            headers: {
+              "Content-Type": "application/json",
+            },
+            credentials: 'same-origin',
+            body: JSON.stringify(data),
+          });
+          break; // Success, exit retry loop
+        } catch (fetchError) {
+          retries--;
+          if (retries === 0) throw fetchError;
+
+          console.log(`Save failed, retrying... (${retries} attempts left)`);
+          await new Promise(resolve => setTimeout(resolve, 500));
+        }
+      }
 
       if (!response.ok) {
         let errorMessage = `${response.status} ${response.statusText}`;
