@@ -32,7 +32,7 @@ export default function Index() {
 
             {/* Subtitle */}
             <p className="text-sm sm:text-lg mb-4 sm:mb-6 font-light tracking-wide">
-              Transforme sua paixão pelo streetwear em um negócio lucrativo
+              Transforme sua paixão pela Ecko em um negócio lucrativo
             </p>
 
             {/* Main Title */}
