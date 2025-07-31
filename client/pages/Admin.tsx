@@ -297,9 +297,9 @@ export default function Admin() {
         <main className="flex-1 p-8">
           <div className="max-w-6xl mx-auto">
             {activeTab === 'hero' && (
-              <AdminHero 
-                data={data.hero} 
-                onSave={(data) => handleSave(`hero/${data.id}`, data)} 
+              <AdminHero
+                data={data.hero}
+                onSave={(data) => handleSave('hero/1', data)}
               />
             )}
             
