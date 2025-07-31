@@ -102,9 +102,29 @@ router.put('/hero/:id', async (req: Request, res: Response) => {
     const data = req.body;
 
     console.log(`Updating hero section ${id}:`, data);
-    await updateRecord('hero_section', data, { id });
-    console.log(`Hero section ${id} updated successfully`);
-    res.json({ message: 'Hero section updated successfully' });
+
+    // Check if hero exists, if not create it
+    const existing = await findOne('hero_section', { id });
+    if (!existing) {
+      // Create new hero with default data
+      const newHero = {
+        id,
+        logo_url: data.logo_url || '',
+        subtitle: data.subtitle || '',
+        main_title: data.main_title || '',
+        description: data.description || '',
+        cta_button_text: data.cta_button_text || '',
+        background_image_url: data.background_image_url || '',
+        is_active: true
+      };
+      await insertRecord('hero_section', newHero);
+      console.log(`Hero section ${id} created successfully`);
+    } else {
+      await updateRecord('hero_section', data, { id });
+      console.log(`Hero section ${id} updated successfully`);
+    }
+
+    res.json({ message: 'Hero section saved successfully' });
   } catch (error) {
     console.error(`Failed to update hero section ${req.params.id}:`, error);
     res.status(500).json({
