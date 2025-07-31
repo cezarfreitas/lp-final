@@ -243,114 +243,81 @@ export default function Admin() {
     <div className="min-h-screen bg-gray-100">
       <div className="flex">
         {/* Sidebar */}
-        <nav className="w-72 sidebar-gradient shadow-xl min-h-screen border-r border-slate-700 relative overflow-hidden">
-          <div className="p-6">
-            {/* Sidebar Header */}
-            <div className="mb-8">
-              <div className="flex items-center space-x-3 mb-2">
-                <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
-                  <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h2 className="text-white font-semibold text-lg">Painel Admin</h2>
-                  <p className="text-slate-400 text-sm">Gerenciar conteúdo</p>
-                </div>
+        <nav className="w-64 bg-black shadow-2xl min-h-screen border-r border-red-900/20 relative overflow-hidden">
+          <div className="p-4">
+            {/* Compact Header */}
+            <div className="mb-6 text-center">
+              <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                <span className="text-white font-bold text-xl">E</span>
               </div>
-
-              {/* Progress Bar */}
-              <div className="bg-slate-700/50 rounded-full p-1">
-                <div className="progress-bar-animated h-2 rounded-full w-3/4"></div>
-              </div>
-              <p className="text-slate-400 text-xs mt-2">Configuração: 75% completa</p>
+              <h2 className="text-white font-bold text-lg">ECKO</h2>
+              <p className="text-gray-400 text-xs">Admin Panel</p>
             </div>
 
-            {/* Navigation Menu */}
-            <div className="space-y-2">
-              <h3 className="text-slate-300 font-medium text-sm uppercase tracking-wider mb-4">
-                Seções do Site
-              </h3>
+            {/* Compact Navigation */}
+            <div className="space-y-1">
 
               {tabs.map((tab, index) => (
                 <div key={tab.id} className="relative group">
                   <button
                     onClick={() => setActiveTab(tab.id)}
-                    className={`w-full text-left px-4 py-3 rounded-xl flex items-center space-x-3 transition-all duration-200 relative overflow-hidden sidebar-button-hover ${
+                    className={`w-full text-left px-3 py-2 rounded-lg flex items-center space-x-2 transition-all duration-200 relative ${
                       activeTab === tab.id
-                        ? 'bg-gradient-to-r from-red-500/20 to-red-600/20 text-white border border-red-500/30 sidebar-active-glow'
-                        : 'text-slate-300 hover:bg-slate-700/50 hover:text-white'
+                        ? 'bg-red-600 text-white shadow-lg shadow-red-600/25'
+                        : 'text-gray-300 hover:bg-gray-800 hover:text-white'
                     }`}
                   >
-                    {/* Active indicator */}
-                    {activeTab === tab.id && (
-                      <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-red-400 to-red-600 rounded-r"></div>
-                    )}
-
-                    {/* Icon */}
-                    <div className={`flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors ${
+                    {/* Compact Icon */}
+                    <div className={`flex-shrink-0 w-6 h-6 rounded flex items-center justify-center ${
                       activeTab === tab.id
-                        ? 'icon-container-active text-red-400'
-                        : 'icon-container text-slate-400 group-hover:bg-slate-600/50 group-hover:text-slate-300'
+                        ? 'bg-red-500/20 text-red-200'
+                        : 'text-gray-400'
                     }`}>
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d={tab.icon} clipRule="evenodd" />
                       </svg>
                     </div>
 
-                    {/* Content */}
+                    {/* Compact Content */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between">
-                        <span className="font-medium truncate sidebar-label">{tab.label}</span>
-
-                        {/* Badge/Number */}
-                        <span className={`text-xs px-2 py-1 rounded-full font-medium section-badge ${
+                        <span className="font-medium text-sm truncate">{tab.label}</span>
+                        <span className={`text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium ${
                           activeTab === tab.id
-                            ? 'bg-red-500/20 text-red-300 border-red-500/20'
-                            : 'text-slate-400'
+                            ? 'bg-red-500/30 text-red-200'
+                            : 'bg-gray-700 text-gray-400'
                         }`}>
                           {index + 1}
                         </span>
                       </div>
-
-                      <p className={`text-xs mt-1 truncate sidebar-description ${
-                        activeTab === tab.id ? 'text-slate-300' : 'text-slate-500'
-                      }`}>
-                        {tab.description}
-                      </p>
                     </div>
-
-                    {/* Hover effect */}
-                    {activeTab !== tab.id && (
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-slate-700/20 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl"></div>
-                    )}
                   </button>
                 </div>
               ))}
             </div>
 
-            {/* Bottom Actions */}
-            <div className="mt-8 pt-6 sidebar-bottom">
-              <div className="space-y-3">
+            {/* Compact Bottom Actions */}
+            <div className="mt-6 pt-4 border-t border-gray-800">
+              <div className="space-y-2">
                 <a
                   href="/"
                   target="_blank"
-                  className="w-full bg-gradient-to-r from-slate-700 to-slate-600 text-white px-4 py-3 rounded-xl hover:from-slate-600 hover:to-slate-500 transition-all duration-200 flex items-center space-x-3 group"
+                  className="w-full bg-red-600 text-white px-3 py-2 rounded-lg hover:bg-red-700 transition-colors flex items-center justify-center space-x-2 text-sm"
                 >
-                  <svg className="w-4 h-4 text-slate-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
-                  <span className="font-medium">Visualizar Site</span>
+                  <span className="font-medium">Ver Site</span>
                 </a>
 
                 <button
                   onClick={fetchData}
-                  className="w-full bg-slate-700/50 text-slate-300 px-4 py-2 rounded-lg hover:bg-slate-600/50 hover:text-white transition-all duration-200 flex items-center space-x-2 text-sm"
+                  className="w-full bg-gray-800 text-gray-300 px-3 py-2 rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-200 flex items-center justify-center space-x-2 text-sm"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                   </svg>
-                  <span>Atualizar Dados</span>
+                  <span>Refresh</span>
                 </button>
               </div>
             </div>
