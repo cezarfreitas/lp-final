@@ -125,12 +125,30 @@ export default function Admin() {
 
   const checkIfSetupNeeded = async () => {
     try {
-      const response = await fetch("/api/setup/status");
+      console.log("Checking setup status...");
+      const response = await fetch("/api/setup/status", {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'same-origin'
+      });
+
       if (!response.ok) {
+        console.log("Setup check failed, redirecting to setup...");
         window.location.href = "/setup";
+      } else {
+        console.log("Setup check passed, but data fetch failed. Retrying...");
+        // Setup is OK, maybe temporary network issue - retry after a moment
+        setTimeout(() => {
+          fetchData();
+        }, 2000);
       }
-    } catch {
-      window.location.href = "/setup";
+    } catch (error) {
+      console.log("Setup check error:", error);
+      // If we can't even reach setup, might be a network issue
+      // Show error state instead of redirecting
+      setSaveStatus("error");
     }
   };
 
