@@ -249,10 +249,10 @@ export default function Admin() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-white">
       <div className="flex">
         {/* Sidebar */}
-        <nav className="w-48 bg-black min-h-screen border-r border-red-600/30">
+        <nav className="w-48 bg-gradient-to-b from-black to-gray-900 min-h-screen border-r border-red-500/20 shadow-2xl">
           <div className="p-4">
             {/* Simple Header */}
             <div className="mb-8 text-center">
