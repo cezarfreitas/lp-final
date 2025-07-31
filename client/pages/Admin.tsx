@@ -371,10 +371,16 @@ export default function Admin() {
             )}
 
             {activeTab === 'footer' && (
-              <AdminFooter 
+              <AdminFooter
                 footerSection={data.footerSection}
                 socialLinks={data.socialLinks}
                 quickLinks={data.quickLinks}
+                onSave={handleSave}
+              />
+            )}
+
+            {activeTab === 'design' && (
+              <AdminDesign
                 onSave={handleSave}
               />
             )}
