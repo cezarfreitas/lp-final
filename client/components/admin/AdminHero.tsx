@@ -17,7 +17,7 @@ interface AdminHeroProps {
 
 export function AdminHero({ data, onSave }: AdminHeroProps) {
   const [formData, setFormData] = useState<HeroData>(data || {
-    id: 0,
+    id: 1,
     logo_url: '',
     subtitle: '',
     main_title: '',
@@ -73,7 +73,7 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
             onClick={() => setShowPreview(false)}
             className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
           >
-            Voltar à Edição
+            Voltar �� Edição
           </button>
         </div>
 
