@@ -10,6 +10,22 @@ CREATE TABLE IF NOT EXISTS page_settings (
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
+-- Configurações de design (cores, fontes, etc)
+CREATE TABLE IF NOT EXISTS design_settings (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  primary_color VARCHAR(7) DEFAULT '#dc2626',
+  secondary_color VARCHAR(7) DEFAULT '#000000',
+  accent_color VARCHAR(7) DEFAULT '#ffffff',
+  text_color VARCHAR(7) DEFAULT '#1f2937',
+  background_color VARCHAR(7) DEFAULT '#f9fafb',
+  font_primary VARCHAR(100) DEFAULT 'Inter',
+  font_secondary VARCHAR(100) DEFAULT 'Roboto',
+  font_sizes JSON,
+  is_active BOOLEAN DEFAULT true,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
 -- Seção Hero
 CREATE TABLE IF NOT EXISTS hero_section (
   id INT PRIMARY KEY AUTO_INCREMENT,
