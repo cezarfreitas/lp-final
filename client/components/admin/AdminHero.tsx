@@ -341,11 +341,28 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
                       className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
                       placeholder="https://... ou /uploads/..."
                     />
-                    <label className="bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300 hover:bg-gray-200 cursor-pointer">
-                      Upload
+                    <label className={`px-4 py-2 rounded border transition-all cursor-pointer flex items-center space-x-2 ${
+                      uploading.logo
+                        ? 'bg-blue-100 text-blue-700 border-blue-300'
+                        : 'bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200'
+                    }`}>
+                      {uploading.logo ? (
+                        <>
+                          <div className="animate-spin rounded-full h-4 w-4 border-2 border-blue-600 border-t-transparent"></div>
+                          <span>Otimizando...</span>
+                        </>
+                      ) : (
+                        <>
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                          </svg>
+                          <span>Upload</span>
+                        </>
+                      )}
                       <input
                         type="file"
                         accept="image/*"
+                        disabled={uploading.logo}
                         onChange={(e) => {
                           const file = e.target.files?.[0];
                           if (file) uploadImage(file, 'logo_url');
