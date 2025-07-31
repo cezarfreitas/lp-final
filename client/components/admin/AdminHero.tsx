@@ -157,6 +157,8 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
     } catch (error) {
       console.error('Upload error:', error);
       alert(`Erro no upload: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
+    } finally {
+      setUploading(prev => ({ ...prev, [uploadField]: false }));
     }
   };
 
