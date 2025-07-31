@@ -576,6 +576,232 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Showroom Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left Column - Text Content */}
+            <div className="space-y-6">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 uppercase tracking-wider">
+                CONHEÇA NOSSO <span className="text-red-600">SHOWROOM</span>
+              </h2>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Visite nosso showroom e conheça de perto toda a qualidade e
+                diversidade dos produtos ECKO. Um espaço moderno e inspirador
+                onde você pode vivenciar o universo da marca.
+              </p>
+
+              <div className="pt-6">
+                <button
+                  onClick={() => {
+                    document.getElementById("benefits")?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                  className="font-display bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
+                >
+                  AGENDAR VISITA
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column - Image Slider */}
+            <div className="relative">
+              <div className="overflow-hidden rounded-lg shadow-lg">
+                <div
+                  id="showroom-slider"
+                  className="flex transition-transform duration-500 ease-in-out"
+                >
+                  {/* Slide 1 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                      alt="Showroom ECKO fachada em São Paulo para lojistas oficiais visitarem"
+                      className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                  </div>
+
+                  {/* Slide 2 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                      alt="Interior do showroom ECKO com produtos para lojistas conhecerem"
+                      className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                  </div>
+
+                  {/* Slide 3 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                      alt="Exposição de produtos ECKO no showroom para futuros lojistas oficiais"
+                      className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                  </div>
+
+                  {/* Slide 4 */}
+                  <div className="w-full flex-shrink-0">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2F3a038822502b49b39691cbaf44da5f95%2F34298f64f7774ba9ba1c7a2036028b45?format=webp&width=600"
+                      alt="Área de atendimento especializado para lojistas ECKO no showroom"
+                      className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Slider Navigation */}
+              <div className="flex justify-center items-center mt-6 space-x-4">
+                <button
+                  id="showroom-prev"
+                  aria-label="Foto anterior do showroom"
+                  className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
+                  onClick={() => {
+                    const slider = document.getElementById("showroom-slider");
+                    const currentTransform =
+                      slider?.style.transform || "translateX(0%)";
+                    const currentValue = parseInt(
+                      currentTransform.match(/-?\d+/) || ["0"],
+                    );
+                    const newValue =
+                      currentValue >= 0 ? -300 : currentValue + 100;
+                    if (slider)
+                      slider.style.transform = `translateX(${newValue}%)`;
+
+                    // Update dots
+                    const dots = document.querySelectorAll(".showroom-dot");
+                    dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                    dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                    const activeIndex = Math.abs(newValue / 100);
+                    if (dots[activeIndex]) {
+                      dots[activeIndex].classList.remove("bg-gray-300");
+                      dots[activeIndex].classList.add("bg-red-600");
+                    }
+                  }}
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+
+                {/* Dots Indicator */}
+                <div className="flex space-x-2">
+                  <button
+                    aria-label="Ver fachada do showroom"
+                    className="w-6 h-6 rounded-full bg-red-600 showroom-dot flex items-center justify-center"
+                    onClick={() => {
+                      const slider = document.getElementById("showroom-slider");
+                      if (slider) slider.style.transform = "translateX(0%)";
+
+                      const dots = document.querySelectorAll(".showroom-dot");
+                      dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                      dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                      dots[0].classList.remove("bg-gray-300");
+                      dots[0].classList.add("bg-red-600");
+                    }}
+                  ></button>
+                  <button
+                    aria-label="Ver interior do showroom"
+                    className="w-6 h-6 rounded-full bg-gray-300 showroom-dot flex items-center justify-center"
+                    onClick={() => {
+                      const slider = document.getElementById("showroom-slider");
+                      if (slider) slider.style.transform = "translateX(-100%)";
+
+                      const dots = document.querySelectorAll(".showroom-dot");
+                      dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                      dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                      dots[1].classList.remove("bg-gray-300");
+                      dots[1].classList.add("bg-red-600");
+                    }}
+                  ></button>
+                  <button
+                    aria-label="Ver exposição de produtos"
+                    className="w-6 h-6 rounded-full bg-gray-300 showroom-dot flex items-center justify-center"
+                    onClick={() => {
+                      const slider = document.getElementById("showroom-slider");
+                      if (slider) slider.style.transform = "translateX(-200%)";
+
+                      const dots = document.querySelectorAll(".showroom-dot");
+                      dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                      dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                      dots[2].classList.remove("bg-gray-300");
+                      dots[2].classList.add("bg-red-600");
+                    }}
+                  ></button>
+                  <button
+                    aria-label="Ver área de atendimento"
+                    className="w-6 h-6 rounded-full bg-gray-300 showroom-dot flex items-center justify-center"
+                    onClick={() => {
+                      const slider = document.getElementById("showroom-slider");
+                      if (slider) slider.style.transform = "translateX(-300%)";
+
+                      const dots = document.querySelectorAll(".showroom-dot");
+                      dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                      dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                      dots[3].classList.remove("bg-gray-300");
+                      dots[3].classList.add("bg-red-600");
+                    }}
+                  ></button>
+                </div>
+
+                <button
+                  id="showroom-next"
+                  aria-label="Próxima foto do showroom"
+                  className="bg-red-600 hover:bg-red-700 text-white p-2 rounded-full transition-colors duration-300"
+                  onClick={() => {
+                    const slider = document.getElementById("showroom-slider");
+                    const currentTransform =
+                      slider?.style.transform || "translateX(0%)";
+                    const currentValue = parseInt(
+                      currentTransform.match(/-?\d+/) || ["0"],
+                    );
+                    const newValue =
+                      currentValue <= -300 ? 0 : currentValue - 100;
+                    if (slider)
+                      slider.style.transform = `translateX(${newValue}%)`;
+
+                    // Update dots
+                    const dots = document.querySelectorAll(".showroom-dot");
+                    dots.forEach((dot) => dot.classList.remove("bg-red-600"));
+                    dots.forEach((dot) => dot.classList.add("bg-gray-300"));
+                    const activeIndex = Math.abs(newValue / 100);
+                    if (dots[activeIndex]) {
+                      dots[activeIndex].classList.remove("bg-gray-300");
+                      dots[activeIndex].classList.add("bg-red-600");
+                    }
+                  }}
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer Section */}
       <footer className="bg-gray-900 text-white py-12 px-4">
         <div className="max-w-6xl mx-auto">
