@@ -42,9 +42,14 @@ export default function Admin() {
       if (!response.ok) {
         let errorData;
         try {
-          errorData = await response.json();
+          const responseText = await response.text();
+          try {
+            errorData = JSON.parse(responseText);
+          } catch {
+            errorData = { error: responseText };
+          }
         } catch {
-          errorData = { error: await response.text() };
+          errorData = { error: 'Failed to read response' };
         }
 
         console.error('API Error:', response.status, response.statusText, errorData);
