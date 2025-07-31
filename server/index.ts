@@ -55,7 +55,15 @@ export function createServer() {
 // Start standalone server when run directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   const app = createServer();
-  const PORT = process.env.PORT || 3000;
+
+  // Try different ports if the preferred one is in use
+  const tryPorts = [
+    process.env.PORT ? parseInt(process.env.PORT) : 3000,
+    3000,
+    3001,
+    8080,
+    8000
+  ];
 
   // Serve static files for production
   app.use(express.static(path.join(__dirname, '../dist/client')));
@@ -65,7 +73,38 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     res.sendFile(path.join(__dirname, '../dist/client/index.html'));
   });
 
-  app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+  const startServer = async (ports: number[]) => {
+    for (const port of ports) {
+      try {
+        await new Promise<void>((resolve, reject) => {
+          const server = app.listen(port, () => {
+            console.log(`🚀 Server running on port ${port}`);
+            console.log(`📱 Local: http://localhost:${port}`);
+            resolve();
+          });
+
+          server.on('error', (err: any) => {
+            if (err.code === 'EADDRINUSE') {
+              console.log(`⚠️  Port ${port} is already in use, trying next port...`);
+              reject(err);
+            } else {
+              console.error(`❌ Server error on port ${port}:`, err);
+              reject(err);
+            }
+          });
+        });
+        break; // Success, exit loop
+      } catch (err: any) {
+        if (err.code !== 'EADDRINUSE' || port === ports[ports.length - 1]) {
+          console.error(`❌ Failed to start server: ${err.message}`);
+          process.exit(1);
+        }
+      }
+    }
+  };
+
+  startServer(tryPorts).catch((err) => {
+    console.error(`❌ Could not start server on any available port:`, err);
+    process.exit(1);
   });
 }
