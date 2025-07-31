@@ -516,6 +516,74 @@ router.delete('/quick-links/:id', async (req: Request, res: Response) => {
   }
 });
 
+// Design APIs
+router.get('/design', async (req: Request, res: Response) => {
+  try {
+    const design = await findOne('design_settings', { is_active: true });
+    if (!design) {
+      // Return default design if none exists
+      const defaultDesign = {
+        id: 1,
+        primary_color: '#dc2626',
+        secondary_color: '#000000',
+        accent_color: '#ffffff',
+        text_color: '#1f2937',
+        background_color: '#f9fafb',
+        font_primary: 'Inter',
+        font_secondary: 'Roboto',
+        font_sizes: JSON.stringify({
+          heading1: '3rem',
+          heading2: '2.25rem',
+          heading3: '1.875rem',
+          body: '1rem',
+          small: '0.875rem'
+        })
+      };
+      res.json(defaultDesign);
+    } else {
+      // Parse font_sizes if it's stored as JSON string
+      if (typeof design.font_sizes === 'string') {
+        design.font_sizes = JSON.parse(design.font_sizes);
+      }
+      res.json(design);
+    }
+  } catch (error) {
+    console.error('Failed to fetch design settings:', error);
+    res.status(500).json({ error: 'Failed to fetch design settings' });
+  }
+});
+
+router.put('/design', async (req: Request, res: Response) => {
+  try {
+    const data = req.body;
+    console.log('Updating design settings:', data);
+
+    // Convert font_sizes object to JSON string for storage
+    if (data.font_sizes && typeof data.font_sizes === 'object') {
+      data.font_sizes = JSON.stringify(data.font_sizes);
+    }
+
+    // Check if design settings exist
+    const existing = await findOne('design_settings', { is_active: true }).catch(() => null);
+
+    if (existing) {
+      await updateRecord('design_settings', data, { id: existing.id });
+    } else {
+      // Create new record
+      await insertRecord('design_settings', { ...data, is_active: true });
+    }
+
+    console.log('Design settings updated successfully');
+    res.json({ message: 'Design settings updated successfully' });
+  } catch (error) {
+    console.error('Failed to update design settings:', error);
+    res.status(500).json({
+      error: 'Failed to update design settings',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
+  }
+});
+
 // Get all data for frontend
 router.get('/all-data', async (req: Request, res: Response) => {
   try {
