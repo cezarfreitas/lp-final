@@ -1,4 +1,56 @@
+import { useState, useEffect } from 'react';
+
+interface HeroData {
+  logo_url: string;
+  subtitle: string;
+  main_title: string;
+  description: string;
+  cta_button_text: string;
+  background_image_url: string;
+}
+
 export default function Index() {
+  const [heroData, setHeroData] = useState<HeroData | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchHeroData();
+  }, []);
+
+  const fetchHeroData = async () => {
+    try {
+      const response = await fetch('/api/admin/hero');
+      if (response.ok) {
+        const data = await response.json();
+        setHeroData(data);
+      }
+    } catch (error) {
+      console.error('Error fetching hero data:', error);
+      // Use fallback data if API fails
+      setHeroData({
+        logo_url: 'https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png',
+        subtitle: 'Transforme sua paixão pelo streetwear em um negócio lucrativo',
+        main_title: 'SEJA UM LOJISTA\nOFICIAL ECKO E TENHA\nos melhores produtos',
+        description: 'Junte-se aos milhares de revendedores que já transformaram seus negócios com a marca mais desejada do streetwear brasileiro',
+        cta_button_text: 'CONHECER OS BENEFÍCIOS',
+        background_image_url: 'https://estyle.vteximg.com.br/arquivos/ecko_mosaic5.png?v=638421392678800000'
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-2 border-red-600 border-t-transparent mx-auto mb-4"></div>
+          <p className="text-white">Carregando...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -7,8 +59,7 @@ export default function Index() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(https://estyle.vteximg.com.br/arquivos/ecko_mosaic5.png?v=638421392678800000)",
+            backgroundImage: `url(${heroData?.background_image_url || 'https://estyle.vteximg.com.br/arquivos/ecko_mosaic5.png?v=638421392678800000'})`,
           }}
         />
 
@@ -22,59 +73,86 @@ export default function Index() {
             style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
           >
             {/* Logo */}
-            <div className="mb-6 sm:mb-8 flex justify-center">
-              <img
-                src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
-                alt="Logo ECKO Oficial"
-                className="h-12 sm:h-16 w-auto"
-              />
-            </div>
+            {heroData?.logo_url && (
+              <div className="mb-6 sm:mb-8 flex justify-center">
+                <img
+                  src={heroData.logo_url}
+                  alt="Logo ECKO Oficial"
+                  className="h-12 sm:h-16 w-auto"
+                />
+              </div>
+            )}
 
             {/* Subtitle */}
+<<<<<<< HEAD
             <p className="text-sm sm:text-lg mb-4 sm:mb-6 font-light tracking-wide">
               Transforme sua paixão pela Ecko em um negócio lucrativo
             </p>
+=======
+            {heroData?.subtitle && (
+              <p className="text-sm sm:text-lg mb-4 sm:mb-6 font-light tracking-wide">
+                {heroData.subtitle}
+              </p>
+            )}
+>>>>>>> 81af7a4e9d020d14e352c2b75ebe9e44f9e2ef83
 
             {/* Main Title */}
-            <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight tracking-wider uppercase">
-              SEJA UM LOJISTA
-              <br />
-              OFICIAL <span className="text-red-600">ECKO</span> E TENHA
-              <br />
-              SUCESSO NO STREETWEAR
-            </h1>
+            {heroData?.main_title && (
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight tracking-wider uppercase">
+                {heroData.main_title.split('\n').map((line, index) => (
+                  <span key={index}>
+                    {line.includes('ECKO') ? (
+                      line.split('ECKO').map((part, i) => (
+                        <span key={i}>
+                          {part}
+                          {i < line.split('ECKO').length - 1 && (
+                            <span className="text-red-600">ECKO</span>
+                          )}
+                        </span>
+                      ))
+                    ) : (
+                      line
+                    )}
+                    {index < heroData.main_title.split('\n').length - 1 && <br />}
+                  </span>
+                ))}
+              </h1>
+            )}
 
             {/* Description */}
-            <p className="text-sm sm:text-lg lg:text-xl mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto leading-relaxed opacity-90 font-medium">
-              Junte-se aos milhares de revendedores que já transformaram seus
-              negócios com a marca mais desejada do streetwear brasileiro
-            </p>
+            {heroData?.description && (
+              <p className="text-sm sm:text-lg lg:text-xl mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto leading-relaxed opacity-90 font-medium">
+                {heroData.description}
+              </p>
+            )}
 
             {/* CTA Button */}
-            <button
-              onClick={() => {
-                document.getElementById("benefits")?.scrollIntoView({
-                  behavior: "smooth",
-                });
-              }}
-              className="font-display border-2 border-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold hover:bg-red-600 active:bg-red-700 transition-colors duration-300 flex items-center justify-center gap-2 mx-auto tracking-wide uppercase w-full max-w-xs sm:w-auto"
-            >
-              <span className="hidden sm:inline">CONHECER OS BENEFÍCIOS</span>
-              <span className="sm:hidden">VER BENEFÍCIOS</span>
-              <svg
-                className="w-4 h-4 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            {heroData?.cta_button_text && (
+              <button
+                onClick={() => {
+                  document.getElementById("benefits")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className="font-display border-2 border-red-600 text-white px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-lg font-semibold hover:bg-red-600 active:bg-red-700 transition-colors duration-300 flex items-center justify-center gap-2 mx-auto tracking-wide uppercase w-full max-w-xs sm:w-auto"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                />
-              </svg>
-            </button>
+                <span className="hidden sm:inline">{heroData.cta_button_text}</span>
+                <span className="sm:hidden">VER BENEFÍCIOS</span>
+                <svg
+                  className="w-4 h-4 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </svg>
+              </button>
+            )}
           </div>
 
           {/* Animated scroll arrow */}
@@ -106,139 +184,30 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-wider">
-              POR QUE SER PARCEIRO <span className="text-red-600">ECKO</span>?
+      {/* Rest of the page - Benefits section */}
+      <section id="benefits" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              POR QUE SER PARCEIRO ECKO?
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Descubra as vantagens exclusivas que oferecemos aos nossos
-              parceiros oficiais
+            <p className="text-xl text-gray-600 mb-12">
+              Descubra as vantagens exclusivas que oferecemos aos nossos parceiros oficiais
             </p>
           </div>
 
-          {/* Benefits Layout - Mobile: 2 cols, Desktop: 4 cards + image */}
-          <div className="grid grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-12 items-center">
-            {/* Left Column - 4 Benefits Cards (Desktop) */}
-            <div className="lg:order-1 order-2 col-span-2 lg:col-span-1">
-              <div className="grid grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-8">
-                {/* Benefit 1 */}
-                <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
-                  <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
-                      />
-                    </svg>
-                  </div>
-                  <div className="lg:flex-1">
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
-                      MARGEM ALTA
-                    </h3>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                      Lucre até 60% em cada produto vendido com preços
-                      exclusivos para parceiros oficiais
-                    </p>
-                  </div>
-                </div>
-
-                {/* Benefit 2 */}
-                <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
-                  <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                      />
-                    </svg>
-                  </div>
-                  <div className="lg:flex-1">
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
-                      ENVIO NACIONAL
-                    </h3>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                      Entregamos em todo Brasil com frete otimizado e prazos
-                      reduzidos para seus clientes
-                    </p>
-                  </div>
-                </div>
-
-                {/* Benefit 3 */}
-                <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
-                  <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
-                  </div>
-                  <div className="lg:flex-1">
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
-                      LANÇAMENTOS EXCLUSIVOS
-                    </h3>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                      Tenha acesso antecipado às novas coleções e produtos
-                      exclusivos antes de todos
-                    </p>
-                  </div>
-                </div>
-
-                {/* Benefit 4 */}
-                <div className="lg:flex lg:items-start lg:text-left text-center group hover:transform hover:scale-105 transition-all duration-300 lg:gap-4">
-                  <div className="bg-red-600 rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto lg:mx-0 mb-4 lg:mb-0 group-hover:bg-red-700 transition-colors lg:flex-shrink-0">
-                    <svg
-                      className="w-6 h-6 sm:w-8 sm:h-8 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2v20M2 12h20"
-                      />
-                    </svg>
-                  </div>
-                  <div className="lg:flex-1">
-                    <h3 className="font-display text-lg sm:text-xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
-                      SUPORTE COMPLETO
-                    </h3>
-                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-                      Equipe dedicada para ajudar com vendas, marketing e
-                      crescimento do seu negócio
-                    </p>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-sm border text-center">
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">PROCESSO SIMPLES</h3>
+              <p className="text-gray-600">Cadastro rápido e aprovação em até 24 horas</p>
             </div>
 
+<<<<<<< HEAD
             {/* Right Column - Hero Image (Desktop) */}
             <div className="lg:order-2 order-1 col-span-2 lg:col-span-1">
               <div className="relative group">
@@ -358,223 +327,31 @@ export default function Index() {
                     </p>
                   </div>
                 </div>
+=======
+            <div className="bg-white p-8 rounded-lg shadow-sm border text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                </svg>
+>>>>>>> 81af7a4e9d020d14e352c2b75ebe9e44f9e2ef83
               </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">SEM TAXAS INICIAIS</h3>
+              <p className="text-gray-600">Comece sem investimento inicial ou taxas de adesão</p>
             </div>
 
-            {/* Right Column - Contact Form */}
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="mb-6">
-                <h3 className="font-display text-2xl font-bold text-gray-900 uppercase tracking-wider mb-2">
-                  CADASTRO LOJISTA OFICIAL ECKO
-                </h3>
-                <p className="text-gray-600">
-                  Preencha o formulário e nossa equipe entrará em contato
-                </p>
+            <div className="bg-white p-8 rounded-lg shadow-sm border text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.458V6.5m0 7v4.042M2.458 12H6.5m7 0h4.042" />
+                </svg>
               </div>
-
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Nome Completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
-                    placeholder="Seu nome completo"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    WhatsApp *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
-                    placeholder="(11) 99999-9999"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Você é lojista com CNPJ? *
-                  </label>
-                  <div className="space-y-2">
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="lojista"
-                        value="sim"
-                        id="lojista-sim"
-                        required
-                        className="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-600"
-                        onChange={(e) => {
-                          const extraFields =
-                            document.getElementById("extra-fields");
-                          const consumerMessage =
-                            document.getElementById("consumer-message");
-                          const submitButton =
-                            document.getElementById("submit-button");
-                          if (e.target.checked) {
-                            if (extraFields)
-                              extraFields.style.display = "block";
-                            if (consumerMessage)
-                              consumerMessage.style.display = "none";
-                            if (submitButton)
-                              submitButton.style.display = "block";
-                          }
-                        }}
-                      />
-                      <span className="ml-2 text-gray-700">Sim</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="lojista"
-                        value="nao"
-                        required
-                        className="w-4 h-4 text-red-600 border-gray-300 focus:ring-red-600"
-                        onChange={(e) => {
-                          const extraFields =
-                            document.getElementById("extra-fields");
-                          const consumerMessage =
-                            document.getElementById("consumer-message");
-                          const submitButton =
-                            document.getElementById("submit-button");
-                          if (e.target.checked) {
-                            if (extraFields) extraFields.style.display = "none";
-                            if (consumerMessage)
-                              consumerMessage.style.display = "block";
-                            if (submitButton)
-                              submitButton.style.display = "none";
-                          }
-                        }}
-                      />
-                      <span className="ml-2 text-gray-700">
-                        Não, sou consumidor
-                      </span>
-                    </label>
-                  </div>
-                </div>
-
-                {/* Campos extras para lojistas */}
-                <div
-                  id="extra-fields"
-                  style={{ display: "none" }}
-                  className="space-y-6"
-                >
-                  <div>
-                    <label
-                      htmlFor="store-type"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Sua loja é? *
-                    </label>
-                    <select
-                      id="store-type"
-                      name="store-type"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
-                    >
-                      <option value="">Selecione uma opção</option>
-                      <option value="online">Online</option>
-                      <option value="fisica">Física</option>
-                      <option value="online-fisica">Online + Física</option>
-                      <option value="midias-sociais">
-                        Vendo nas mídias sociais
-                      </option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="cep"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Qual seu CEP? *
-                    </label>
-                    <input
-                      type="text"
-                      id="cep"
-                      name="cep"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent outline-none transition-colors"
-                      placeholder="00000-000"
-                      maxLength={9}
-                      onChange={(e) => {
-                        // Formata��ão automática do CEP
-                        let value = e.target.value.replace(/\D/g, "");
-                        if (value.length > 5) {
-                          value =
-                            value.substring(0, 5) + "-" + value.substring(5, 8);
-                        }
-                        e.target.value = value;
-                      }}
-                    />
-                  </div>
-                </div>
-
-                {/* Mensagem para consumidores */}
-                <div
-                  id="consumer-message"
-                  style={{ display: "none" }}
-                  className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"
-                >
-                  <div className="text-center space-y-4">
-                    <h4 className="font-display text-lg font-bold text-gray-900 uppercase tracking-wide">
-                      ⚠️ CANAL EXCLUSIVO B2B
-                    </h4>
-                    <p className="text-gray-700 leading-relaxed">
-                      Infelizmente este canal é só por <strong>atacado</strong>,
-                      mas caso queira receber um{" "}
-                      <strong className="text-red-600">
-                        cupom de 10% de desconto
-                      </strong>{" "}
-                      no site oficial da ECKO, clique em enviar que te mando
-                      agora!
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        // Aqui você pode adicionar a lógica para enviar o cupom
-                        alert(
-                          "Cupom enviado! Verifique seu WhatsApp em alguns minutos.",
-                        );
-                      }}
-                      className="font-display bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 text-sm font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
-                    >
-                      QUERO O CUPOM DE 10%
-                    </button>
-                  </div>
-                </div>
-
-                <div id="submit-button" style={{ display: "none" }}>
-                  <button
-                    type="submit"
-                    className="w-full font-display bg-red-600 hover:bg-red-700 text-white px-8 py-4 text-lg font-semibold transition-colors duration-300 uppercase tracking-wide rounded-lg"
-                  >
-                    QUERO SER PARCEIRO AGORA
-                  </button>
-                </div>
-
-                <p className="text-xs text-gray-500 text-center">
-                  Ao enviar, você concorda em receber contato da nossa equipe
-                </p>
-              </form>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">SUPORTE DEDICADO</h3>
+              <p className="text-gray-600">Equipe especializada para te acompanhar em cada etapa</p>
             </div>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Testimonials Section */}
       <section className="py-16 px-4 bg-white">
@@ -1875,6 +1652,8 @@ export default function Index() {
           </div>
         </div>
       </footer>
+=======
+>>>>>>> 81af7a4e9d020d14e352c2b75ebe9e44f9e2ef83
     </div>
   );
 }
