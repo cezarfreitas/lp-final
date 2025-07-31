@@ -260,8 +260,6 @@ export default function Index() {
               </div>
             </div>
           </div>
-
-
         </div>
       </section>
 
@@ -1534,7 +1532,6 @@ export default function Index() {
                       alt="Showroom ECKO fachada em São Paulo para lojistas oficiais visitarem"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
-
                   </div>
 
                   {/* Slide 2 */}
@@ -1544,7 +1541,6 @@ export default function Index() {
                       alt="Interior do showroom ECKO com produtos para lojistas conhecerem"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
-
                   </div>
 
                   {/* Slide 3 */}
@@ -1554,7 +1550,6 @@ export default function Index() {
                       alt="Exposição de produtos ECKO no showroom para futuros lojistas oficiais"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
-
                   </div>
 
                   {/* Slide 4 */}
@@ -1564,7 +1559,6 @@ export default function Index() {
                       alt="Área de atendimento especializado para lojistas ECKO no showroom"
                       className="w-full h-64 sm:h-80 lg:h-96 object-cover"
                     />
-
                   </div>
                 </div>
               </div>
@@ -1735,7 +1729,6 @@ export default function Index() {
                 20 anos de tradição no streetwear brasileiro. A marca que
                 transforma paixão em negócio lucrativo.
               </p>
-
             </div>
 
             {/* Quick Links */}
