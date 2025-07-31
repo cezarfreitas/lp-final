@@ -46,6 +46,7 @@ export function AdminDesign({ data, onSave }: AdminDesignProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('Saving design data:', formData);
     onSave('design', formData, 'PUT');
   };
 
