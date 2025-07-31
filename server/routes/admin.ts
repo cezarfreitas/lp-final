@@ -60,21 +60,33 @@ router.post('/upload', upload.single('file'), async (req: Request, res: Response
     }
 
     const fileUrl = `/uploads/${req.file.filename}`;
-    
-    // Save file info to database
-    const fileData = {
-      original_name: req.file.originalname,
-      filename: req.file.filename,
-      file_path: req.file.path,
-      file_size: req.file.size,
-      mime_type: req.file.mimetype,
-      file_url: fileUrl
-    };
 
-    const result = await insertRecord('uploaded_files', fileData);
+    console.log('File uploaded successfully:', {
+      filename: req.file.filename,
+      originalname: req.file.originalname,
+      size: req.file.size,
+      mimetype: req.file.mimetype,
+      url: fileUrl
+    });
+
+    // Optionally save to database, but don't fail if it doesn't work
+    try {
+      const fileData = {
+        original_name: req.file.originalname,
+        filename: req.file.filename,
+        file_path: req.file.path,
+        file_size: req.file.size,
+        mime_type: req.file.mimetype,
+        file_url: fileUrl
+      };
+      await insertRecord('uploaded_files', fileData);
+      console.log('File info saved to database');
+    } catch (dbError) {
+      console.warn('Could not save file info to database:', dbError);
+      // Continue without failing
+    }
 
     res.json({
-      id: result.insertId,
       url: fileUrl,
       filename: req.file.filename,
       originalName: req.file.originalname,
@@ -82,7 +94,10 @@ router.post('/upload', upload.single('file'), async (req: Request, res: Response
     });
   } catch (error) {
     console.error('Upload error:', error);
-    res.status(500).json({ error: 'Upload failed' });
+    res.status(500).json({
+      error: 'Upload failed',
+      details: error instanceof Error ? error.message : 'Unknown error'
+    });
   }
 });
 
