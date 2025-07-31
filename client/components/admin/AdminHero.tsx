@@ -27,6 +27,10 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
   });
 
   const [showPreview, setShowPreview] = useState(false);
+  const [uploading, setUploading] = useState<{ logo: boolean; background: boolean }>({
+    logo: false,
+    background: false
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
