@@ -53,7 +53,13 @@ const upload = multer({
 });
 
 // File upload endpoint
-router.post('/upload', upload.single('file'), async (req: Request, res: Response) => {
+router.post('/upload', (req, res, next) => {
+  // Add CORS headers for file upload
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'POST');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+}, upload.single('file'), async (req: Request, res: Response) => {
   try {
     if (!req.file) {
       return res.status(400).json({ error: 'No file uploaded' });
