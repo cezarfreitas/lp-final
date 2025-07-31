@@ -1,6 +1,7 @@
 import path from "path";
 import express from "express";
 import cors from "cors";
+import fs from "fs";
 import { fileURLToPath } from "url";
 import compression from "compression";
 import { initializeDatabase } from "./lib/database.js";
