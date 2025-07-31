@@ -39,7 +39,29 @@ export default function Admin() {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await fetch("/api/admin/all-data");
+
+      // Add retry logic for network issues
+      let response;
+      let retries = 3;
+
+      while (retries > 0) {
+        try {
+          response = await fetch("/api/admin/all-data", {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            credentials: 'same-origin'
+          });
+          break; // Success, exit retry loop
+        } catch (fetchError) {
+          retries--;
+          if (retries === 0) throw fetchError;
+
+          console.log(`Fetch failed, retrying... (${retries} attempts left)`);
+          await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second before retry
+        }
+      }
 
       if (!response.ok) {
         let errorData;
