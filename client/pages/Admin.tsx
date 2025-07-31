@@ -108,7 +108,13 @@ export default function Admin() {
         error instanceof TypeError &&
         error.message.includes("Failed to fetch")
       ) {
+        // Network error - try setup check
+        console.log("Network error detected, checking if setup is needed...");
         checkIfSetupNeeded();
+      } else if (error instanceof Error && error.message.includes("NetworkError")) {
+        // CORS or network issues
+        console.log("Network/CORS error detected");
+        setSaveStatus("error");
       } else {
         setSaveStatus("error");
       }
