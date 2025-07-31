@@ -47,11 +47,11 @@ export default function Admin() {
       while (retries > 0) {
         try {
           response = await fetch("/api/admin/all-data", {
-            method: 'GET',
+            method: "GET",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
-            credentials: 'same-origin'
+            credentials: "same-origin",
           });
           break; // Success, exit retry loop
         } catch (fetchError) {
@@ -59,7 +59,7 @@ export default function Admin() {
           if (retries === 0) throw fetchError;
 
           console.log(`Fetch failed, retrying... (${retries} attempts left)`);
-          await new Promise(resolve => setTimeout(resolve, 1000)); // Wait 1 second before retry
+          await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait 1 second before retry
         }
       }
 
@@ -111,7 +111,10 @@ export default function Admin() {
         // Network error - try setup check
         console.log("Network error detected, checking if setup is needed...");
         checkIfSetupNeeded();
-      } else if (error instanceof Error && error.message.includes("NetworkError")) {
+      } else if (
+        error instanceof Error &&
+        error.message.includes("NetworkError")
+      ) {
         // CORS or network issues
         console.log("Network/CORS error detected");
         setSaveStatus("error");
@@ -127,11 +130,11 @@ export default function Admin() {
     try {
       console.log("Checking setup status...");
       const response = await fetch("/api/setup/status", {
-        method: 'GET',
+        method: "GET",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        credentials: 'same-origin'
+        credentials: "same-origin",
       });
 
       if (!response.ok) {
@@ -174,7 +177,7 @@ export default function Admin() {
             headers: {
               "Content-Type": "application/json",
             },
-            credentials: 'same-origin',
+            credentials: "same-origin",
             body: JSON.stringify(data),
           });
           break; // Success, exit retry loop
@@ -183,7 +186,7 @@ export default function Admin() {
           if (retries === 0) throw fetchError;
 
           console.log(`Save failed, retrying... (${retries} attempts left)`);
-          await new Promise(resolve => setTimeout(resolve, 500));
+          await new Promise((resolve) => setTimeout(resolve, 500));
         }
       }
 
@@ -246,7 +249,9 @@ export default function Admin() {
         <div className="text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-2 border-gray-300 border-t-red-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Carregando dados...</p>
-          <p className="text-gray-400 text-sm mt-2">Conectando ao servidor...</p>
+          <p className="text-gray-400 text-sm mt-2">
+            Conectando ao servidor...
+          </p>
         </div>
       </div>
     );
@@ -277,20 +282,31 @@ export default function Admin() {
                 Erro ao carregar dados
               </h2>
               <p className="text-gray-600 mb-6">
-                Não foi possível conectar ao servidor. Verifique sua conexão de internet ou tente novamente.
+                Não foi possível conectar ao servidor. Verifique sua conexão de
+                internet ou tente novamente.
               </p>
             </div>
 
             <div className="space-y-3">
               <button
                 onClick={() => {
-                  setSaveStatus('idle');
+                  setSaveStatus("idle");
                   fetchData();
                 }}
                 className="w-full bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 flex items-center justify-center space-x-2"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                  />
                 </svg>
                 <span>Tentar Reconectar</span>
               </button>
