@@ -233,83 +233,47 @@ export default function Admin() {
     <div className="min-h-screen bg-gray-100">
       <div className="flex">
         {/* Sidebar */}
-        <nav className="w-64 bg-black shadow-2xl min-h-screen border-r border-red-900/20 relative overflow-hidden">
+        <nav className="w-48 bg-black min-h-screen border-r border-red-600/30">
           <div className="p-4">
-            {/* Compact Header */}
-            <div className="mb-6 text-center">
-              <div className="w-12 h-12 ecko-logo-container ecko-logo-pulse rounded-full flex items-center justify-center mx-auto mb-3">
-                <span className="text-white font-bold text-xl text-shadow-md">E</span>
-              </div>
-              <h2 className="text-white font-bold text-lg text-shadow-sm">ECKO</h2>
-              <p className="text-gray-400 text-xs">Admin Panel</p>
+            {/* Simple Header */}
+            <div className="mb-8 text-center">
+              <h1 className="text-white font-bold text-xl">ECKO</h1>
+              <p className="text-gray-400 text-sm">Admin</p>
             </div>
 
-            {/* Compact Navigation */}
-            <div className="space-y-1">
-
-              {tabs.map((tab, index) => (
-                <div key={tab.id} className="relative group">
-                  <button
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`w-full text-left px-3 py-2 rounded-lg flex items-center space-x-2 ripple-effect ${
-                      activeTab === tab.id
-                        ? 'nav-item-active text-white'
-                        : 'text-gray-300 nav-item-hover'
-                    }`}
-                  >
-                    {/* Compact Icon */}
-                    <div className={`flex-shrink-0 w-6 h-6 rounded flex items-center justify-center ${
-                      activeTab === tab.id
-                        ? 'bg-red-500/20 text-red-200 icon-glow-red'
-                        : 'text-gray-400 icon-glow-subtle'
-                    }`}>
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d={tab.icon} clipRule="evenodd" />
-                      </svg>
-                    </div>
-
-                    {/* Compact Content */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center justify-between">
-                        <span className="font-medium text-sm truncate nav-item-text">{tab.label}</span>
-                        <span className={`nav-badge w-5 h-5 rounded-full flex items-center justify-center ${
-                          activeTab === tab.id
-                            ? 'nav-badge-active'
-                            : 'nav-badge-inactive'
-                        }`}>
-                          {index + 1}
-                        </span>
-                      </div>
-                    </div>
-                  </button>
-                </div>
+            {/* Clean Navigation */}
+            <div className="space-y-2">
+              {tabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`w-full text-left px-4 py-3 rounded transition-colors ${
+                    activeTab === tab.id
+                      ? 'bg-red-600 text-white'
+                      : 'text-gray-300 hover:bg-gray-800 hover:text-white'
+                  }`}
+                >
+                  {tab.label}
+                </button>
               ))}
             </div>
 
-            {/* Compact Bottom Actions */}
-            <div className="mt-6 pt-4 border-t border-gray-800">
-              <div className="space-y-2">
-                <a
-                  href="/"
-                  target="_blank"
-                  className="w-full action-btn-primary text-white px-3 py-2 rounded-lg flex items-center justify-center space-x-2 text-sm font-medium"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  <span>Ver Site</span>
-                </a>
+            {/* Bottom Actions */}
+            <div className="mt-8 pt-6 border-t border-gray-800 space-y-2">
+              <a
+                href="/"
+                target="_blank"
+                className="block w-full bg-red-600 text-white text-center px-4 py-2 rounded hover:bg-red-700 transition-colors text-sm"
+              >
+                Ver Site
+              </a>
 
-                <button
-                  onClick={fetchData}
-                  className="w-full action-btn-secondary text-gray-300 px-3 py-2 rounded-lg hover:text-white flex items-center justify-center space-x-2 text-sm"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                  </svg>
-                  <span>Refresh</span>
-                </button>
-              </div>
+              <button
+                onClick={fetchData}
+                className="w-full bg-gray-800 text-gray-300 px-4 py-2 rounded hover:bg-gray-700 hover:text-white transition-colors text-sm"
+              >
+                Atualizar
+              </button>
             </div>
           </div>
         </nav>
