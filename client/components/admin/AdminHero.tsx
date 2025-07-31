@@ -44,22 +44,31 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
   const uploadImage = async (file: File, field: 'logo_url' | 'background_image_url') => {
     const formData = new FormData();
     formData.append('file', file);
-    
+
     try {
+      console.log('Uploading file:', file.name);
+
       const response = await fetch('/api/admin/upload', {
         method: 'POST',
         body: formData
       });
-      
+
       if (response.ok) {
         const result = await response.json();
+        console.log('Upload successful:', result);
         setFormData(prev => ({
           ...prev,
           [field]: result.url
         }));
+        alert('Upload realizado com sucesso!');
+      } else {
+        const errorData = await response.text();
+        console.error('Upload failed:', response.status, errorData);
+        alert(`Erro no upload: ${response.status} - ${errorData}`);
       }
     } catch (error) {
       console.error('Upload error:', error);
+      alert(`Erro no upload: ${error instanceof Error ? error.message : 'Erro desconhecido'}`);
     }
   };
 
