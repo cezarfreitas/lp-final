@@ -7,17 +7,20 @@ Landing page otimizada para captação de lojistas oficiais da marca ECKO.
 ### Configurações necessárias:
 
 **Build Settings:**
+
 - **Build Command**: `npm run build`
 - **Start Command**: `npm start`
 - **Node Version**: 18+
 
 **Environment Variables:**
+
 ```bash
 NODE_ENV=production
 CORS_ORIGIN=*
 ```
 
 ### Estrutura do Projeto:
+
 ```
 ├── client/           # Frontend React
 │   ├── pages/        # Páginas da aplicação
@@ -59,4 +62,4 @@ npm start
 
 ---
 
-*Landing page desenvolvida para programa de parceiros ECKO 🔥*
+_Landing page desenvolvida para programa de parceiros ECKO 🔥_

@@ -13,11 +13,13 @@ export function createServer() {
 
   // Middleware básico
   app.use(compression());
-  app.use(cors({
-    origin: process.env.CORS_ORIGIN || "*",
-    methods: ["GET", "POST"],
-    allowedHeaders: ["Content-Type", "Authorization"]
-  }));
+  app.use(
+    cors({
+      origin: process.env.CORS_ORIGIN || "*",
+      methods: ["GET", "POST"],
+      allowedHeaders: ["Content-Type", "Authorization"],
+    }),
+  );
   app.use(express.json({ limit: "10mb" }));
   app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
@@ -41,7 +43,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   // Serve static files in production
   if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "../dist/client")));
-    
+
     // Serve React app for all routes
     app.get("*", (req, res) => {
       res.sendFile(path.join(__dirname, "../dist/client/index.html"));
@@ -50,18 +52,22 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 
   // Start server with port fallback
   const port = process.env.PORT || 3000;
-  
-  app.listen(port, () => {
-    console.log(`🚀 ECKO Landing Page rodando na porta ${port}`);
-    console.log(`📱 URL: ${process.env.BASE_URL || `http://localhost:${port}`}`);
-    console.log(`🌟 Ambiente: ${process.env.NODE_ENV || 'development'}`);
-  }).on('error', (err: any) => {
-    if (err.code === 'EADDRINUSE') {
-      console.error(`❌ Porta ${port} já está em uso`);
-      process.exit(1);
-    } else {
-      console.error('❌ Erro no servidor:', err);
-      process.exit(1);
-    }
-  });
+
+  app
+    .listen(port, () => {
+      console.log(`🚀 ECKO Landing Page rodando na porta ${port}`);
+      console.log(
+        `📱 URL: ${process.env.BASE_URL || `http://localhost:${port}`}`,
+      );
+      console.log(`🌟 Ambiente: ${process.env.NODE_ENV || "development"}`);
+    })
+    .on("error", (err: any) => {
+      if (err.code === "EADDRINUSE") {
+        console.error(`❌ Porta ${port} já está em uso`);
+        process.exit(1);
+      } else {
+        console.error("❌ Erro no servidor:", err);
+        process.exit(1);
+      }
+    });
 }
