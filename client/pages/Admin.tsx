@@ -111,17 +111,21 @@ export default function Admin() {
         let errorMessage = `${response.status} ${response.statusText}`;
 
         try {
-          const contentType = response.headers.get('content-type');
-          if (contentType && contentType.includes('application/json')) {
-            const errorData = await response.json();
+          // Clone the response to read it multiple times if needed
+          const responseClone = response.clone();
+          const responseText = await responseClone.text();
+
+          try {
+            // Try to parse as JSON first
+            const errorData = JSON.parse(responseText);
             errorMessage += ` - ${errorData.error || errorData.message || 'Unknown error'}`;
-          } else {
-            const errorText = await response.text();
-            errorMessage += ` - ${errorText || 'Unknown error'}`;
+          } catch {
+            // If not JSON, use the text directly
+            errorMessage += responseText ? ` - ${responseText}` : ' - Unknown error';
           }
         } catch (parseError) {
-          console.error('Error parsing response:', parseError);
-          errorMessage += ' - Failed to parse error response';
+          console.error('Error reading response:', parseError);
+          errorMessage += ' - Failed to read error response';
         }
 
         console.error('Save API Error:', errorMessage);
