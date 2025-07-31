@@ -244,12 +244,12 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
                 <div className="space-y-3">
                   <div className="flex space-x-2">
                     <input
-                      type="url"
+                      type="text"
                       name="logo_url"
                       value={formData.logo_url}
                       onChange={handleChange}
                       className="flex-1 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                      placeholder="https://..."
+                      placeholder="https://... ou /uploads/..."
                     />
                     <label className="bg-gray-100 text-gray-700 px-4 py-2 rounded border border-gray-300 hover:bg-gray-200 cursor-pointer">
                       Upload
