@@ -270,8 +270,8 @@ export default function Admin() {
                     {/* Compact Icon */}
                     <div className={`flex-shrink-0 w-6 h-6 rounded flex items-center justify-center ${
                       activeTab === tab.id
-                        ? 'bg-red-500/20 text-red-200'
-                        : 'text-gray-400'
+                        ? 'bg-red-500/20 text-red-200 icon-glow-red'
+                        : 'text-gray-400 icon-glow-subtle'
                     }`}>
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d={tab.icon} clipRule="evenodd" />
@@ -281,11 +281,11 @@ export default function Admin() {
                     {/* Compact Content */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between">
-                        <span className="font-medium text-sm truncate">{tab.label}</span>
-                        <span className={`text-xs w-5 h-5 rounded-full flex items-center justify-center font-medium ${
+                        <span className="font-medium text-sm truncate nav-item-text">{tab.label}</span>
+                        <span className={`nav-badge w-5 h-5 rounded-full flex items-center justify-center ${
                           activeTab === tab.id
-                            ? 'bg-red-500/30 text-red-200'
-                            : 'bg-gray-700 text-gray-400'
+                            ? 'nav-badge-active'
+                            : 'nav-badge-inactive'
                         }`}>
                           {index + 1}
                         </span>
