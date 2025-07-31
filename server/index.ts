@@ -25,7 +25,17 @@ export function createServer() {
   app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
   // Create uploads directory if it doesn't exist
-  app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
+  const uploadsDir = path.join(__dirname, '../public/uploads');
+  if (!fs.existsSync(uploadsDir)) {
+    fs.mkdirSync(uploadsDir, { recursive: true });
+    console.log('✅ Created uploads directory:', uploadsDir);
+  }
+
+  // Serve uploads directory
+  app.use('/uploads', express.static(uploadsDir));
+
+  // Also serve from root public directory
+  app.use(express.static(path.join(__dirname, '../public')));
 
   // Admin API routes
   app.use('/api/admin', adminRoutes);
