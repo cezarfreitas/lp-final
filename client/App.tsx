@@ -1,50 +1,30 @@
-import "./global.css";
-import "./admin-clean.css";
-
-import { Toaster } from "@/components/ui/toaster";
-import { createRoot } from "react-dom/client";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import "./global.css";
 
-// Lazy load pages for better performance
+// Lazy load pages
 const Index = lazy(() => import("./pages/Index"));
-const Admin = lazy(() => import("./pages/Admin"));
-const Setup = lazy(() => import("./pages/Setup"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading component
-const PageLoader = () => (
-  <div className="min-h-screen flex items-center justify-center bg-white">
+const Loading = () => (
+  <div className="min-h-screen bg-black flex items-center justify-center">
     <div className="text-center">
-      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-red-600 mx-auto mb-4"></div>
-      <p className="text-gray-600">Carregando...</p>
+      <div className="animate-spin rounded-full h-12 w-12 border-2 border-red-600 border-t-transparent mx-auto mb-4"></div>
+      <p className="text-white">Carregando...</p>
     </div>
   </div>
 );
 
-const queryClient = new QueryClient();
-
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/setup" element={<Setup />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-createRoot(document.getElementById("root")!).render(<App />);
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  );
+}
