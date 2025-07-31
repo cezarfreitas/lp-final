@@ -436,12 +436,17 @@ export function AdminHero({ data, onSave }: AdminHeroProps) {
                   </div>
 
                   {formData.background_image_url && (
-                    <div className="p-3 bg-gray-50 rounded border">
-                      <img 
-                        src={formData.background_image_url} 
-                        alt="Background preview" 
-                        className="w-full h-24 object-cover rounded"
+                    <div className="p-4 bg-gray-50 rounded border">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm font-medium text-gray-700">Preview do Fundo:</span>
+                        <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">✓ Otimizado</span>
+                      </div>
+                      <img
+                        src={formData.background_image_url}
+                        alt="Background preview"
+                        className="w-full h-32 object-cover rounded border"
                       />
+                      <p className="text-xs text-gray-500 mt-2">Formato WebP • Max 1920x1080 • Compressão inteligente</p>
                     </div>
                   )}
                 </div>
