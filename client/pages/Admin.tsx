@@ -108,15 +108,24 @@ export default function Admin() {
       });
 
       if (!response.ok) {
-        let errorData;
+        let errorMessage = `${response.status} ${response.statusText}`;
+
         try {
-          errorData = await response.json();
-        } catch {
-          errorData = { error: await response.text() };
+          const contentType = response.headers.get('content-type');
+          if (contentType && contentType.includes('application/json')) {
+            const errorData = await response.json();
+            errorMessage += ` - ${errorData.error || errorData.message || 'Unknown error'}`;
+          } else {
+            const errorText = await response.text();
+            errorMessage += ` - ${errorText || 'Unknown error'}`;
+          }
+        } catch (parseError) {
+          console.error('Error parsing response:', parseError);
+          errorMessage += ' - Failed to parse error response';
         }
 
-        console.error('Save API Error:', response.status, response.statusText, errorData);
-        throw new Error(`Failed to save data: ${response.status} ${response.statusText} - ${errorData.error || 'Unknown error'}`);
+        console.error('Save API Error:', errorMessage);
+        throw new Error(`Failed to save data: ${errorMessage}`);
       }
 
       const result = await response.json();
