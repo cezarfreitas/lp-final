@@ -129,12 +129,23 @@ export async function updateRecord(
   data: Record<string, any>,
   conditions: Record<string, any>
 ): Promise<{ affectedRows: number }> {
-  const setClause = Object.keys(data).map(key => `${key} = ?`).join(', ');
+  // Remove timestamp fields that should not be manually updated
+  const filteredData = { ...data };
+  delete filteredData.created_at;
+  delete filteredData.updated_at;
+  delete filteredData.id; // Also remove id from data
+
+  if (Object.keys(filteredData).length === 0) {
+    console.log('No data to update after filtering');
+    return { affectedRows: 0 };
+  }
+
+  const setClause = Object.keys(filteredData).map(key => `${key} = ?`).join(', ');
   const whereClause = Object.keys(conditions).map(key => `${key} = ?`).join(' AND ');
 
-  const values = [...Object.values(data), ...Object.values(conditions)];
+  const values = [...Object.values(filteredData), ...Object.values(conditions)];
 
-  const query = `UPDATE ${table} SET ${setClause} WHERE ${whereClause}`;
+  const query = `UPDATE ${table} SET ${setClause}, updated_at = CURRENT_TIMESTAMP WHERE ${whereClause}`;
   console.log('UPDATE query:', query);
   console.log('UPDATE values:', values);
 
