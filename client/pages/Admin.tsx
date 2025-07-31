@@ -291,7 +291,14 @@ export default function Admin() {
                       {tabs.find(tab => tab.id === activeTab)?.label}
                     </h2>
                     <p className="text-gray-600">
-                      {tabs.find(tab => tab.id === activeTab)?.description}
+                      {activeTab === 'hero' && 'Seção principal da página'}
+                      {activeTab === 'benefits' && 'Vantagens e diferenciais'}
+                      {activeTab === 'testimonials' && 'Avaliações dos clientes'}
+                      {activeTab === 'faq' && 'Perguntas frequentes'}
+                      {activeTab === 'gallery' && 'Imagens dos produtos'}
+                      {activeTab === 'showroom' && 'Espaço físico da loja'}
+                      {activeTab === 'footer' && 'Rodapé e links'}
+                      {activeTab === 'design' && 'Cores, fontes e identidade visual'}
                     </p>
                   </div>
 
