@@ -23,7 +23,7 @@ export default function Index() {
           >
             {/* Logo */}
             <div className="mb-6 sm:mb-8 flex justify-center">
-              <img 
+              <img
                 src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
                 alt="Logo ECKO Oficial"
                 className="h-12 sm:h-16 w-auto"
@@ -582,7 +582,7 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Logo and About */}
             <div className="space-y-4">
-              <img 
+              <img
                 src="https://www.ntktextil.com.br/wp-content/uploads/2022/08/Logo-Ecko.png"
                 alt="Logo ECKO Oficial"
                 className="h-10 w-auto"
